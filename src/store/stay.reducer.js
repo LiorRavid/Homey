@@ -11,7 +11,7 @@ const initialState = {
   },
 }
 
-export function toyReducer(state = initialState, action) {
+export function stayReducer(state = initialState, action) {
   let newState = state
 
   switch (action.type) {

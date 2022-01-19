@@ -1,6 +1,6 @@
 import React from 'react';
 import { SiAirbnb } from 'react-icons/si';
-import { FcBusinessman } from "react-icons/fc";
+import { FaUserCircle } from "react-icons/fa";
 
 function Header() {
     return (
@@ -14,7 +14,7 @@ function Header() {
             <div className='header-right'>
                 <p>Became a Host</p>
                 <p>Explore</p>
-                <FcBusinessman size="2em" />
+                <FaUserCircle size="2em" color="#717171"/>
             </div>
 
 

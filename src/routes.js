@@ -1,5 +1,5 @@
 import { HomePage } from './pages/HomePage.jsx'
-import { StayApp } from './pages/StayApp.jsx'
+import { Explore } from './pages/Explore.jsx'
 import { StayDetails } from './pages/StayDetails.jsx'
 
 const routes = [
@@ -9,7 +9,7 @@ const routes = [
   },
   {
     path: '/explore',
-    component: StayApp,
+    component: Explore,
   },
   {
     path: '/',

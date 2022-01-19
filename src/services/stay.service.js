@@ -4,6 +4,7 @@ var axios = Axios.create({
     withCredentials: true
 })
 
+const STORAGE_KEY = 'stayDB'
 
 export const stayService = {
   query,
@@ -12,14 +13,15 @@ export const stayService = {
   remove,
 }
 
-async function query(filterBy, sort) {
-  const { name, inStock, labels } = filterBy
-  const { type, order } = sort
+async function query() {
   try {
-    const res = await axios.get(`http://localhost:3020/api/toy?name=${name}&inStock=${inStock}&labels=${JSON.stringify(labels)}&type=${type}&order=${order}`)
-    return res.data
+    // const res = await axios.get(`http://localhost:3020/api/toy?name=${name}&inStock=${inStock}&labels=${JSON.stringify(labels)}&type=${type}&order=${order}`)
+    // return res.data
+    const res = await storageService.query(STORAGE_KEY)
+    console.log(res)
+    return res
   } catch (err) {
-    console.log('Cannot get toys:',  err)
+    console.log('Cannot get stays:',  err)
     throw err
   }
   // return axios.get(`http://localhost:3020/api/toy?name=${name}&inStock=${inStock}&labels=${JSON.stringify(labels)}&type=${type}&order=${order}`).then((res) => res.data)
@@ -31,12 +33,12 @@ async function getById(stayId) {
   //   .then((res) => res.data)
   try {
     // const res = await axios.get(`http://localhost:3020/api/toy/${toyId}`)
-    const res = await storageService.get('stayDB',stayId)
+    const res = await storageService.get(STORAGE_KEY,stayId)
     // console.log(res)
     // return res.data
     return res
   } catch (err) {
-    console.log(`Cannot get toy with id: ${stayId}`)
+    console.log(`Cannot get stay with id: ${stayId}`)
     throw err
   }
 }

@@ -11,7 +11,13 @@ const db = {
       "rooms": "3 bed rooms",
       "beds": "4 beds",
       "baths": "2 baths",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/st1ndcdgqaxxijkkhb2q.jpg",
+       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/wmygr93wrcqh5fsc3dz4.jpg",
+       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/mnkeemhzpc642yfq1xeg.jpg",
+       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/af3ztibpl68iy1xrsgom.jpg",
+       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/csbx1d1wzgkvdbqncibe.jpg"
+      ],
       "price": 124.00,
       "summary": "Wake up only 100m from the sand at Bondi Beach :) This is an actual Bondi locals home, not an AirBnB investment property. The entire flat is north east facing; great light, morning and afternoon. High ceilings with ornate features in an original art deco block. Right in the heart of Bondi with all the cafes, shops, bars and restaurants on your doorstep!",
       "capacity": 6,
@@ -81,7 +87,13 @@ const db = {
       "rooms": "1",
       "beds": "1 bed",
       "baths": "1 bath",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603035/airbnb/2.Potts%20Point%20Apartment/luaf5chccjidm4omsnul.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603035/airbnb/2.Potts%20Point%20Apartment/jnk8qkvdagatou0wk1tt.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603035/airbnb/2.Potts%20Point%20Apartment/xkridiixumipmska3rwo.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603034/airbnb/2.Potts%20Point%20Apartment/sa0ozlgrvnlj9favhs6z.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603034/airbnb/2.Potts%20Point%20Apartment/wtyapwhtneddeb61a3cj.jpg"
+        ],
       "price": 155.00,
       "summary": "COMMITTED TO HIGHEST COVID-19 CLEANING STANDARDS. Large floor-to-ceiling windows welcome the Sydney sunshine in this stylish apartment furnished with chic, modern amenities. On the roof, take in gorgeous views of Sydney Harbour and the Opera House as you float in the pool or dine on the deck.",
       "capacity": 2,
@@ -151,7 +163,13 @@ const db = {
       "rooms": "2",
       "beds": "2 bed",
       "baths": "1 bath",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603234/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/erdg7jqz3ddrljjrx0gy.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603234/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/tilbgf2e4g7q6wey9ubr.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603234/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/cle9arb9gfvcvzxahxsz.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603233/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/oc3lih08dcmbxkjnxcpq.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603233/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/a5352qg0a4s4bvvjgsva.jpg"
+      ],
       "price": 225.00,
       "summary": "Boasting spectacular ocean views from all rooms, this two bedroom, top floor apartment has been freshly renovated & luxuriously styled throughout. Feel on top of the world in your very own private beachfront retreat!. Offering direct access to Narrabeen beach and walking distance to popular restaurants, bars, cafes & shops. No car is needed in this incredible and convenient location.....You won't want to leave! ",
       "capacity": 4,
@@ -219,7 +237,13 @@ const db = {
       "rooms": "2 bedroms",
       "beds":"3 beds",
       "bath":"1 bath",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/sorvf2bw377ollbx8ks3.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/nasros7aa5xxs9eiwron.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/b9czkoyopauaxcxkqxdj.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/bsd2pigj4vbrhapcn8lf.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603540/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/pswbzrvjj9stkoiw3jie.jpg"
+        ],
       "price": 230.00,
       "summary": "New two-bedroom ground-level apartment set back from the street, located on a quiet block in South Slope Brooklyn near restaurants, bars, grocery stores, coffee shops, subway & bus lines. Great area!You'll feel at home here. It's spacious with comfortable furniture, Nectar Mattresses for quality sleep, a fully stocked kitchen so you can cook and eat in if you like. And two big NYC pluses - there's a WASHER and DRYER in the unit and there's a small outdoor space off the Master Bedroom in back.",
       "capacity": 6,
@@ -293,7 +317,13 @@ const db = {
       "rooms": "Studio",
       "beds":"1 bed",
       "bath":"1 bath",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603776/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/qj6foafn2alcmsb2otah.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/xpczizwjq13lpbkpqcz9.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/be8t51kuem6cb7axlo6f.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/r8hw0ffscselixvxggsm.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/uw2hx9tix537k9mdlcmu.jpg"
+        ],
       "price": 100.00,
       "summary": "Located in Bowery - historically the most unique streetscape of New York with over 400 years of history and culture - this place is right around the corner of Grand St subway. Super convenient as you can be anywhere in Manhattan in just a few minutes. Steps away from SoHo, NoHo and major subway lines (6,J,Z,N,Q,B,D). Its unbeatable location puts the best of downtown.",
       "capacity": 2,
@@ -365,7 +395,13 @@ const db = {
       "rooms": "1 bedroom",
       "beds":"4 beds",
       "bath":"1 bath",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603874/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/it5vi5ayl8epkjbuvro5.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/kntpqe217cuawwuqoq0w.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/a238yoc4lhkdrfebijh2.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/xjf5gxlbcanmkksmkbxw.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/pdy9nqr4tqxr8j48ongf.jpg"
+        ],
       "price": 105.00,
       "summary": "Luxury private apartment/suite with cozy balcony/terrace has a brand new modern furniture with queen size bedroom set in the bedroom and double level daybed in the living room(see pictures). Very comfortable mattress in every bed.Apartment Building is situated just 15 minutes away from all major airports. Walking distance to all large shopping malls, supermarkets,restaurants and boutiques. Just one block away to \"R\" and \"M\" trains (15-20 minutes to Manhattan) and other major transportation...",
       "capacity": 4,
@@ -437,7 +473,13 @@ const db = {
       "rooms": "1 bed rooms",
       "beds": "1 beds",
       "baths": "1 baths",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/oapgf7bnlo3bxladxcsi.jpg",
+       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/mkjwdxg7ozvdw3sjj92v.jpg",
+       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/qa4iqzk48aymylesh6fs.jpg",
+       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/shwqsfzg0xtgzphk0xdm.jpg",
+       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603979/airbnb/1.Tafari%20Gran%20Via/vygbh3zftuetyplv09ef.jpg"
+      ],
       "price": 78.54,
       "summary":  "Elegant and comfortable one-roomed flat for rent per day situated in the center of Madrid, just behind the mythical building of the Hotel Atlantico of Gran Vía.The nearest metro stations are: Callao / Gran Vía.Ideal for married couples, singles or families who want to stay a few days in the town.The flat is located in a new built building (year 2008), it is on the fifth floor with lift and has a capacity of 3 persons. It has a double bed and a sofa of 85 cm.The kitchen is totally equiped.",
       "capacity": 2,
@@ -509,7 +551,13 @@ const db = {
       "rooms": "1 bed rooms",
       "beds": "1 beds",
       "baths": "1 baths",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/kfjvtiens7lzcujrmk33.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/x7l34bczffiw7xfehkj9.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/fxnsp3vyr1lza8yh0oce.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/qrtwnhhs0lo2kpncgyxv.jpg",
+         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604481/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/eo5dju90xjvxgnujqo8t.jpg"
+        ],
       "price": 33.84,
       "summary": "The space Attic room in the center of Madrid very bright and quiet, overlooking the entire south of Madrid and five minutes from the Puerta del Sol and Madrid's most emblematic places. Calm and quiet, but in the area where most people go out. Bars, cinemas (spanish and english), bars, restaurants, museums, main train station... everything is close to the attic. It has a large bathroom, comfortable lounge with TV, HiFi and kitchen. Wi-Fi by optical fiber. Heating. Plenty of light! The Wi-Fi has the maximum speed available (100MB) to surf the net or use video Skype with total guarantee. An excellent place from which to discover Madrid, with the metro at the door and 10 minutes from Atocha Station. Metro at the door. No smokers.",
       "capacity": 1,
@@ -579,7 +627,13 @@ const db = {
       "rooms": "1 bed rooms",
       "beds": "1 beds",
       "baths": "1 baths",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": [
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604677/airbnb/3.Loft%20Eloisa/ukf2rleeojb7vqb6udf0.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604677/airbnb/3.Loft%20Eloisa/kj0fznnca50omsk5vom9.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604677/airbnb/3.Loft%20Eloisa/riht5pn6bywgeempf41c.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604677/airbnb/3.Loft%20Eloisa/zfkagl89jrtbn7uwsve9.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604677/airbnb/3.Loft%20Eloisa/kcpt4zxj9y4vml74jp7n.jpg"
+      ],
       "price": 107.60,
       "summary": "The space Attic room in the center of Madrid very bright and quiet, overlooking the entire south of Madrid and five minutes from the Puerta del Sol and Madrid's most emblematic places. Calm and quiet, but in the area where most people go out. Bars, cinemas (spanish and english), bars, restaurants, museums, main train station... everything is close to the attic. It has a large bathroom, comfortable lounge with TV, HiFi and kitchen. Wi-Fi by optical fiber. Heating. Plenty of light! The Wi-Fi has the maximum speed available (100MB) to surf the net or use video Skype with total guarantee. An excellent place from which to discover Madrid, with the metro at the door and 10 minutes from Atocha Station. Metro at the door. No smokers.",
       "capacity": 2,

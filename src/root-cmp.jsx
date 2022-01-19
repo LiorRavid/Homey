@@ -9,13 +9,13 @@ export class RootCmp extends React.Component {
     render() {
         return (
             <section className="main-container">
-                <AppHeader/>
+                {/* <AppHeader/> */}
                 <main>
                     <Switch>
                         {routes.map(route=> <Route key={route.path} exact component={route.component} path={route.path} /> )}
                     </Switch>
                 </main>
-                <AppFooter />
+                {/* <AppFooter /> */}
             </section>
         )
     }

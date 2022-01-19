@@ -14,10 +14,10 @@ const db = {
       "baths": "2 baths",
       "imgUrls": [
         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/st1ndcdgqaxxijkkhb2q.jpg",
-       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/wmygr93wrcqh5fsc3dz4.jpg",
-       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/mnkeemhzpc642yfq1xeg.jpg",
-       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/af3ztibpl68iy1xrsgom.jpg",
-       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/csbx1d1wzgkvdbqncibe.jpg"
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/wmygr93wrcqh5fsc3dz4.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/mnkeemhzpc642yfq1xeg.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/af3ztibpl68iy1xrsgom.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642600159/airbnb/1.Sunny%20Beach%20Apartment/csbx1d1wzgkvdbqncibe.jpg"
       ],
       "price": 124.00,
       "summary": "Wake up only 100m from the sand at Bondi Beach :) This is an actual Bondi locals home, not an AirBnB investment property. The entire flat is north east facing; great light, morning and afternoon. High ceilings with ornate features in an original art deco block. Right in the heart of Bondi with all the cafes, shops, bars and restaurants on your doorstep!",
@@ -79,7 +79,7 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     },
     {
       "_id": "10006548",
@@ -90,11 +90,11 @@ const db = {
       "baths": "1 bath",
       "imgUrls": [
         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603035/airbnb/2.Potts%20Point%20Apartment/luaf5chccjidm4omsnul.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603035/airbnb/2.Potts%20Point%20Apartment/jnk8qkvdagatou0wk1tt.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603035/airbnb/2.Potts%20Point%20Apartment/xkridiixumipmska3rwo.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603034/airbnb/2.Potts%20Point%20Apartment/sa0ozlgrvnlj9favhs6z.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603034/airbnb/2.Potts%20Point%20Apartment/wtyapwhtneddeb61a3cj.jpg"
-        ],
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603035/airbnb/2.Potts%20Point%20Apartment/jnk8qkvdagatou0wk1tt.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603035/airbnb/2.Potts%20Point%20Apartment/xkridiixumipmska3rwo.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603034/airbnb/2.Potts%20Point%20Apartment/sa0ozlgrvnlj9favhs6z.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603034/airbnb/2.Potts%20Point%20Apartment/wtyapwhtneddeb61a3cj.jpg"
+      ],
       "price": 155.00,
       "summary": "COMMITTED TO HIGHEST COVID-19 CLEANING STANDARDS. Large floor-to-ceiling windows welcome the Sydney sunshine in this stylish apartment furnished with chic, modern amenities. On the roof, take in gorgeous views of Sydney Harbour and the Opera House as you float in the pool or dine on the deck.",
       "capacity": 2,
@@ -155,7 +155,7 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     },
     {
       "_id": "10006549",
@@ -166,10 +166,10 @@ const db = {
       "baths": "1 bath",
       "imgUrls": [
         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603234/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/erdg7jqz3ddrljjrx0gy.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603234/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/tilbgf2e4g7q6wey9ubr.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603234/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/cle9arb9gfvcvzxahxsz.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603233/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/oc3lih08dcmbxkjnxcpq.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603233/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/a5352qg0a4s4bvvjgsva.jpg"
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603234/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/tilbgf2e4g7q6wey9ubr.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603234/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/cle9arb9gfvcvzxahxsz.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603233/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/oc3lih08dcmbxkjnxcpq.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603233/airbnb/3.NTH%20VIEW%20-%20%20Beachfront%20Retreat%21/a5352qg0a4s4bvvjgsva.jpg"
       ],
       "price": 225.00,
       "summary": "Boasting spectacular ocean views from all rooms, this two bedroom, top floor apartment has been freshly renovated & luxuriously styled throughout. Feel on top of the world in your very own private beachfront retreat!. Offering direct access to Narrabeen beach and walking distance to popular restaurants, bars, cafes & shops. No car is needed in this incredible and convenient location.....You won't want to leave! ",
@@ -229,22 +229,22 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     },
     {
       "_id": "10006550",
       "name": "Nice South Slope 2 BR w/ Patio, Washer / Dryer",
       "type": "House",
       "rooms": "2 bedroms",
-      "beds":"3 beds",
-      "bath":"1 bath",
+      "beds": "3 beds",
+      "bath": "1 bath",
       "imgUrls": [
         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/sorvf2bw377ollbx8ks3.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/nasros7aa5xxs9eiwron.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/b9czkoyopauaxcxkqxdj.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/bsd2pigj4vbrhapcn8lf.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603540/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/pswbzrvjj9stkoiw3jie.jpg"
-        ],
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/nasros7aa5xxs9eiwron.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/b9czkoyopauaxcxkqxdj.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603541/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/bsd2pigj4vbrhapcn8lf.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603540/airbnb/1.Nice%20South%20Slope%202%20BR%20w%20Patio%2C%20Washer%20%20Dryer/pswbzrvjj9stkoiw3jie.jpg"
+      ],
       "price": 230.00,
       "summary": "New two-bedroom ground-level apartment set back from the street, located on a quiet block in South Slope Brooklyn near restaurants, bars, grocery stores, coffee shops, subway & bus lines. Great area!You'll feel at home here. It's spacious with comfortable furniture, Nectar Mattresses for quality sleep, a fully stocked kitchen so you can cook and eat in if you like. And two big NYC pluses - there's a WASHER and DRYER in the unit and there's a small outdoor space off the Master Bedroom in back.",
       "capacity": 6,
@@ -277,7 +277,7 @@ const db = {
       "reviews": [
         {
           "id": "r101",
-          "createdAt":"1639164653",
+          "createdAt": "1639164653",
           "txt": "Our stay at Todd's place was great! Super easy to get to manhattan using the subway and lots to do right around Brooklyn. Todd was very quick to respond and assist with check in. This was an amazing stay!",
           "rate": 5,
           "by": {
@@ -288,7 +288,7 @@ const db = {
         },
         {
           "id": "r102",
-          "createdAt":"1642534652",
+          "createdAt": "1642534652",
           "txt": "Delightful unit better than the photos, which are great. Very safe and well-located part of Brooklyn. Easy access to the subway and to many Park Slope amenities. Owner was very easy to communicate with and responded to questions quite promptly.",
           "rate": 5,
           "by": {
@@ -299,7 +299,7 @@ const db = {
         },
         {
           "id": "r103",
-          "createdAt":"1636659452",
+          "createdAt": "1636659452",
           "txt": "Good location. Close to Shopping, restaurants and the Barclays Center.",
           "rate": 5,
           "by": {
@@ -309,22 +309,22 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     },
     {
       "_id": "10006551",
       "name": "138 Bowery-Modern Queen Studio",
       "type": "House",
       "rooms": "Studio",
-      "beds":"1 bed",
-      "bath":"1 bath",
+      "beds": "1 bed",
+      "bath": "1 bath",
       "imgUrls": [
         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603776/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/qj6foafn2alcmsb2otah.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/xpczizwjq13lpbkpqcz9.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/be8t51kuem6cb7axlo6f.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/r8hw0ffscselixvxggsm.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/uw2hx9tix537k9mdlcmu.jpg"
-        ],
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/xpczizwjq13lpbkpqcz9.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/be8t51kuem6cb7axlo6f.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/r8hw0ffscselixvxggsm.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603775/airbnb/2.138%20Bowery-Modern%20Queen%20Studio/uw2hx9tix537k9mdlcmu.jpg"
+      ],
       "price": 100.00,
       "summary": "Located in Bowery - historically the most unique streetscape of New York with over 400 years of history and culture - this place is right around the corner of Grand St subway. Super convenient as you can be anywhere in Manhattan in just a few minutes. Steps away from SoHo, NoHo and major subway lines (6,J,Z,N,Q,B,D). Its unbeatable location puts the best of downtown.",
       "capacity": 2,
@@ -355,7 +355,7 @@ const db = {
       "reviews": [
         {
           "id": "r101",
-          "createdAt":"1630870652",
+          "createdAt": "1630870652",
           "txt": "Have stayed here severaltimes now. Always clean, safe and perfect location. Wifi, elevator, a/c, quiet. It's a fabulous stay & I highly recommend.",
           "rate": 4,
           "by": {
@@ -366,7 +366,7 @@ const db = {
         },
         {
           "id": "r102",
-          "createdAt":"1588707452",
+          "createdAt": "1588707452",
           "txt": "Clean apartment, great location. Jeniffer was a very accommodating host in setting me up and kept good communication throughout my stay.",
           "rate": 4,
           "by": {
@@ -377,7 +377,7 @@ const db = {
         },
         {
           "id": "r103",
-          "createdAt":"1554493052",
+          "createdAt": "1554493052",
           "txt": "Great value and location.",
           "rate": 4,
           "by": {
@@ -387,22 +387,22 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     },
     {
       "_id": "10006552",
       "name": "Luxury private apartment/Suite/with balcony",
       "type": "House",
       "rooms": "1 bedroom",
-      "beds":"4 beds",
-      "bath":"1 bath",
+      "beds": "4 beds",
+      "bath": "1 bath",
       "imgUrls": [
         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603874/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/it5vi5ayl8epkjbuvro5.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/kntpqe217cuawwuqoq0w.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/a238yoc4lhkdrfebijh2.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/xjf5gxlbcanmkksmkbxw.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/pdy9nqr4tqxr8j48ongf.jpg"
-        ],
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/kntpqe217cuawwuqoq0w.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/a238yoc4lhkdrfebijh2.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/xjf5gxlbcanmkksmkbxw.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603873/airbnb/3.Luxury%20private%20apartmentSuitewith%20balcony/pdy9nqr4tqxr8j48ongf.jpg"
+      ],
       "price": 105.00,
       "summary": "Luxury private apartment/suite with cozy balcony/terrace has a brand new modern furniture with queen size bedroom set in the bedroom and double level daybed in the living room(see pictures). Very comfortable mattress in every bed.Apartment Building is situated just 15 minutes away from all major airports. Walking distance to all large shopping malls, supermarkets,restaurants and boutiques. Just one block away to \"R\" and \"M\" trains (15-20 minutes to Manhattan) and other major transportation...",
       "capacity": 4,
@@ -433,7 +433,7 @@ const db = {
       "reviews": [
         {
           "id": "r101",
-          "createdAt":"1641065852",
+          "createdAt": "1641065852",
           "txt": "Great place, probably one of the best places for the price. very clean and organize. loved it.",
           "rate": 5,
           "by": {
@@ -444,7 +444,7 @@ const db = {
         },
         {
           "id": "r102",
-          "createdAt":"1594150652",
+          "createdAt": "1594150652",
           "txt": "Very spacious and clean. Location is very convenient and is in a nice neighborhood. I would recommend this place.",
           "rate": 5,
           "by": {
@@ -455,7 +455,7 @@ const db = {
         },
         {
           "id": "r103",
-          "createdAt":"1617478652",
+          "createdAt": "1617478652",
           "txt": "Had a good stay at Lana's place.",
           "rate": 4,
           "by": {
@@ -465,7 +465,7 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     },
     {
       "_id": "10006553",
@@ -476,13 +476,13 @@ const db = {
       "baths": "1 baths",
       "imgUrls": [
         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/oapgf7bnlo3bxladxcsi.jpg",
-       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/mkjwdxg7ozvdw3sjj92v.jpg",
-       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/qa4iqzk48aymylesh6fs.jpg",
-       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/shwqsfzg0xtgzphk0xdm.jpg",
-       "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603979/airbnb/1.Tafari%20Gran%20Via/vygbh3zftuetyplv09ef.jpg"
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/mkjwdxg7ozvdw3sjj92v.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/qa4iqzk48aymylesh6fs.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603980/airbnb/1.Tafari%20Gran%20Via/shwqsfzg0xtgzphk0xdm.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642603979/airbnb/1.Tafari%20Gran%20Via/vygbh3zftuetyplv09ef.jpg"
       ],
       "price": 78.54,
-      "summary":  "Elegant and comfortable one-roomed flat for rent per day situated in the center of Madrid, just behind the mythical building of the Hotel Atlantico of Gran Vía.The nearest metro stations are: Callao / Gran Vía.Ideal for married couples, singles or families who want to stay a few days in the town.The flat is located in a new built building (year 2008), it is on the fifth floor with lift and has a capacity of 3 persons. It has a double bed and a sofa of 85 cm.The kitchen is totally equiped.",
+      "summary": "Elegant and comfortable one-roomed flat for rent per day situated in the center of Madrid, just behind the mythical building of the Hotel Atlantico of Gran Vía.The nearest metro stations are: Callao / Gran Vía.Ideal for married couples, singles or families who want to stay a few days in the town.The flat is located in a new built building (year 2008), it is on the fifth floor with lift and has a capacity of 3 persons. It has a double bed and a sofa of 85 cm.The kitchen is totally equiped.",
       "capacity": 2,
       "amenities": [
         "TV with standard cable",
@@ -543,7 +543,7 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     },
     {
       "_id": "10006554",
@@ -554,11 +554,11 @@ const db = {
       "baths": "1 baths",
       "imgUrls": [
         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/kfjvtiens7lzcujrmk33.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/x7l34bczffiw7xfehkj9.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/fxnsp3vyr1lza8yh0oce.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/qrtwnhhs0lo2kpncgyxv.jpg",
-         "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604481/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/eo5dju90xjvxgnujqo8t.jpg"
-        ],
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/x7l34bczffiw7xfehkj9.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/fxnsp3vyr1lza8yh0oce.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604482/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/qrtwnhhs0lo2kpncgyxv.jpg",
+        "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642604481/airbnb/2.Attic%20in%20the%20Heart%20of%20Madrid-WIFI/eo5dju90xjvxgnujqo8t.jpg"
+      ],
       "price": 33.84,
       "summary": "The space Attic room in the center of Madrid very bright and quiet, overlooking the entire south of Madrid and five minutes from the Puerta del Sol and Madrid's most emblematic places. Calm and quiet, but in the area where most people go out. Bars, cinemas (spanish and english), bars, restaurants, museums, main train station... everything is close to the attic. It has a large bathroom, comfortable lounge with TV, HiFi and kitchen. Wi-Fi by optical fiber. Heating. Plenty of light! The Wi-Fi has the maximum speed available (100MB) to surf the net or use video Skype with total guarantee. An excellent place from which to discover Madrid, with the metro at the door and 10 minutes from Atocha Station. Metro at the door. No smokers.",
       "capacity": 1,
@@ -619,7 +619,7 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     },
     {
       "_id": "10006555",
@@ -697,7 +697,7 @@ const db = {
           }
         }
       ],
-      "likedByUsers" : ['mini-user'] // for user-wishlist : use $in
+      "likedByUsers": ['mini-user'] // for user-wishlist : use $in
     }
   ],
   "order": [
@@ -722,7 +722,7 @@ const db = {
         "price": 80.00
       },
       "status": "pending"
-    }    
+    }
   ],
   "user": [
     {
@@ -730,290 +730,290 @@ const db = {
       "fullname": "Damien Li",
       "imgUrl": "/img/user/Damien.jpg",
       "isHost": true,
-      "username" : "Damien",
-      "password" : "1234"
+      "username": "Damien",
+      "password": "1234"
     },
     {
       "_id": "51399393",
       "fullname": "Shaine Muller",
       "imgUrl": "/img/user/Muller.jpg",
       "isHost": true,
-      "username" : "shaine",
-      "password" : "1234"
+      "username": "shaine",
+      "password": "1234"
     },
     {
       "_id": "51399394",
       "fullname": "Laura geva",
       "imgUrl": "/img/user/Laura.jpg",
       "isHost": true,
-      "username" : "Laura",
-      "password" : "1234"
+      "username": "Laura",
+      "password": "1234"
     },
     {
       "_id": "51399395",
       "fullname": "Todd James",
       "imgUrl": "/img/user/Todd.jpg",
       "isHost": true,
-      "username" : "Todd",
-      "password" : "1234"
+      "username": "Todd",
+      "password": "1234"
     },
     {
       "_id": "51399396",
       "fullname": "Jeniffer Huoston",
       "imgUrl": "/img/user/Jeniffer.jpg",
       "isHost": true,
-      "username" : "Jeniffer",
-      "password" : "1234"
+      "username": "Jeniffer",
+      "password": "1234"
     },
     {
       "_id": "51399397",
       "fullname": "Lana Jane",
       "imgUrl": "/img/user/Lana.jpg",
       "isHost": true,
-      "username" : "Lana",
-      "password" : "1234"
+      "username": "Lana",
+      "password": "1234"
     },
     {
       "_id": "51399398",
       "fullname": "Nuria Guy",
       "imgUrl": "/img/user/Nuria.jpg",
       "isHost": true,
-      "username" : "Nuria",
-      "password" : "1234"
+      "username": "Nuria",
+      "password": "1234"
     },
     {
       "_id": "51399399",
       "fullname": "José Alur",
       "imgUrl": "/img/user/Jose.jpg",
       "isHost": true,
-      "username" : "José",
-      "password" : "1234"
+      "username": "José",
+      "password": "1234"
     },
     {
       "_id": "51399400",
       "fullname": "David Eloisa",
       "imgUrl": "/img/user/David.jpg",
       "isHost": true,
-      "username" : "David",
-      "password" : "1234"
+      "username": "David",
+      "password": "1234"
     },
     {
       "_id": "51399401",
       "fullname": "Lindsay Cohen",
       "imgUrl": "/img/user/Lindsay.jpg",
       "isHost": false,
-      "username" : "Lindsay",
-      "password" : "123"
+      "username": "Lindsay",
+      "password": "123"
     },
     {
       "_id": "51399402",
       "fullname": "Ben Alush",
       "imgUrl": "/img/user/Ben.jpg",
       "isHost": false,
-      "username" : "Ben",
-      "password" : "123"
+      "username": "Ben",
+      "password": "123"
     },
     {
       "_id": "51399403",
       "fullname": "Kristina Ami",
       "imgUrl": "/img/user/Kristina.jpg",
       "isHost": false,
-      "username" : "Kristina",
-      "password" : "123"
+      "username": "Kristina",
+      "password": "123"
     },
     {
       "_id": "51399404",
       "fullname": "Anna Daisy",
       "imgUrl": "/img/user/Anna.jpg",
       "isHost": false,
-      "username" : "Anna",
-      "password" : "123"
+      "username": "Anna",
+      "password": "123"
     },
     {
       "_id": "51399405",
       "fullname": "Caroline Zinc",
       "imgUrl": "/img/user/Caroline.jpg",
       "isHost": false,
-      "username" : "Caroline",
-      "password" : "123"
+      "username": "Caroline",
+      "password": "123"
     },
     {
       "_id": "51399406",
       "fullname": "Sandra Sho",
       "imgUrl": "/img/user/Sandra.jpg",
       "isHost": false,
-      "username" : "Sandra",
-      "password" : "123"
+      "username": "Sandra",
+      "password": "123"
     },
     {
       "_id": "51399407",
       "fullname": "Lily High",
       "imgUrl": "/img/user/Lily.jpg",
       "isHost": false,
-      "username" : "Lily",
-      "password" : "123"
+      "username": "Lily",
+      "password": "123"
     },
     {
       "_id": "51399408",
       "fullname": "Linda Bino",
       "imgUrl": "/img/user/Linda.jpg",
       "isHost": false,
-      "username" : "Linda",
-      "password" : "123"
+      "username": "Linda",
+      "password": "123"
     },
     {
       "_id": "51399409",
       "fullname": "Bianca Papo",
       "imgUrl": "/img/user/Bianca.jpg",
       "isHost": false,
-      "username" : "Bianca",
-      "password" : "123"
+      "username": "Bianca",
+      "password": "123"
     },
     {
       "_id": "51399410",
       "fullname": "Kristen Boss",
       "imgUrl": "/img/user/Kristen.jpg",
       "isHost": false,
-      "username" : "Kristen",
-      "password" : "123"
+      "username": "Kristen",
+      "password": "123"
     },
     {
       "_id": "51399411",
       "fullname": "Richard Gone",
       "imgUrl": "/img/user/Richard.jpg",
       "isHost": false,
-      "username" : "Richard",
-      "password" : "123"
+      "username": "Richard",
+      "password": "123"
     },
     {
       "_id": "51399412",
       "fullname": "Shane Seer",
       "imgUrl": "/img/user/Shane.jpg",
       "isHost": false,
-      "username" : "Shane",
-      "password" : "123"
+      "username": "Shane",
+      "password": "123"
     },
     {
       "_id": "51399413",
       "fullname": "Stephanie Grass",
       "imgUrl": "/img/user/Stephanie.jpg",
       "isHost": false,
-      "username" : "Stephanie",
-      "password" : "123"
+      "username": "Stephanie",
+      "password": "123"
     },
     {
       "_id": "51399414",
       "fullname": "Patricia Slack",
       "imgUrl": "/img/user/Patricia.jpg",
       "isHost": false,
-      "username" : "Patricia",
-      "password" : "123"
+      "username": "Patricia",
+      "password": "123"
     },
     {
       "_id": "51399415",
       "fullname": "Johannes Shane",
       "imgUrl": "/img/user/Johannes.jpg",
       "isHost": false,
-      "username" : "Johannes",
-      "password" : "123"
+      "username": "Johannes",
+      "password": "123"
     },
     {
       "_id": "51399416",
       "fullname": "Geovanni Rosso",
       "imgUrl": "/img/user/Geovanni.jpg",
       "isHost": false,
-      "username" : "Geovanni",
-      "password" : "123"
+      "username": "Geovanni",
+      "password": "123"
     },
     {
       "_id": "51399417",
       "fullname": "Yuji Lev",
       "imgUrl": "/img/user/Yuji.jpg",
       "isHost": false,
-      "username" : "Yuji",
-      "password" : "123"
+      "username": "Yuji",
+      "password": "123"
     },
     {
       "_id": "51399418",
       "fullname": "Cynthia Wayne",
       "imgUrl": "/img/user/Cynthia.jpg",
       "isHost": false,
-      "username" : "Cynthia",
-      "password" : "123"
+      "username": "Cynthia",
+      "password": "123"
     },
     {
       "_id": "51399419",
       "fullname": "Linda Zaia",
       "imgUrl": "/img/user/Linda2.jpg",
       "isHost": false,
-      "username" : "Linda",
-      "password" : "123"
+      "username": "Linda",
+      "password": "123"
     },
     {
       "_id": "51399420",
       "fullname": "Edgar Moz",
       "imgUrl": "/img/user/Edgar.jpg",
       "isHost": false,
-      "username" : "Edgar",
-      "password" : "123"
+      "username": "Edgar",
+      "password": "123"
     },
     {
       "_id": "51399421",
       "fullname": "Stephanie Leinani",
       "imgUrl": "/img/user/Stephanie2.jpg",
       "isHost": false,
-      "username" : "Stephanie",
-      "password" : "123"
+      "username": "Stephanie",
+      "password": "123"
     },
     {
       "_id": "51399422",
       "fullname": "Mallory Gauoda",
       "imgUrl": "/img/user/Mallory.jpg",
       "isHost": false,
-      "username" : "Mallory",
-      "password" : "123"
+      "username": "Mallory",
+      "password": "123"
     },
     {
       "_id": "51399423",
       "fullname": "Crystal Palas",
       "imgUrl": "/img/user/Crystal.jpg",
       "isHost": false,
-      "username" : "Crystal",
-      "password" : "123"
+      "username": "Crystal",
+      "password": "123"
     },
     {
       "_id": "51399424",
       "fullname": "Jerrilynn Aloni",
       "imgUrl": "/img/user/Jerrilynn.jpg",
       "isHost": false,
-      "username" : "Jerrilynn",
-      "password" : "123"
+      "username": "Jerrilynn",
+      "password": "123"
     },
     {
       "_id": "51399425",
       "fullname": "Gorge Mai",
       "imgUrl": "/img/user/Gorge.jpg",
       "isHost": false,
-      "username" : "Gorge",
-      "password" : "123"
+      "username": "Gorge",
+      "password": "123"
     },
     {
       "_id": "51399426",
       "fullname": "Jose Antonio",
       "imgUrl": "/img/user/Jose2.jpg",
       "isHost": false,
-      "username" : "Jose",
-      "password" : "123"
+      "username": "Jose",
+      "password": "123"
     },
     {
       "_id": "51399427",
       "fullname": "Emanuel Noir",
       "imgUrl": "/img/user/Emanuel.jpg",
       "isHost": false,
-      "username" : "Emanuel",
-      "password" : "123"
+      "username": "Emanuel",
+      "password": "123"
     },
-  ]  
+  ]
 }
 
 

@@ -8,7 +8,7 @@ const routes = [
     component: StayDetails,
   },
   {
-    path: '/stay',
+    path: '/explore',
     component: StayApp,
   },
   {

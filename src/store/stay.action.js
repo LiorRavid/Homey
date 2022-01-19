@@ -1,4 +1,4 @@
-import { toyService } from '../services/toy.service.js'
+import { stayService } from '../services/stay.service.js'
 
 export function loadToys() {
   return async (dispatch, getState) => {

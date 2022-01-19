@@ -2,8 +2,9 @@
 // https://docs.atlas.mongodb.com/sample-data/sample-airbnb/
 // Need to be mapped to simpler model
 
+stay[1]._id
 const db = {
-  "stay": [
+  stay: [
     {
       "_id": "10006547",
       "name": "Sunny Beach Apartment",

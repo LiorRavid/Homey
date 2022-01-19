@@ -1,24 +1,15 @@
 import Axios from 'axios'
+import {storageService} from './async-storage.service.js'
 var axios = Axios.create({
     withCredentials: true
 })
 
-const labelsOptions = [
-  { value: 'onWheels', label: 'On wheels' },
-  { value: 'boxGame', label: 'Box game' },
-  { value: 'art', label: 'Art' },
-  { value: 'baby', label: 'Baby' },
-  { value: 'doll', label: 'Doll' },
-  { value: 'puzzle', label: 'Puzzle' },
-  { value: 'outdoor', label: 'Outdoor' },
-]
 
-export const toyService = {
+export const stayService = {
   query,
   getById,
   save,
   remove,
-  labelsOptions,
 }
 
 async function query(filterBy, sort) {
@@ -34,15 +25,18 @@ async function query(filterBy, sort) {
   // return axios.get(`http://localhost:3020/api/toy?name=${name}&inStock=${inStock}&labels=${JSON.stringify(labels)}&type=${type}&order=${order}`).then((res) => res.data)
 }
 
-async function getById(toyId) {
+async function getById(stayId) {
   // return axios
   //   .get(`http://localhost:3020/api/toy/${toyId}`)
   //   .then((res) => res.data)
   try {
-    const res = await axios.get(`http://localhost:3020/api/toy/${toyId}`)
-    return res.data
+    // const res = await axios.get(`http://localhost:3020/api/toy/${toyId}`)
+    const res = await storageService.get('stayDB',stayId)
+    // console.log(res)
+    // return res.data
+    return res
   } catch (err) {
-    console.log(`Cannot get toy with id: ${toyId}`)
+    console.log(`Cannot get toy with id: ${stayId}`)
     throw err
   }
 }

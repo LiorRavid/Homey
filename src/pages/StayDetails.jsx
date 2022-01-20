@@ -147,6 +147,7 @@ export class StayDetails extends React.Component {
                             return <div className="review-card" key={review.id}>
                                 <div className="review-card-header">
                                     {/* <img src={review.by.imgUrl} alt="" /> */}
+                                    {/* <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iqkf1w1u1l6zoqzxgrli.jpg" alt="" /> */}
                                     <h3>{review.by.fullname}</h3>
                                     <small>{this.getDateFromTimeStemp(review.createdAt)}</small>
                                 </div>

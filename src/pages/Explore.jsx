@@ -19,10 +19,13 @@ class _Explore extends React.Component {
 
     render() {
         const {stays} = this.props
+        const trip = ''
         if (!stays || stays.length===0) return <React.Fragment/>
         const imgUrl = stays[0].imgUrls[0]
         return (
             <section className="explore-container">
+                <span>{stays.length} stays</span>
+                <h1>Find place to stay</h1>
                 <StayList stays={stays}/>
             </section>
         )

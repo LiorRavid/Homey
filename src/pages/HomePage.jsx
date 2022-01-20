@@ -1,9 +1,9 @@
-import Header from '../cmps/AppHeader'
+import { AppHeader } from '../cmps/AppHeader'
 
 export function HomePage() {
-    return(
+    return (
         <section className="home-page">
-             <Header />
+            <AppHeader />
         </section>
     )
 }

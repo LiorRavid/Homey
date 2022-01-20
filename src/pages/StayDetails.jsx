@@ -87,6 +87,15 @@ export class StayDetails extends React.Component {
         console.log(average);
         return Number.parseFloat(average).toFixed(2)
     }
+    getDateFromTimeStemp = (timeStemp) => {
+        var a = new Date(timeStemp * 1000);
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var year = a.getFullYear();
+        var month = months[a.getMonth()];
+        var date = a.getDate();
+        var time = date + ' ' + month + ' ' + year;
+        return time;
+    }
 
 
 
@@ -140,10 +149,11 @@ export class StayDetails extends React.Component {
                         {stay.reviews.map(review => {
                             return <div className="review-card" key={review._id}>
                                 <div className="review-card-header">
-                                    <img src={review.by.imgUrl} alt="" />
+                                    {/* <img src={review.by.imgUrl} alt="" /> */}
                                     <h3>{review.by.fullname}</h3>
+                                    <small>{this.getDateFromTimeStemp(review.createdAt)}</small>
                                 </div>
-
+                                <p>{review.txt}</p>
                             </div>
                         })}
                     </div>

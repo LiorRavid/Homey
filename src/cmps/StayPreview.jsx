@@ -5,7 +5,7 @@ export function StayPreview({ stay}) {
     return (
             <Link to={`/stay/${stay._id}`} className="clean-link">
                 <div className="stay-preview-card">
-                    <img src={imgUrl}/>
+                        <img src={imgUrl}/>
                     <div className="stay-preview-info">
                         <h3>{stay.name}</h3>
                         <h3 className="stay-price"><span >${stay.price}</span> / night</h3>

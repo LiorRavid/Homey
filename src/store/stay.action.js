@@ -1,10 +1,10 @@
 import { stayService } from '../services/stay.service.js'
 
 export function loadStays() {
-  console.log('hio')
   return async (dispatch, getState) => {
     try {
-      const stays = await stayService.query()
+      // const { filterBy } = getState().toyModule
+      const stays = await stayService.query(/*filterBy*/)
       dispatch({ type: 'SET_STAYS', stays })
     } catch (err) {
       console.error(err)

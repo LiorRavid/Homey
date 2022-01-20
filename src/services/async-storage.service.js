@@ -8,16 +8,29 @@ export const storageService = {
     postMany
 }
 
-function query(entityType, delay = 600) {
+function query(entityType,filterBy, delay = 600) {
     var entities = JSON.parse(localStorage.getItem(entityType)) || _createEntities(entityType)
 
+    // if (entityType === 'stayDB') {
+    //     if (!filterBy) filterBy = { minPrice:-Infinity, maxPrice:Infinity,location:''}
+
+    //     if (filterBy.location) {
+    //         const location = filterBy.location.toUpperCase()
+    //         entities = entities.filter(stay => {
+    //             return stay.loc.country.toUpperCase().includes(location)
+    //         })
+    //     }
+    //     entities = entities.filter(stay => {
+    //         return (stay.price>=filterBy.minPrice && stay.price <=filterBy.maxPrice)
+    //     } )
+    // }
+        
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             // reject('OOOOPs')
             resolve(entities)
         }, delay)
     })
-    // return Promise.resolve(entities)
 }
 
 function get(entityType, entityId) {

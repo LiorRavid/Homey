@@ -1,10 +1,10 @@
 const initialState = {
   stays: [],
-  // filterBy: {
-  //   name: '',
-  //   inStock: 'undefined',
-  //   labels: null,
-  // },
+//   filterBy: {
+//     minPrice:-Infinity,
+//     maxPrice:Infinity,
+//     location:'',
+// },
   // sort: {
   //   type: 'byName',
   //   order: 1,

@@ -1,17 +1,10 @@
-// export function StayDetails() {
-//     return(
-//         <section className="stay-detail">
-//             Stay Details
-//         </section>
-//     )
-// }
+
 
 import React from 'react'
 // import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 
-// import { Chat } from '../cmps/Chat.jsx'
 
 import { stayService } from '../services/stay.service.js'
 // import { addReview } from '../store/review.actions.js'
@@ -19,7 +12,9 @@ import { stayService } from '../services/stay.service.js'
 export class StayDetails extends React.Component {
     state = {
         stay: null,
-        reviews: []
+        reviews: [],
+        // loggedInUser:'',
+        review:''
     }
 
 
@@ -103,8 +98,8 @@ export class StayDetails extends React.Component {
         const { stay, reviews } = this.state
         const reviewsAvg = this.getReviewsAvg(reviews)
 
-
         if (!stay) return <h1>Loading...</h1>
+
         return (
             <div className="stay-details">
                 <section className="title">
@@ -113,6 +108,7 @@ export class StayDetails extends React.Component {
                     <p>∙</p>
                     <p>{stay.loc.address}</p>
                 </section>
+
                 <section className="gallery">
                     {stay.imgUrls.map((imgUrl, idx) => <img src={imgUrl} alt="" key={idx} />)}
                 </section>
@@ -143,6 +139,7 @@ export class StayDetails extends React.Component {
                         {stay.amenities.map((amenitie,idx) => <p key={idx}>{amenitie}</p>)}
                     </div>
                 </section>
+
                 <section className="reviews">
                     <h2>⭐ {reviewsAvg} ({reviews.length} reviews)</h2>
                     <div className="review-list">
@@ -159,8 +156,11 @@ export class StayDetails extends React.Component {
                     </div>
                 </section>
 
-                {/* <Route component={this.addReviewModal} path="/toy/review-add" />
-                <Chat toyId={toy._id} /> */}
+                <section className="add-review">
+                    <h2>Add Review</h2>
+                </section>
+
+                
             </div>
 
         )

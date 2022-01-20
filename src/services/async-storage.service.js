@@ -127,7 +127,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399392",
                         "fullname": "Damien Li",
-                        "imgUrl": "/img/user/Damien.jpg",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/z9fvzn5thptwielcxjcs.jpg",
                     },
                     "loc": {
                         "country": "Australia",
@@ -145,7 +145,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399401",
                                 "fullname": "Lindsay Cohen",
-                                "imgUrl": "/img/user/Lindsay.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/rqxrhjsfe3pdfigrngck.jpg"
                             }
                         },
                         {
@@ -156,7 +156,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399402",
                                 "fullname": "Ben Alush",
-                                "imgUrl": "/img/user/Ben.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/hexzpxqrbckr79fpme6k.jpg"
                             }
                         },
                         {
@@ -167,7 +167,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399403",
                                 "fullname": "Kristina Ami",
-                                "imgUrl": "/img/user/Kristina.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/oani6ltbutvjrwtk3y87.jpg"
                             }
                         }
                     ],
@@ -203,7 +203,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399393",
                         "fullname": "Shaine Muller",
-                        "imgUrl": "/img/user/Muller.jpg",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/qgs5dku8ibjb27lemyd8.jpg",
                     },
                     "loc": {
                         "country": "Australia",
@@ -221,7 +221,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399404",
                                 "fullname": "Anna Daisy",
-                                "imgUrl": "/img/user/Anna.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iv4wumidq298t4dkymr7.jpg"
                             }
                         },
                         {
@@ -232,7 +232,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399405",
                                 "fullname": "Caroline Zinc",
-                                "imgUrl": "/img/user/Caroline.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/x69menxowdfk9t0w6vkq.jpg"
                             }
                         },
                         {
@@ -243,7 +243,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399406",
                                 "fullname": "Sandra Sho",
-                                "imgUrl": "/img/user/Sandra.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/yso7svkq9csrtyn1tt1f.jpg"
                             }
                         }
                     ],
@@ -277,7 +277,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399394",
                         "fullname": "Laura Geva",
-                        "imgUrl": "/img/user/Laura.jpg",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/ysfdpeukfczrsojbsybv.jpg",
                     },
                     "loc": {
                         "country": "Australia",
@@ -295,7 +295,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399407",
                                 "fullname": "Lily High",
-                                "imgUrl": "/img/user/Lily.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/xvvnlvnxfswn2wuljf1u.jpg"
                             }
                         },
                         {
@@ -306,7 +306,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399408",
                                 "fullname": "Linda Bino",
-                                "imgUrl": "/img/user/Linda.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/gzloilmrozsgnar7kcpy.jpg"
                             }
                         },
                         {
@@ -317,7 +317,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399409",
                                 "fullname": "Bianca Papo",
-                                "imgUrl": "/img/user/Bianca.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/sok0f011ccq2og8aczma.jpg"
                             }
                         }
                     ],
@@ -357,7 +357,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399395",
                         "fullname": "Todd James",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/rpwmbdbljxbreiyr1dp5.jpg",
                     },
                     "loc": {
                         "country": "United States",
@@ -375,7 +375,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399410",
                                 "fullname": "Kristen Boss",
-                                "imgUrl": "/img/user/Kristen.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/ymls8guacyduphw9gbek.jpg"
                             }
                         },
                         {
@@ -386,7 +386,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399411",
                                 "fullname": "Richard Gone",
-                                "imgUrl": "/img/user/Richard.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/nnmrnj0cioxhrdj9nohv.jpg"
                             }
                         },
                         {
@@ -397,7 +397,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399412",
                                 "fullname": "Shane Seer",
-                                "imgUrl": "/img/user/Shane.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/labhymljovfwwwakwr9h.jpg"
                             }
                         }
                     ],
@@ -435,7 +435,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399396",
                         "fullname": "Jeniffer Huoston",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/zlkfwvkumwlrzzrtnrms.jpg",
                     },
                     "loc": {
                         "country": "United States",
@@ -453,7 +453,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399413",
                                 "fullname": "Stephanie Grass",
-                                "imgUrl": "/img/user/Stephanie.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/clz9vbbaephnsmkcdgq2.jpg"
                             }
                         },
                         {
@@ -464,7 +464,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399414",
                                 "fullname": "Patricia Slack",
-                                "imgUrl": "/img/user/Patricia.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/hvkh9qe0a07mi873zdyz.jpg"
                             }
                         },
                         {
@@ -475,7 +475,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399415",
                                 "fullname": "Johannes Shane",
-                                "imgUrl": "/img/user/Johannes.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/csrbgx9vv8bbs2fmbpdu.jpg"
                             }
                         }
                     ],
@@ -513,7 +513,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399397",
                         "fullname": "Lana Jane",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/w5h7m6yedu6iqzi8pje8.jpg",
                     },
                     "loc": {
                         "country": "United States",
@@ -531,7 +531,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399416",
                                 "fullname": "Geovanni Rosso",
-                                "imgUrl": "/img/user/Geovanni.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694272/airbnb/users/ovpsurmx5olcbaoqujdv.jpg"
                             }
                         },
                         {
@@ -542,7 +542,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399417",
                                 "fullname": "Yuji Lev",
-                                "imgUrl": "/img/user/Yuji.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/ezpzm0eiipod0yrxu2pm.jpg"
                             }
                         },
                         {
@@ -553,7 +553,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399418",
                                 "fullname": "Cynthia Wayne",
-                                "imgUrl": "/img/user/Cynthia.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/rlzfdsumttpvqyc9aenv.jpg"
                             }
                         }
                     ],
@@ -591,7 +591,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399398",
                         "fullname": "Nuria",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/r8jukej0xmbajqluliqe.jpg",
                     },
                     "loc": {
                         "country": "Spain",
@@ -609,7 +609,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399419",
                                 "fullname": "Linda Zaia",
-                                "imgUrl": "/img/user/Linda2.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iqkf1w1u1l6zoqzxgrli.jpg"
                             }
                         },
                         {
@@ -620,7 +620,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399420",
                                 "fullname": "Edgar Moz",
-                                "imgUrl": "/img/user/Edgar.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/jvcxtcuixivln9pqpcz7.jpg"
                             }
                         },
                         {
@@ -631,7 +631,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399421",
                                 "fullname": "Stephanie Leinani",
-                                "imgUrl": "/img/user/Stephanie2.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/oani6ltbutvjrwtk3y87.jpg"
                             }
                         }
                     ],
@@ -667,7 +667,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399399",
                         "fullname": "José",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/i2v3i6lbcrb1eubmezkj.jpg",
                     },
                     "loc": {
                         "country": "Spain",
@@ -685,7 +685,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399422",
                                 "fullname": "Mallory Gauoda",
-                                "imgUrl": "/img/user/Mallory.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/xzbls0ekzakmg9tnsyot.jpg"
                             }
                         },
                         {
@@ -696,7 +696,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399423",
                                 "fullname": "Crystal Palas",
-                                "imgUrl": "/img/user/Crystal.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/dlkzgh1lknrddahvf1dh.jpg"
                             }
                         },
                         {
@@ -707,7 +707,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399424",
                                 "fullname": "Jerrilynn aloni",
-                                "imgUrl": "/img/user/Jerrilynn.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/iabu99jfklda8w86wboe.jpg"
                             }
                         }
                     ],
@@ -745,7 +745,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399400",
                         "fullname": "David Eloisa",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/lvnkfgpktpbrlxymdolz.jpg",
                     },
                     "loc": {
                         "country": "Spain",
@@ -763,7 +763,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399425",
                                 "fullname": "Gorge Mai",
-                                "imgUrl": "/img/user/Gorge.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/ixjgcxyr0ldtr0nusevt.jpg"
                             }
                         },
                         {
@@ -774,7 +774,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399426",
                                 "fullname": "Jose Antonio",
-                                "imgUrl": "/img/user/Jose2.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/iklgetxe2b2ydlupuzib.jpg"
                             }
                         },
                         {
@@ -785,7 +785,7 @@ function _createEntities(entityType) {
                             "by": {
                                 "_id": "51399427",
                                 "fullname": "Emanuel Noir",
-                                "imgUrl": "/img/user/Emanuel.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/rmpydqpcbz8c1ims6hzb.jpg"
                             }
                         }
                     ],
@@ -798,7 +798,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399392",
                     "fullname": "Damien Li",
-                    "imgUrl": "/img/user/Damien.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/z9fvzn5thptwielcxjcs.jpg",
                     "isHost": true,
                     "username": "Damien",
                     "password": "1234"
@@ -806,15 +806,15 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399393",
                     "fullname": "Shaine Muller",
-                    "imgUrl": "/img/user/Muller.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/qgs5dku8ibjb27lemyd8.jpg",
                     "isHost": true,
                     "username": "shaine",
                     "password": "1234"
                 },
                 {
                     "_id": "51399394",
-                    "fullname": "Laura geva",
-                    "imgUrl": "/img/user/Laura.jpg",
+                    "fullname": "Laura Geva",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/ysfdpeukfczrsojbsybv.jpg",
                     "isHost": true,
                     "username": "Laura",
                     "password": "1234"
@@ -822,7 +822,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399395",
                     "fullname": "Todd James",
-                    "imgUrl": "/img/user/Todd.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/rpwmbdbljxbreiyr1dp5.jpg",
                     "isHost": true,
                     "username": "Todd",
                     "password": "1234"
@@ -830,7 +830,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399396",
                     "fullname": "Jeniffer Huoston",
-                    "imgUrl": "/img/user/Jeniffer.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/zlkfwvkumwlrzzrtnrms.jpg",
                     "isHost": true,
                     "username": "Jeniffer",
                     "password": "1234"
@@ -838,7 +838,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399397",
                     "fullname": "Lana Jane",
-                    "imgUrl": "/img/user/Lana.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/w5h7m6yedu6iqzi8pje8.jpg",
                     "isHost": true,
                     "username": "Lana",
                     "password": "1234"
@@ -846,7 +846,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399398",
                     "fullname": "Nuria Guy",
-                    "imgUrl": "/img/user/Nuria.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/r8jukej0xmbajqluliqe.jpg",
                     "isHost": true,
                     "username": "Nuria",
                     "password": "1234"
@@ -854,7 +854,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399399",
                     "fullname": "José Alur",
-                    "imgUrl": "/img/user/Jose.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/i2v3i6lbcrb1eubmezkj.jpg",
                     "isHost": true,
                     "username": "José",
                     "password": "1234"
@@ -862,7 +862,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399400",
                     "fullname": "David Eloisa",
-                    "imgUrl": "/img/user/David.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/lvnkfgpktpbrlxymdolz.jpg",
                     "isHost": true,
                     "username": "David",
                     "password": "1234"
@@ -870,7 +870,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399401",
                     "fullname": "Lindsay Cohen",
-                    "imgUrl": "/img/user/Lindsay.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/rqxrhjsfe3pdfigrngck.jpg",
                     "isHost": false,
                     "username": "Lindsay",
                     "password": "123"
@@ -878,7 +878,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399402",
                     "fullname": "Ben Alush",
-                    "imgUrl": "/img/user/Ben.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/hexzpxqrbckr79fpme6k.jpg",
                     "isHost": false,
                     "username": "Ben",
                     "password": "123"
@@ -886,7 +886,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399403",
                     "fullname": "Kristina Ami",
-                    "imgUrl": "/img/user/Kristina.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/oani6ltbutvjrwtk3y87.jpg",
                     "isHost": false,
                     "username": "Kristina",
                     "password": "123"
@@ -894,7 +894,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399404",
                     "fullname": "Anna Daisy",
-                    "imgUrl": "/img/user/Anna.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iv4wumidq298t4dkymr7.jpg",
                     "isHost": false,
                     "username": "Anna",
                     "password": "123"
@@ -902,7 +902,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399405",
                     "fullname": "Caroline Zinc",
-                    "imgUrl": "/img/user/Caroline.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/x69menxowdfk9t0w6vkq.jpg",
                     "isHost": false,
                     "username": "Caroline",
                     "password": "123"
@@ -910,7 +910,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399406",
                     "fullname": "Sandra Sho",
-                    "imgUrl": "/img/user/Sandra.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/yso7svkq9csrtyn1tt1f.jpg",
                     "isHost": false,
                     "username": "Sandra",
                     "password": "123"
@@ -918,7 +918,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399407",
                     "fullname": "Lily High",
-                    "imgUrl": "/img/user/Lily.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/xvvnlvnxfswn2wuljf1u.jpg",
                     "isHost": false,
                     "username": "Lily",
                     "password": "123"
@@ -926,7 +926,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399408",
                     "fullname": "Linda Bino",
-                    "imgUrl": "/img/user/Linda.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/gzloilmrozsgnar7kcpy.jpg",
                     "isHost": false,
                     "username": "Linda",
                     "password": "123"
@@ -934,7 +934,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399409",
                     "fullname": "Bianca Papo",
-                    "imgUrl": "/img/user/Bianca.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/sok0f011ccq2og8aczma.jpg",
                     "isHost": false,
                     "username": "Bianca",
                     "password": "123"
@@ -942,7 +942,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399410",
                     "fullname": "Kristen Boss",
-                    "imgUrl": "/img/user/Kristen.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/ymls8guacyduphw9gbek.jpg",
                     "isHost": false,
                     "username": "Kristen",
                     "password": "123"
@@ -950,7 +950,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399411",
                     "fullname": "Richard Gone",
-                    "imgUrl": "/img/user/Richard.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/nnmrnj0cioxhrdj9nohv.jpg",
                     "isHost": false,
                     "username": "Richard",
                     "password": "123"
@@ -958,7 +958,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399412",
                     "fullname": "Shane Seer",
-                    "imgUrl": "/img/user/Shane.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/labhymljovfwwwakwr9h.jpg",
                     "isHost": false,
                     "username": "Shane",
                     "password": "123"
@@ -966,7 +966,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399413",
                     "fullname": "Stephanie Grass",
-                    "imgUrl": "/img/user/Stephanie.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/clz9vbbaephnsmkcdgq2.jpg",
                     "isHost": false,
                     "username": "Stephanie",
                     "password": "123"
@@ -974,7 +974,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399414",
                     "fullname": "Patricia Slack",
-                    "imgUrl": "/img/user/Patricia.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/hvkh9qe0a07mi873zdyz.jpg",
                     "isHost": false,
                     "username": "Patricia",
                     "password": "123"
@@ -982,7 +982,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399415",
                     "fullname": "Johannes Shane",
-                    "imgUrl": "/img/user/Johannes.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/csrbgx9vv8bbs2fmbpdu.jpg",
                     "isHost": false,
                     "username": "Johannes",
                     "password": "123"
@@ -990,7 +990,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399416",
                     "fullname": "Geovanni Rosso",
-                    "imgUrl": "/img/user/Geovanni.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694272/airbnb/users/ovpsurmx5olcbaoqujdv.jpg",
                     "isHost": false,
                     "username": "Geovanni",
                     "password": "123"
@@ -998,7 +998,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399417",
                     "fullname": "Yuji Lev",
-                    "imgUrl": "/img/user/Yuji.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/ezpzm0eiipod0yrxu2pm.jpg",
                     "isHost": false,
                     "username": "Yuji",
                     "password": "123"
@@ -1006,7 +1006,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399418",
                     "fullname": "Cynthia Wayne",
-                    "imgUrl": "/img/user/Cynthia.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/rlzfdsumttpvqyc9aenv.jpg",
                     "isHost": false,
                     "username": "Cynthia",
                     "password": "123"
@@ -1014,7 +1014,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399419",
                     "fullname": "Linda Zaia",
-                    "imgUrl": "/img/user/Linda2.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iqkf1w1u1l6zoqzxgrli.jpg",
                     "isHost": false,
                     "username": "Linda",
                     "password": "123"
@@ -1022,7 +1022,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399420",
                     "fullname": "Edgar Moz",
-                    "imgUrl": "/img/user/Edgar.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/jvcxtcuixivln9pqpcz7.jpg",
                     "isHost": false,
                     "username": "Edgar",
                     "password": "123"
@@ -1030,7 +1030,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399421",
                     "fullname": "Stephanie Leinani",
-                    "imgUrl": "/img/user/Stephanie2.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/oani6ltbutvjrwtk3y87.jpg",
                     "isHost": false,
                     "username": "Stephanie",
                     "password": "123"
@@ -1038,7 +1038,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399422",
                     "fullname": "Mallory Gauoda",
-                    "imgUrl": "/img/user/Mallory.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/xzbls0ekzakmg9tnsyot.jpg",
                     "isHost": false,
                     "username": "Mallory",
                     "password": "123"
@@ -1046,7 +1046,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399423",
                     "fullname": "Crystal Palas",
-                    "imgUrl": "/img/user/Crystal.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/dlkzgh1lknrddahvf1dh.jpg",
                     "isHost": false,
                     "username": "Crystal",
                     "password": "123"
@@ -1054,7 +1054,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399424",
                     "fullname": "Jerrilynn Aloni",
-                    "imgUrl": "/img/user/Jerrilynn.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/iabu99jfklda8w86wboe.jpg",
                     "isHost": false,
                     "username": "Jerrilynn",
                     "password": "123"
@@ -1062,7 +1062,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399425",
                     "fullname": "Gorge Mai",
-                    "imgUrl": "/img/user/Gorge.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/ixjgcxyr0ldtr0nusevt.jpg",
                     "isHost": false,
                     "username": "Gorge",
                     "password": "123"
@@ -1070,7 +1070,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399426",
                     "fullname": "Jose Antonio",
-                    "imgUrl": "/img/user/Jose2.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/iklgetxe2b2ydlupuzib.jpg",
                     "isHost": false,
                     "username": "Jose",
                     "password": "123"
@@ -1078,7 +1078,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399427",
                     "fullname": "Emanuel Noir",
-                    "imgUrl": "/img/user/Emanuel.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/rmpydqpcbz8c1ims6hzb.jpg",
                     "isHost": false,
                     "username": "Emanuel",
                     "password": "123"

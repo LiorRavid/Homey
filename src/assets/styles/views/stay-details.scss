@@ -36,4 +36,18 @@
          }
         }
     }
+    .info{
+        width: 60%;
+        .info-title{
+            border-bottom: 1px solid rgba(0,0,0,.1607843137254902); 
+        }
+        .info-feature{
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0,0,0,.1607843137254902);
+        }
+        .info-description{
+            // padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0,0,0,.1607843137254902);
+        }
+    }
 }

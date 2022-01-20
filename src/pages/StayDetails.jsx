@@ -105,7 +105,7 @@ export class StayDetails extends React.Component {
                     <p>{stay.loc.address}</p>
                 </section>
                 <section className="gallery">
-                    {stay.imgUrls.map(imgUrl => <img src={imgUrl} alt="" />)}
+                    {stay.imgUrls.map((imgUrl, idx) => <img src={imgUrl} alt="" key={idx} />)}
                 </section>
 
                 <section className="info">
@@ -130,22 +130,25 @@ export class StayDetails extends React.Component {
                     </div>
                     <div className="info-amenities">
                         <h2>What this place offers</h2>
-                        
-                            {stay.amenities.map(amenitie =><p>{amenitie}</p>)}
+
+                        {stay.amenities.map(amenitie => <p>{amenitie}</p>)}
                     </div>
                 </section>
                 <section className="reviews">
                     <h2>⭐ {reviewsAvg} ({reviews.length} reviews)</h2>
-                    {/* <hr />
-                    {stay.reviews.map(review => {
-                        return <section key={review._id}>
-                            <p><span>Review: </span>{review.txt}</p>
-                            <p><span>Creator: </span>{review.byUser}</p>
-                            <hr />
-                        </section>
-                    })} */}
+                    <div className="review-list">
+                        {stay.reviews.map(review => {
+                            return <div className="review-card" key={review._id}>
+                                <div className="review-card-header">
+                                    <img src={review.by.imgUrl} alt="" />
+                                    <h3>{review.by.fullname}</h3>
+                                </div>
+
+                            </div>
+                        })}
+                    </div>
                 </section>
-               
+
                 {/* <Route component={this.addReviewModal} path="/toy/review-add" />
                 <Chat toyId={toy._id} /> */}
             </div>

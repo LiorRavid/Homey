@@ -136,14 +136,14 @@ export class StayDetails extends React.Component {
                 </section>
                 <section className="reviews">
                     <h2>⭐ {reviewsAvg} ({reviews.length} reviews)</h2>
-                    <hr />
-                    {toy.reviews.map(review => {
+                    {/* <hr />
+                    {stay.reviews.map(review => {
                         return <section key={review._id}>
                             <p><span>Review: </span>{review.txt}</p>
                             <p><span>Creator: </span>{review.byUser}</p>
                             <hr />
                         </section>
-                    })}
+                    })} */}
                 </section>
                
                 {/* <Route component={this.addReviewModal} path="/toy/review-add" />

@@ -140,14 +140,14 @@ export class StayDetails extends React.Component {
                     <div className="info-amenities">
                         <h2>What this place offers</h2>
 
-                        {stay.amenities.map(amenitie => <p>{amenitie}</p>)}
+                        {stay.amenities.map((amenitie,idx) => <p key={idx}>{amenitie}</p>)}
                     </div>
                 </section>
                 <section className="reviews">
                     <h2>⭐ {reviewsAvg} ({reviews.length} reviews)</h2>
                     <div className="review-list">
                         {stay.reviews.map(review => {
-                            return <div className="review-card" key={review._id}>
+                            return <div className="review-card" key={review.id}>
                                 <div className="review-card-header">
                                     {/* <img src={review.by.imgUrl} alt="" /> */}
                                     <h3>{review.by.fullname}</h3>

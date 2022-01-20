@@ -3,7 +3,7 @@ import { SiAirbnb } from 'react-icons/si';
 import { FaUserCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi"
 
-function Header() {
+export function AppHeader() {
     return (
         <div className='header'>
 
@@ -25,4 +25,3 @@ function Header() {
     )
 }
 
-export default Header

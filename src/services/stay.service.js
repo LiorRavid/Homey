@@ -13,11 +13,11 @@ export const stayService = {
   remove,
 }
 
-async function query() {
+async function query(filterBy) {
   try {
     // const res = await axios.get(`http://localhost:3020/api/toy?name=${name}&inStock=${inStock}&labels=${JSON.stringify(labels)}&type=${type}&order=${order}`)
     // return res.data
-    const res = await storageService.query(STORAGE_KEY)
+    const res = await storageService.query(STORAGE_KEY,filterBy)
     console.log(res)
     return res
   } catch (err) {

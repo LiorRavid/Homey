@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { StayList } from '../cmps/StayList.jsx'
+import{Filter} from '../cmps/StayFilter.jsx'
 import { loadStays,setFilter} from '../store/stay.action.js'
 
 
@@ -17,11 +18,11 @@ class _Explore extends React.Component {
     //     }
     // }
 
-    onSetFilter = (filterBy) => {
+    // onSetFilter = (filterBy) => {
 
-        console.log('the new filter', filterBy)
-        this.props.setFilter(filterBy)
-    }
+    //     console.log('the new filter', filterBy)
+    //     this.props.setFilter(filterBy)
+    // }
 
     render() {
         const {stays} = this.props
@@ -32,7 +33,7 @@ class _Explore extends React.Component {
             <section className="explore-container">
                 <span>{stays.length} stays</span>
                 <h1>Find place to stay</h1>
-                <Filter onSetFilter={this.onSetFilter}/>
+                {/* <Filter onSetFilter={this.onSetFilter}/> */}
                 <StayList stays={stays}/>
             </section>
         )
@@ -47,7 +48,7 @@ function mapStateToProps({ stayModule }) {
 
 const mapDispatchToProps = {
     loadStays,
-    setFilter
+    // setFilter
 }
 
 

@@ -78,22 +78,22 @@ export class StayDetails extends React.Component {
     // }
 
     getReviewsAvg = (reviews) => {
-        const sum = reviews.reduce((acc, review) =>{
+        const sum = reviews.reduce((acc, review) => {
             return acc + review.rate;
-          }, 0);
-          
-          const average = sum / reviews.length;
-          
-          console.log(average);
-          return Number.parseFloat(average).toFixed(2)
+        }, 0);
+
+        const average = sum / reviews.length;
+
+        console.log(average);
+        return Number.parseFloat(average).toFixed(2)
     }
 
 
 
     render() {
-        const { stay,reviews } = this.state
+        const { stay, reviews } = this.state
         const reviewsAvg = this.getReviewsAvg(reviews)
-        
+
 
         if (!stay) return <h1>Loading...</h1>
         return (
@@ -107,8 +107,35 @@ export class StayDetails extends React.Component {
                 <section className="gallery">
                     {stay.imgUrls.map(imgUrl => <img src={imgUrl} alt="" />)}
                 </section>
-                {/* <section className="reviews">
-                    <h2>Toy reviews:</h2>
+
+                <section className="info">
+                    <div className="info-title">
+                        <h2>Entire {stay.type} hosted by {stay.host.fullname}</h2>
+                        <p>{stay.capacity} guests ∙ {stay.rooms} ∙ {stay.beds} ∙ {stay.baths}</p>
+                        {/* <img src={`../assets${stay.host.imgUrl}`} alt="" /> */}
+                    </div>
+                    <div className="info-feature">
+                        <h3>Entire home</h3>
+                        <small>You’ll have the apartment to yourself.</small>
+                        <h3>Self check-in</h3>
+                        <small>Check yourself in with the keypad.</small>
+                        <h3>Great location</h3>
+                        <small>95% of recent guests gave the location a 5-star rating.</small>
+                        <h3>Enhanced Clean</h3>
+                        <small>This Host committed to Airbnb's 5-step enhanced cleaning process.</small>
+                    </div>
+                    <div className="info-description">
+                        <h2>Description</h2>
+                        <p>{stay.summary}</p>
+                    </div>
+                    <div className="info-amenities">
+                        <h2>What this place offers</h2>
+                        
+                            {stay.amenities.map(amenitie =><p>{amenitie}</p>)}
+                    </div>
+                </section>
+                <section className="reviews">
+                    <h2>⭐ {reviewsAvg} ({reviews.length} reviews)</h2>
                     <hr />
                     {toy.reviews.map(review => {
                         return <section key={review._id}>
@@ -118,15 +145,8 @@ export class StayDetails extends React.Component {
                         </section>
                     })}
                 </section>
-                <section className="controllers flex">
-                    <button>
-                        <Link className="primary-btn clean-link" to={`/toy/edit/${toy._id}`
-                        }>Edit</Link>
-                    </button>
-                    <NavLink className="modal-link" to={`/toy/review-add`}>Add Review</NavLink>
-                    <button onClick={this.onGoBack}>Back</button>
-                </section>
-                <Route component={this.addReviewModal} path="/toy/review-add" />
+               
+                {/* <Route component={this.addReviewModal} path="/toy/review-add" />
                 <Chat toyId={toy._id} /> */}
             </div>
 

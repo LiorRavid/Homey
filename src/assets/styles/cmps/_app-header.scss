@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     font-family: circular ;
+    z-index: 100;
+    position: sticky;
     
 }
 
@@ -14,7 +16,7 @@
     justify-content: center;
     font-size: 1rem;
     cursor: pointer;
-    color: white;
+    color: #ff385c;
 
     .homey {
         font-size: 1.8em;
@@ -22,33 +24,71 @@
     }
 }
 
-.header-right{
+.header-center {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px lightgray solid;
+    padding: 10px;
+    flex: 1;
+    max-width: fit-content;
+    border-radius: 999px;
+    margin-top: 15px;
+    margin-bottom: 10px;    
+    cursor: pointer;
+    transform: translateX(33%);
+    box-shadow: 1px 1px 3px 0px #00000066;
+    height: 50px;
+
+    .search-icon{
+        background-color: #ff385c;
+        border-radius: 50%;
+        color: white;
+        font-size: 2rem;
+        padding: 0.5rem;       
+    }
+}
+
+.header-center > input {
+    border: none;
+    width: 250px;
+    padding: 10px;
+    outline-width: 0;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 
     button{
-        margin-right: 20px;
         background-color: #ff000000;
         padding: 15px;
         border-radius: 20px;
         border: none;
         cursor: pointer;
-        color: white;
+        color: black;
     }
-    button:hover:not(last-child){
-        background-color: #706d6d67;
+    button:hover:not(:last-child){
+        background-color: #706d6d0e;
+    }
+    button:not(:last-child){
+        margin-right: 20px;
+    }
+    button:last-child{
+        border: 1px lightgray solid;
     }
 
     .user-icon{
         background-color: rgb(251, 251, 251);
         display: flex;
-        padding: 10px;
+        padding: 5px;
+        font-size: 2rem;
 
         .ham-icon{
-            margin: 4px 7px 0px
-            
+            margin: 7px 9px 0px;
+            font-size: 2rem;
             
         }
     }

@@ -30,8 +30,9 @@ export class StayDetails extends React.Component {
     loadStay = () => {
         const { stayId } = this.props.match.params
         stayService.getById(stayId).then((stay) => {
-            console.log('stay from details',stay)
-            this.setState({ stay })
+            console.log('stay from details', stay)
+            const reviews = [...stay.reviews]
+            this.setState({ stay, reviews })
         })
         // , () => { console.log('the state after stay', this.state) }
     }
@@ -76,20 +77,37 @@ export class StayDetails extends React.Component {
 
     // }
 
+    getReviewsAvg = (reviews) => {
+        const sum = reviews.reduce((acc, review) =>{
+            return acc + review.rate;
+          }, 0);
+          
+          const average = sum / reviews.length;
+          
+          console.log(average);
+          return Number.parseFloat(average).toFixed(2)
+    }
+
 
 
     render() {
-        const { stay } = this.state
+        const { stay,reviews } = this.state
+        const reviewsAvg = this.getReviewsAvg(reviews)
+        
+
         if (!stay) return <h1>Loading...</h1>
         return (
             <div className="stay-details">
-                <h1>{stay.name}</h1>
-                {/* <section className="title">
-                    <h1>{toy.name}</h1>
-                    {toy.isInStock && <h3>In stock!!</h3>}
-                    <h2>${toy.price}</h2>
+                <section className="title">
+                    <h1>{stay.name}</h1>
+                    <p>⭐ {reviewsAvg} ({reviews.length} reviews)</p>
+                    <p>∙</p>
+                    <p>{stay.loc.address}</p>
                 </section>
-                <section className="reviews">
+                <section className="gallery">
+                    {stay.imgUrls.map(imgUrl => <img src={imgUrl} alt="" />)}
+                </section>
+                {/* <section className="reviews">
                     <h2>Toy reviews:</h2>
                     <hr />
                     {toy.reviews.map(review => {

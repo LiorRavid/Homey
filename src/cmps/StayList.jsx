@@ -1,10 +1,10 @@
-// import { StayPreview } from '../StayPreview.jsx'
+import { StayPreview } from './StayPreview.jsx'
 
-// export function StayList({ stays, loggedInUser, updateUser, toggleMsgModal, login, trip,addTrip ,loadWishlist ,stayType}) {
+export function StayList({stays}) {
 
-//     return (
-//         <section className="stay-list">
-//             {stays.map(stay => <StayPreview key={Math.random()} updateUser={updateUser} loggedInUser={loggedInUser} stay={stay} toggleMsgModal={toggleMsgModal} stayType={stayType} login={login} trip={trip} addTrip={addTrip} loadWishlist={loadWishlist}/>)}
-//         </section>
-//     )
-// }
+    return (
+        <section className="stay-list card-grid">
+            {stays.map(stay => <StayPreview key={stay._id} stay={stay}/>)}
+        </section>
+    )
+}

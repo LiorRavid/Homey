@@ -5,15 +5,18 @@
 @import "setup/typography.scss";
 
 // // Basics
-// @import "basics/helpers.scss";
+@import "basics/helpers.scss";
 @import "basics/layout.scss";
-// @import "basics/base.scss";
-// @import "basics/buttons.scss";
+@import "basics/base.scss";
+@import "basics/buttons.scss";
 
 // // Components
-// @import "cmps/stay-list.scss";
-// @import "cmps/stay-filter.scss";
-// @import "cmps/app-header.scss";
+@import "cmps/stay-list.scss";
+@import "cmps/stay-filter.scss";
+@import "cmps/app-header.scss";
+@import "cmps/stay-preview.scss";
+@import "cmps/user-msg.scss";
+
+// Views
+@import "views/explore.scss";
 @import "views/stay-details.scss";
-// @import "cmps/stay-preview.scss";
-// @import "cmps/user-msg.scss";

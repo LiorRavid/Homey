@@ -22,6 +22,16 @@
     @content;
   }
 }
+@mixin for-desktop-layout {
+  @media (min-width: $padded-break-desktop) {
+    @content;
+  }
+}
+@mixin for-huge-layout {
+  @media (min-width: $padded-break-huge) {
+    @content;
+  }
+}
 
 @mixin layoutGTC($max) {
   grid-template-columns:
@@ -38,14 +48,16 @@
     display: block;
     content: '';
     width: 100%;
-    padding-top: ($height / $width) * 100%;
   }
-  > * {
-    position: absolute;
-    inset: 0;
-  }
+  // > * {
+  //   position: absolute;
+  //   inset: 0;
+  // }
 
   > img {
+    position: absolute;
+    inset: 0;
+    border-radius: 13px;
     // height: 100%;
     width: 65%;
     object-fit: cover;

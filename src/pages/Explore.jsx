@@ -23,8 +23,7 @@ class _Explore extends React.Component {
         const imgUrl = stays[0].imgUrls[0]
         return (
             <section className="explore-container">
-                <img src ={imgUrl}/>
-                {/* <StayList stays={stays}/> */}
+                <StayList stays={stays}/>
             </section>
         )
     }

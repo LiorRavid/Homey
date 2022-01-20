@@ -8,14 +8,14 @@ export function AppHeader() {
         <div className='header'>
 
             <div className='header-left'>
-                <SiAirbnb size="2em" color="blue" />
+                <SiAirbnb size="2em" color="white" />
                 <span className='homey'>  homey</span>
             </div>
 
             <div className='header-right'>
                 <button>Became a Host</button>
                 <button>Explore</button>
-                <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem"/><FaUserCircle size="1.5rem" color="#717171"/></button>
+                <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black"/><FaUserCircle size="1.5rem" color="#717171"/></button>
                 
             </div>
 

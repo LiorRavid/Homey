@@ -3,19 +3,22 @@
     display: flex;
     justify-content: space-between;
     font-family: circular ;
+    
 }
 
 .header-left {
     display: flex;
     object-fit: contain;
-    height: 70px;
+    height: 80px;
     align-items: center;
     justify-content: center;
     font-size: 1rem;
     cursor: pointer;
+    color: white;
 
     .homey {
         font-size: 1.8em;
+        margin-left: 5px;
     }
 }
 
@@ -32,13 +35,14 @@
         border-radius: 20px;
         border: none;
         cursor: pointer;
+        color: white;
     }
-    button:hover{
-        background-color: #706d6d21;
+    button:hover:not(last-child){
+        background-color: #706d6d67;
     }
 
     .user-icon{
-        background-color: red;
+        background-color: rgb(251, 251, 251);
         display: flex;
         padding: 10px;
 

@@ -1,5 +1,6 @@
 .stay-details{
     .title{
+padding-block-start: 20px;
         h1{
            font-size: 1.5rem;
         line-height: 1.4rem;
@@ -39,15 +40,20 @@
     .info{
         width: 60%;
         .info-title{
-            border-bottom: 1px solid rgba(0,0,0,.1607843137254902); 
+            padding: 30px;
         }
-        .info-feature{
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(0,0,0,.1607843137254902);
+        .info-feature,.info-description,.info-amenities{
+            border-top: 1px solid rgba(0,0,0,.1607843137254902); 
+            padding: 30px;
         }
-        .info-description{
-            // padding-bottom: 10px;
-            border-bottom: 1px solid rgba(0,0,0,.1607843137254902);
+        // .info-description{
+            //     padding: 10px;
+            //     border-bottom: 1px solid rgba(0,0,0,.1607843137254902);
+            // }
         }
+        .reviews{
+            border-top: 1px solid rgba(0,0,0,.1607843137254902); 
+            padding: 30px;
+            
     }
 }

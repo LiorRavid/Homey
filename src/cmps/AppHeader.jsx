@@ -3,6 +3,7 @@ import { SiAirbnb } from 'react-icons/si';
 import { FaUserCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BiSearch } from "react-icons/bi"
+import { Link } from "react-router-dom"
 
 export function AppHeader() {
     return (
@@ -23,8 +24,9 @@ export function AppHeader() {
             </div>
 
             <div className='header-right'>
-                <button>Became a Host</button>
-                <button>Explore</button>
+                <Link className='btn-explore clean-link' to={`/explore?location=''&minPrice='-Infinity'&maxPrice=Infinity`}>Explore</Link>
+                {/* <button>Explore</button> */}
+                <button>Become a Host</button>
                 <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black"/><FaUserCircle color="#717171"/></button>
                 
             </div>

@@ -2,7 +2,7 @@
 .header{
     display: flex;
     justify-content: space-between;
-    font-family: circular ;
+    // font-family: circular ;
     z-index: 100;
     position: sticky;
     
@@ -64,7 +64,7 @@
 
     button{
         background-color: #ff000000;
-        padding: 15px;
+        padding: 7px;
         border-radius: 20px;
         border: none;
         cursor: pointer;
@@ -74,6 +74,21 @@
         background-color: #706d6d0e;
     }
     button:not(:last-child){
+        margin-right: 20px;
+    }
+    .btn-explore{
+        background-color: #ff000000;
+        padding: 17px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        color: black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .btn-explore:hover:not(:last-child){
+        background-color: #706d6d0e;
+    }
+    .btn-explore:not(:last-child){
         margin-right: 20px;
     }
     button:last-child{

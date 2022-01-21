@@ -1,0 +1,30 @@
+
+
+.top-cities-gallery{
+    display: flex;
+    .top-cities-card {
+        width: 900px;
+        // height: 900px;
+        margin: 10px;
+    }  
+    img {
+        border-top-left-radius: 13px; 
+        border-top-right-radius: 13px; 
+        max-height: 435px;
+
+        }
+    .city-details-container{
+        text-align: center;
+        border: 1px lightgray solid;
+        border-bottom-left-radius: 13px;
+        border-bottom-right-radius: 13px;
+    }
+    .city-details-container:hover{
+        background-color: rgba(211, 211, 211, 0.192);
+    }
+    .head-line {
+        display: block;
+    }
+}
+
+

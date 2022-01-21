@@ -5,6 +5,8 @@
     // font-family: circular ;
     z-index: 100;
     position: sticky;
+    // background-color: black;
+    // background-image: linear-gradient(185deg, black 100%, white 100%  );
     
 }
 
@@ -83,7 +85,6 @@
         border: none;
         cursor: pointer;
         color: black;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
     .btn-explore:hover:not(:last-child){
         background-color: #706d6d0e;

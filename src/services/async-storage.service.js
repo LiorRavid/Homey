@@ -11,19 +11,19 @@ export const storageService = {
 function query(entityType,filterBy, delay = 600) {
     var entities = JSON.parse(localStorage.getItem(entityType)) || _createEntities(entityType)
 
-    // if (entityType === 'stayDB') {
-    //     if (!filterBy) filterBy = { minPrice:-Infinity, maxPrice:Infinity,location:''}
-
-    //     if (filterBy.location) {
-    //         const location = filterBy.location.toUpperCase()
-    //         entities = entities.filter(stay => {
-    //             return stay.loc.country.toUpperCase().includes(location)
-    //         })
-    //     }
-    //     entities = entities.filter(stay => {
-    //         return (stay.price>=filterBy.minPrice && stay.price <=filterBy.maxPrice)
-    //     } )
-    // }
+    if (entityType === 'stayDB') {
+        if (!filterBy) filterBy = { minPrice:-Infinity, maxPrice:Infinity,location:''}
+        
+        if (filterBy.location) {
+            const location = filterBy.location.toUpperCase()
+            entities = entities.filter(stay => {
+                return stay.loc.country.toUpperCase().includes(location)
+            })
+        }
+        entities = entities.filter(stay => {
+            return (stay.price>=filterBy.minPrice && stay.price <=filterBy.maxPrice)
+        } )
+    }
         
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -127,7 +127,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399392",
                         "fullname": "Damien Li",
-                        "imgUrl": "/img/user/Damien.jpg",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/z9fvzn5thptwielcxjcs.jpg",
                     },
                     "loc": {
                         "country": "Australia",
@@ -141,33 +141,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": 1577829600,
                             "txt": "Beautiful apartment, steps to the beach. Cute furnishings and great price",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399401",
                                 "fullname": "Lindsay Cohen",
-                                "imgUrl": "/img/user/Lindsay.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/rqxrhjsfe3pdfigrngck.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": 1544429611,
                             "txt": "A great place - incredibly close to the beach! Right off the main road in Bondi Beach, so if you want to be in the middle of the action you can’t beat this spot. The apartment got a bit too warm for us with no AC (we visited in the summer months) but fans in the bedrooms were helpful. JC was a great host and super responsive!",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":5,
+                                "Communication":4,
+                                "Check-in":5,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399402",
                                 "fullname": "Ben Alush",
-                                "imgUrl": "/img/user/Ben.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/hexzpxqrbckr79fpme6k.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": 1612562400,
                             "txt": "Just as beautiful as pictured and in the perfect location, literally a minute walk from the beach on the block! James was very communicative and helpful when needed. Such a dreamy spot!",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399403",
                                 "fullname": "Kristina Ami",
-                                "imgUrl": "/img/user/Kristina.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/oani6ltbutvjrwtk3y87.jpg"
                             }
                         }
                     ],
@@ -203,7 +224,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399393",
                         "fullname": "Shaine Muller",
-                        "imgUrl": "/img/user/Muller.jpg",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/qgs5dku8ibjb27lemyd8.jpg",
                     },
                     "loc": {
                         "country": "Australia",
@@ -217,33 +238,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": 1601931600,
                             "txt": "Potts Point is a lovely district within downtown Sydney within walking distance of several tourist attractions. I appreciated all of Damien’s suggestions on what to see in Sydney and restaurants to eat at. I loved our stay!",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399404",
                                 "fullname": "Anna Daisy",
-                                "imgUrl": "/img/user/Anna.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iv4wumidq298t4dkymr7.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": 1570136400,
                             "txt": "This apartment in Potts Point is in a great location with spectacular views! I was quite impressed with how functional the space was. The apartment is small, but has everything you will need.",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":5,
+                                "Check-in":3,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399405",
                                 "fullname": "Caroline Zinc",
-                                "imgUrl": "/img/user/Caroline.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/x69menxowdfk9t0w6vkq.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": 1639778400,
                             "txt": "Terrific location with wonderful walking and running options and spectacular rooftop harbor view. The pool and roof top is an added bonus. Lots of restaurants within easy walking distance. The apartment has a very pleasant outlook and handy location and excellent communication with your host.",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":5,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":5,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399406",
                                 "fullname": "Sandra Sho",
-                                "imgUrl": "/img/user/Sandra.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/yso7svkq9csrtyn1tt1f.jpg"
                             }
                         }
                     ],
@@ -277,7 +319,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399394",
                         "fullname": "Laura Geva",
-                        "imgUrl": "/img/user/Laura.jpg",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/ysfdpeukfczrsojbsybv.jpg",
                     },
                     "loc": {
                         "country": "Australia",
@@ -291,33 +333,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": 1616364000,
                             "txt": "absolutely beautiful place! such a lovely host!!! the place was perfect for my group of friends and was clean and comfortable to stay in 💌",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":4,
+                                "Value":5
+                            },
                             "by": {
                                 "_id": "51399407",
                                 "fullname": "Lily High",
-                                "imgUrl": "/img/user/Lily.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/xvvnlvnxfswn2wuljf1u.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": 1579816800,
                             "txt": "Can't recommend Laura's apartment enough. It runs the width of the apartment building so there are ocean views from literally every window. Second bedroom, bathroom and kitchen all look to the south with really beach views to Collaroy. Main bedroom (which is huge and beautiful) and living area look to the north and both get all day sun. Apartment is super light and bright, and literally footsteps from the sand. kitchen is super functional and well equipped with everything you need. Location is excellent - literally footsteps from the beach, and 500mtrs to the north or south for a great selection of cafes and restaurants. Communication with Laura was fast. Highly recommend!, thanks so much Laura :)",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":5,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":5,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399408",
                                 "fullname": "Linda Bino",
-                                "imgUrl": "/img/user/Linda.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/gzloilmrozsgnar7kcpy.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": 1626296400,
                             "txt": "We had a wonderful stay and completely fell in love with Narrabeen. Great location and super easy for kids. We will be back!",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":5,
+                                "Check-in":4,
+                                "Accuracy":5,
+                                "Location":5,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399409",
                                 "fullname": "Bianca Papo",
-                                "imgUrl": "/img/user/Bianca.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/sok0f011ccq2og8aczma.jpg"
                             }
                         }
                     ],
@@ -357,7 +420,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399395",
                         "fullname": "Todd James",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/rpwmbdbljxbreiyr1dp5.jpg",
                     },
                     "loc": {
                         "country": "United States",
@@ -371,33 +434,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": "1639164653",
                             "txt": "Our stay at Todd's place was great! Super easy to get to manhattan using the subway and lots to do right around Brooklyn. Todd was very quick to respond and assist with check in. This was an amazing stay!",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399410",
                                 "fullname": "Kristen Boss",
-                                "imgUrl": "/img/user/Kristen.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/ymls8guacyduphw9gbek.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": "1642534652",
                             "txt": "Delightful unit better than the photos, which are great. Very safe and well-located part of Brooklyn. Easy access to the subway and to many Park Slope amenities. Owner was very easy to communicate with and responded to questions quite promptly.",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":5,
+                                "Check-in":5,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399411",
                                 "fullname": "Richard Gone",
-                                "imgUrl": "/img/user/Richard.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/nnmrnj0cioxhrdj9nohv.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": "1636659452",
                             "txt": "Good location. Close to Shopping, restaurants and the Barclays Center.",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":5,
+                                "Location":5,
+                                "Value":5
+                            },
                             "by": {
                                 "_id": "51399412",
                                 "fullname": "Shane Seer",
-                                "imgUrl": "/img/user/Shane.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/labhymljovfwwwakwr9h.jpg"
                             }
                         }
                     ],
@@ -435,7 +519,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399396",
                         "fullname": "Jeniffer Huoston",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/zlkfwvkumwlrzzrtnrms.jpg",
                     },
                     "loc": {
                         "country": "United States",
@@ -449,33 +533,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": "1630870652",
                             "txt": "Have stayed here severaltimes now. Always clean, safe and perfect location. Wifi, elevator, a/c, quiet. It's a fabulous stay & I highly recommend.",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":5,
+                                "Accuracy":5,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399413",
                                 "fullname": "Stephanie Grass",
-                                "imgUrl": "/img/user/Stephanie.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/clz9vbbaephnsmkcdgq2.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": "1588707452",
                             "txt": "Clean apartment, great location. Jeniffer was a very accommodating host in setting me up and kept good communication throughout my stay.",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399414",
                                 "fullname": "Patricia Slack",
-                                "imgUrl": "/img/user/Patricia.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/hvkh9qe0a07mi873zdyz.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": "1554493052",
                             "txt": "Great value and location.",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":5,
+                                "Check-in":5,
+                                "Accuracy":5,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399415",
                                 "fullname": "Johannes Shane",
-                                "imgUrl": "/img/user/Johannes.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/csrbgx9vv8bbs2fmbpdu.jpg"
                             }
                         }
                     ],
@@ -513,7 +618,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399397",
                         "fullname": "Lana Jane",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/w5h7m6yedu6iqzi8pje8.jpg",
                     },
                     "loc": {
                         "country": "United States",
@@ -527,33 +632,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": "1641065852",
                             "txt": "Great place, probably one of the best places for the price. very clean and organize. loved it.",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":5,
+                                "Check-in":4,
+                                "Accuracy":5,
+                                "Location":5,
+                                "Value":5
+                            },
                             "by": {
                                 "_id": "51399416",
                                 "fullname": "Geovanni Rosso",
-                                "imgUrl": "/img/user/Geovanni.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694272/airbnb/users/ovpsurmx5olcbaoqujdv.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": "1594150652",
                             "txt": "Very spacious and clean. Location is very convenient and is in a nice neighborhood. I would recommend this place.",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":5,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":5,
+                                "Value":5
+                            },
                             "by": {
                                 "_id": "51399417",
                                 "fullname": "Yuji Lev",
-                                "imgUrl": "/img/user/Yuji.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/ezpzm0eiipod0yrxu2pm.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": "1617478652",
                             "txt": "Had a good stay at Lana's place.",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399418",
                                 "fullname": "Cynthia Wayne",
-                                "imgUrl": "/img/user/Cynthia.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/rlzfdsumttpvqyc9aenv.jpg"
                             }
                         }
                     ],
@@ -591,7 +717,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399398",
                         "fullname": "Nuria",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/r8jukej0xmbajqluliqe.jpg",
                     },
                     "loc": {
                         "country": "Spain",
@@ -605,33 +731,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": 1465767064000,
                             "txt": "We loved staying at Nurias place. The location is so centralized and we were able to enjoy walking to different attractions in the city.",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399419",
                                 "fullname": "Linda Zaia",
-                                "imgUrl": "/img/user/Linda2.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iqkf1w1u1l6zoqzxgrli.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": 1534109464000,
                             "txt": "Nuria's apartment is in the perfect location to everything in the historic center. The place is close to everything that we were able to stop by and drop of stuff as needed or take a nap when we were touring the city. All the amenities are as described and Nuria is a great host able to help us with any questions we had during the check in.",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":5,
+                                "Location":5,
+                                "Value":5
+                            },
                             "by": {
                                 "_id": "51399420",
                                 "fullname": "Edgar Moz",
-                                "imgUrl": "/img/user/Edgar.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/jvcxtcuixivln9pqpcz7.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": 1612992664000,
                             "txt": "Nuria hands down was absolutely fantastic and accommodating. She's very flexible as far as check-in/check out times and she even provided complimentary champagne as a welcoming gift. The location of her apartment was amazing! Most of the typical tourist spots are close by and walkable. If you don't want to walk, the apartment is right across the street from the Callao metro stop. Would stay here again if I visit Madrid.",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399421",
                                 "fullname": "Stephanie Leinani",
-                                "imgUrl": "/img/user/Stephanie2.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/oani6ltbutvjrwtk3y87.jpg"
                             }
                         }
                     ],
@@ -667,7 +814,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399399",
                         "fullname": "José",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/i2v3i6lbcrb1eubmezkj.jpg",
                     },
                     "loc": {
                         "country": "Spain",
@@ -681,33 +828,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": 1541280664000,
                             "txt": "Very cute space in a great location! Close to a lot of stores bars and metro! Although Jose was on vacation during my visit and we didn’t get to meet, he was very easy to get a hold of and very quick to respond! My stay was cut short due to things out of his and my control but he was very helpful anytime I needed! The room is a comfortable stay, it does get very hot so be sure to buy a fan for the room! The room is up a lot of stairs so be prepared. But overall great space while visit Madrid & he was a great host!",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399422",
                                 "fullname": "Mallory Gauoda",
-                                "imgUrl": "/img/user/Mallory.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/xzbls0ekzakmg9tnsyot.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": 1513373464000,
                             "txt": "I lived with José for 4 months while studying abroad in Madrid and he could not have been a better host. Every positive review is absolutely accurate, he really is fantastic. The neighborhood is centrally located and a short walk from major metro stops and a 10 minute walk to most major tourist destinations. Close enough for convenience and far enough to have a quiet place to stay that was a great representation of the diversity of Madrid. The apartment is fantastic and José is happy to give you recommendations, binge watch Game of Thrones with you or give you privacy when you need it. At one point I got very sick and he even went to the pharmacy for me. If you're a solo female traveler, this neighborhood like most of Madrid, is VERY safe! I took many late night walks alone. The apartment is on the top floor with no elevator so if you have mobility issues, you should consider that. Otherwise, stay here! Thank you so much, José!",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":5,
+                                "Communication":5,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":5,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399423",
                                 "fullname": "Crystal Palas",
-                                "imgUrl": "/img/user/Crystal.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/dlkzgh1lknrddahvf1dh.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": 1466026264000,
                             "txt": "The apartment is exactly as the listing describes it, and the neighborhood is lively , Full of interesting cafés and things to do. You can walk to the best museums, and yet not be in an area dominated by tourism.José was extremely kind and eager to be helpful in every moment, but one can also have quiet, and once complete privacy.",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":3,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399424",
                                 "fullname": "Jerrilynn aloni",
-                                "imgUrl": "/img/user/Jerrilynn.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/iabu99jfklda8w86wboe.jpg"
                             }
                         }
                     ],
@@ -745,7 +913,7 @@ function _createEntities(entityType) {
                     "host": {
                         "_id": "51399400",
                         "fullname": "David Eloisa",
-                        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+                        "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/lvnkfgpktpbrlxymdolz.jpg",
                     },
                     "loc": {
                         "country": "Spain",
@@ -759,33 +927,54 @@ function _createEntities(entityType) {
                             "id": "r101",
                             "createdAt": 1563226264000,
                             "txt": "nice place for couples...",
-                            "rate": 4,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":5,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":5,
+                                "Value":5
+                            },
                             "by": {
                                 "_id": "51399425",
                                 "fullname": "Gorge Mai",
-                                "imgUrl": "/img/user/Gorge.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/ixjgcxyr0ldtr0nusevt.jpg"
                             }
                         },
                         {
                             "id": "r102",
                             "createdAt": 1537047064000,
                             "txt": "Very clean and nice place, in a very good neighborhood. Eloisa always very kind and in constant communication. We had a great stay, thank you once again!",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":4,
+                                "Location":4,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399426",
                                 "fullname": "Jose Antonio",
-                                "imgUrl": "/img/user/Jose2.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/iklgetxe2b2ydlupuzib.jpg"
                             }
                         },
                         {
                             "id": "r103",
                             "createdAt": 1539639064000,
                             "txt": "Nice place, 5 min from atocha and 15 min by walk to the city center . Worth enough !",
-                            "rate": 5,
+                            "rate": {
+                                "Cleanliness":4,
+                                "Communication":4,
+                                "Check-in":4,
+                                "Accuracy":5,
+                                "Location":5,
+                                "Value":4
+                            },
                             "by": {
                                 "_id": "51399427",
                                 "fullname": "Emanuel Noir",
-                                "imgUrl": "/img/user/Emanuel.jpg"
+                                "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/rmpydqpcbz8c1ims6hzb.jpg"
                             }
                         }
                     ],
@@ -795,10 +984,19 @@ function _createEntities(entityType) {
             break;
         case 'userDB':
             entities = [
+                // {
+                //     "_id": "00000001",
+                //     "fullname": "Guest",
+                //     "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/z9fvzn5thptwielcxjcs.jpg",
+                //     "isHost": false,
+                //     "isGuest": true,
+                //     "username": "Guest",
+                //     "password": "123"
+                // },
                 {
                     "_id": "51399392",
                     "fullname": "Damien Li",
-                    "imgUrl": "/img/user/Damien.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/z9fvzn5thptwielcxjcs.jpg",
                     "isHost": true,
                     "username": "Damien",
                     "password": "1234"
@@ -806,15 +1004,15 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399393",
                     "fullname": "Shaine Muller",
-                    "imgUrl": "/img/user/Muller.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/qgs5dku8ibjb27lemyd8.jpg",
                     "isHost": true,
                     "username": "shaine",
                     "password": "1234"
                 },
                 {
                     "_id": "51399394",
-                    "fullname": "Laura geva",
-                    "imgUrl": "/img/user/Laura.jpg",
+                    "fullname": "Laura Geva",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/ysfdpeukfczrsojbsybv.jpg",
                     "isHost": true,
                     "username": "Laura",
                     "password": "1234"
@@ -822,7 +1020,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399395",
                     "fullname": "Todd James",
-                    "imgUrl": "/img/user/Todd.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/rpwmbdbljxbreiyr1dp5.jpg",
                     "isHost": true,
                     "username": "Todd",
                     "password": "1234"
@@ -830,7 +1028,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399396",
                     "fullname": "Jeniffer Huoston",
-                    "imgUrl": "/img/user/Jeniffer.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/zlkfwvkumwlrzzrtnrms.jpg",
                     "isHost": true,
                     "username": "Jeniffer",
                     "password": "1234"
@@ -838,7 +1036,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399397",
                     "fullname": "Lana Jane",
-                    "imgUrl": "/img/user/Lana.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/w5h7m6yedu6iqzi8pje8.jpg",
                     "isHost": true,
                     "username": "Lana",
                     "password": "1234"
@@ -846,7 +1044,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399398",
                     "fullname": "Nuria Guy",
-                    "imgUrl": "/img/user/Nuria.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/r8jukej0xmbajqluliqe.jpg",
                     "isHost": true,
                     "username": "Nuria",
                     "password": "1234"
@@ -854,7 +1052,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399399",
                     "fullname": "José Alur",
-                    "imgUrl": "/img/user/Jose.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/i2v3i6lbcrb1eubmezkj.jpg",
                     "isHost": true,
                     "username": "José",
                     "password": "1234"
@@ -862,7 +1060,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399400",
                     "fullname": "David Eloisa",
-                    "imgUrl": "/img/user/David.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/lvnkfgpktpbrlxymdolz.jpg",
                     "isHost": true,
                     "username": "David",
                     "password": "1234"
@@ -870,7 +1068,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399401",
                     "fullname": "Lindsay Cohen",
-                    "imgUrl": "/img/user/Lindsay.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/rqxrhjsfe3pdfigrngck.jpg",
                     "isHost": false,
                     "username": "Lindsay",
                     "password": "123"
@@ -878,7 +1076,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399402",
                     "fullname": "Ben Alush",
-                    "imgUrl": "/img/user/Ben.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/hexzpxqrbckr79fpme6k.jpg",
                     "isHost": false,
                     "username": "Ben",
                     "password": "123"
@@ -886,7 +1084,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399403",
                     "fullname": "Kristina Ami",
-                    "imgUrl": "/img/user/Kristina.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/oani6ltbutvjrwtk3y87.jpg",
                     "isHost": false,
                     "username": "Kristina",
                     "password": "123"
@@ -894,7 +1092,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399404",
                     "fullname": "Anna Daisy",
-                    "imgUrl": "/img/user/Anna.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iv4wumidq298t4dkymr7.jpg",
                     "isHost": false,
                     "username": "Anna",
                     "password": "123"
@@ -902,7 +1100,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399405",
                     "fullname": "Caroline Zinc",
-                    "imgUrl": "/img/user/Caroline.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/x69menxowdfk9t0w6vkq.jpg",
                     "isHost": false,
                     "username": "Caroline",
                     "password": "123"
@@ -910,7 +1108,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399406",
                     "fullname": "Sandra Sho",
-                    "imgUrl": "/img/user/Sandra.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/yso7svkq9csrtyn1tt1f.jpg",
                     "isHost": false,
                     "username": "Sandra",
                     "password": "123"
@@ -918,7 +1116,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399407",
                     "fullname": "Lily High",
-                    "imgUrl": "/img/user/Lily.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/xvvnlvnxfswn2wuljf1u.jpg",
                     "isHost": false,
                     "username": "Lily",
                     "password": "123"
@@ -926,7 +1124,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399408",
                     "fullname": "Linda Bino",
-                    "imgUrl": "/img/user/Linda.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/gzloilmrozsgnar7kcpy.jpg",
                     "isHost": false,
                     "username": "Linda",
                     "password": "123"
@@ -934,7 +1132,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399409",
                     "fullname": "Bianca Papo",
-                    "imgUrl": "/img/user/Bianca.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/sok0f011ccq2og8aczma.jpg",
                     "isHost": false,
                     "username": "Bianca",
                     "password": "123"
@@ -942,7 +1140,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399410",
                     "fullname": "Kristen Boss",
-                    "imgUrl": "/img/user/Kristen.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/ymls8guacyduphw9gbek.jpg",
                     "isHost": false,
                     "username": "Kristen",
                     "password": "123"
@@ -950,7 +1148,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399411",
                     "fullname": "Richard Gone",
-                    "imgUrl": "/img/user/Richard.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/nnmrnj0cioxhrdj9nohv.jpg",
                     "isHost": false,
                     "username": "Richard",
                     "password": "123"
@@ -958,7 +1156,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399412",
                     "fullname": "Shane Seer",
-                    "imgUrl": "/img/user/Shane.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/labhymljovfwwwakwr9h.jpg",
                     "isHost": false,
                     "username": "Shane",
                     "password": "123"
@@ -966,7 +1164,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399413",
                     "fullname": "Stephanie Grass",
-                    "imgUrl": "/img/user/Stephanie.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/clz9vbbaephnsmkcdgq2.jpg",
                     "isHost": false,
                     "username": "Stephanie",
                     "password": "123"
@@ -974,7 +1172,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399414",
                     "fullname": "Patricia Slack",
-                    "imgUrl": "/img/user/Patricia.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/hvkh9qe0a07mi873zdyz.jpg",
                     "isHost": false,
                     "username": "Patricia",
                     "password": "123"
@@ -982,7 +1180,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399415",
                     "fullname": "Johannes Shane",
-                    "imgUrl": "/img/user/Johannes.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/csrbgx9vv8bbs2fmbpdu.jpg",
                     "isHost": false,
                     "username": "Johannes",
                     "password": "123"
@@ -990,7 +1188,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399416",
                     "fullname": "Geovanni Rosso",
-                    "imgUrl": "/img/user/Geovanni.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694272/airbnb/users/ovpsurmx5olcbaoqujdv.jpg",
                     "isHost": false,
                     "username": "Geovanni",
                     "password": "123"
@@ -998,7 +1196,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399417",
                     "fullname": "Yuji Lev",
-                    "imgUrl": "/img/user/Yuji.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/ezpzm0eiipod0yrxu2pm.jpg",
                     "isHost": false,
                     "username": "Yuji",
                     "password": "123"
@@ -1006,7 +1204,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399418",
                     "fullname": "Cynthia Wayne",
-                    "imgUrl": "/img/user/Cynthia.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/rlzfdsumttpvqyc9aenv.jpg",
                     "isHost": false,
                     "username": "Cynthia",
                     "password": "123"
@@ -1014,7 +1212,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399419",
                     "fullname": "Linda Zaia",
-                    "imgUrl": "/img/user/Linda2.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694276/airbnb/users/iqkf1w1u1l6zoqzxgrli.jpg",
                     "isHost": false,
                     "username": "Linda",
                     "password": "123"
@@ -1022,7 +1220,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399420",
                     "fullname": "Edgar Moz",
-                    "imgUrl": "/img/user/Edgar.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/jvcxtcuixivln9pqpcz7.jpg",
                     "isHost": false,
                     "username": "Edgar",
                     "password": "123"
@@ -1030,7 +1228,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399421",
                     "fullname": "Stephanie Leinani",
-                    "imgUrl": "/img/user/Stephanie2.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/oani6ltbutvjrwtk3y87.jpg",
                     "isHost": false,
                     "username": "Stephanie",
                     "password": "123"
@@ -1038,7 +1236,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399422",
                     "fullname": "Mallory Gauoda",
-                    "imgUrl": "/img/user/Mallory.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694275/airbnb/users/xzbls0ekzakmg9tnsyot.jpg",
                     "isHost": false,
                     "username": "Mallory",
                     "password": "123"
@@ -1046,7 +1244,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399423",
                     "fullname": "Crystal Palas",
-                    "imgUrl": "/img/user/Crystal.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/dlkzgh1lknrddahvf1dh.jpg",
                     "isHost": false,
                     "username": "Crystal",
                     "password": "123"
@@ -1054,7 +1252,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399424",
                     "fullname": "Jerrilynn Aloni",
-                    "imgUrl": "/img/user/Jerrilynn.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/iabu99jfklda8w86wboe.jpg",
                     "isHost": false,
                     "username": "Jerrilynn",
                     "password": "123"
@@ -1062,7 +1260,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399425",
                     "fullname": "Gorge Mai",
-                    "imgUrl": "/img/user/Gorge.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/ixjgcxyr0ldtr0nusevt.jpg",
                     "isHost": false,
                     "username": "Gorge",
                     "password": "123"
@@ -1070,7 +1268,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399426",
                     "fullname": "Jose Antonio",
-                    "imgUrl": "/img/user/Jose2.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694274/airbnb/users/iklgetxe2b2ydlupuzib.jpg",
                     "isHost": false,
                     "username": "Jose",
                     "password": "123"
@@ -1078,7 +1276,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "51399427",
                     "fullname": "Emanuel Noir",
-                    "imgUrl": "/img/user/Emanuel.jpg",
+                    "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694273/airbnb/users/rmpydqpcbz8c1ims6hzb.jpg",
                     "isHost": false,
                     "username": "Emanuel",
                     "password": "123"

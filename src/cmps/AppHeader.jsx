@@ -24,7 +24,7 @@ export function AppHeader() {
             </div>
 
             <div className='header-right'>
-                <Link className='btn-explore clean-link' to={`/explore?location=''&minPrice='-Infinity'&maxPrice=Infinity`}>Explore</Link>
+                <Link className='btn-explore clean-link' to={`/explore?location=&minPrice=-Infinity&maxPrice=Infinity`}>Explore</Link>
                 {/* <button>Explore</button> */}
                 <Link to="/host">Become a host</Link>
                 <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black"/><FaUserCircle color="#717171"/></button>

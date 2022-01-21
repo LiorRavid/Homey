@@ -1,15 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import queryString from 'query-string' 
 
 import { StayList } from '../cmps/StayList.jsx'
 import{Filter} from '../cmps/StayFilter.jsx'
-import { loadStays,setFilter} from '../store/stay.action.js'
+import { loadStays} from '../store/stay.action.js'
 
 
 class _Explore extends React.Component {
 
     componentDidMount() {
-        this.props.loadStays();
+        this.getStays();
     }
 
     // componentDidUpdate(prevProps) {
@@ -18,11 +19,11 @@ class _Explore extends React.Component {
     //     }
     // }
 
-    // onSetFilter = (filterBy) => {
-
-    //     console.log('the new filter', filterBy)
-    //     this.props.setFilter(filterBy)
-    // }
+    getStays = ()=>{
+        const filterBy = queryString.parse(this.props.location.search)
+        console.log(filterBy)
+        this.props.loadStays(filterBy)
+    }
 
     render() {
         const {stays} = this.props
@@ -31,9 +32,9 @@ class _Explore extends React.Component {
         const imgUrl = stays[0].imgUrls[0]
         return (
             <section className="explore-container">
-                <span>{stays.length} stays</span>
+                <span className="stays-number">{stays.length} stays</span>
                 <h1>Find place to stay</h1>
-                {/* <Filter onSetFilter={this.onSetFilter}/> */}
+                <Filter/>
                 <StayList stays={stays}/>
             </section>
         )
@@ -48,7 +49,6 @@ function mapStateToProps({ stayModule }) {
 
 const mapDispatchToProps = {
     loadStays,
-    // setFilter
 }
 
 

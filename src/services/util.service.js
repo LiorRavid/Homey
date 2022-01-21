@@ -2,7 +2,8 @@ export const utilService = {
     makeId,
     makeLorem,
     getRandomIntInclusive,
-    delay
+    delay,
+    getDateFromTimeStemp
 }
 
 function makeId(length = 6) {
@@ -36,5 +37,15 @@ function delay(ms = 1500) {
     return new Promise(resolve => {
         setTimeout(resolve, ms)
     })
+}
+
+function getDateFromTimeStemp(timeStemp){
+    var a = new Date(timeStemp * 1000);
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var time = date + ' ' + month + ' ' + year;
+    return time;
 }
 

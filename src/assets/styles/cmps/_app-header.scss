@@ -1,14 +1,35 @@
 
 .header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    // justify-content: space-between;
     // font-family: circular ;
     z-index: 100;
     position: sticky;
     // background-color: black;
     // background-image: linear-gradient(185deg, black 100%, white 100%  );
+    .header-details {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-filter {
+        display: flex;
+        align-self: center;
+        // background-color: black;
+        border-radius: 40px;
+        border: 1px solid black;
+
+
+        div{
+            padding: 20px 50px;
+        }
+        div:not(:last-child, div:nth-of-type(4) ){
+            border-right: 1px solid lightgrey;
+        }
+    }
     
 }
+
 
 .header-left {
     display: flex;

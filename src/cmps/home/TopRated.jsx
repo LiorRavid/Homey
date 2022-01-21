@@ -13,9 +13,11 @@ export function TopRated({ onSearch }) {
 
     return (
         <main className="top-cities-gallery">
-            {/* <div className='head-line'>
+            
             <h1>Top Rated </h1>
-            </div> */}
+           
+           <section className='top-cities'>
+
             <Link to="/explore" onClick={() => { onSelectTopCity('Bangkok') }} className="top-cities-card">
                 <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642760367/airbnb/pop-des/uwlmwbvado6u2qhqtky8.jpg" alt="TopCities" />
                 <div className="city-details-container">
@@ -34,6 +36,7 @@ export function TopRated({ onSearch }) {
                     </div>
                 </div>
             </Link>
+           </section>
         </main>
     )
 }

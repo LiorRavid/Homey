@@ -13,9 +13,10 @@ export function PopDestination({ onSearch }) {
 
     return (
         <main className="top-cities-gallery">
-            {/* <div className='head-line'>
+            
             <h1>Top Popular Destinations</h1>
-            </div> */}
+
+            <section className='top-cities'>
             <Link to="/explore" onClick={() => { onSelectTopCity('New York') }} className="top-cities-card">
                 <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642756388/airbnb/pop-des/x7oh3muult8plsfm5x2a.jpg" alt="TopCities" />
                 <div className="city-details-container">
@@ -52,6 +53,7 @@ export function PopDestination({ onSearch }) {
                     </div>
                 </div>
             </Link>
+            </section>
         </main>
     )
 }

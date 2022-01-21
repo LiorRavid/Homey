@@ -6,7 +6,8 @@ import { httpService } from './http.service'
 export const reviewService = {
   add,
   query,
-  remove
+  remove,
+  getReviewsAvg
 }
 
 
@@ -34,6 +35,41 @@ async function add(review) {
   // const addedReview = storageService.post('review', review)
 
   return addedReview
+}
+
+function getReviewsAvg(reviews){
+  let reviewsAvg = {
+      cleanliness: 0,
+      communication: 0,
+      "check-in": 0,
+      accuracy: 0,
+      location: 0,
+      value: 0,
+      total: 0
+  }
+
+  reviews.forEach(review => {
+      reviewsAvg.cleanliness += review.rate.Cleanliness
+      reviewsAvg.communication += review.rate.Communication
+      reviewsAvg["check-in"] += review.rate["Check-in"]
+      reviewsAvg.accuracy += review.rate.Accuracy
+      reviewsAvg.location += review.rate.Location
+      reviewsAvg.value += review.rate.Value
+      reviewsAvg.total += (review.rate.Cleanliness + review.rate.Communication + review.rate["Check-in"] + review.rate.Accuracy + review.rate.Location + review.rate.Value) / 6
+  });
+
+  reviewsAvg.cleanliness = (reviewsAvg.cleanliness / reviews.length).toFixed(1)
+  reviewsAvg.communication = (reviewsAvg.communication / reviews.length).toFixed(1)
+  reviewsAvg["check-in"] = (reviewsAvg["check-in"] / reviews.length).toFixed(1)
+  reviewsAvg.accuracy = (reviewsAvg.accuracy / reviews.length).toFixed(1)
+  reviewsAvg.location = (reviewsAvg.location / reviews.length).toFixed(1)
+  reviewsAvg.value = (reviewsAvg.value / reviews.length).toFixed(1)
+  reviewsAvg.total = (reviewsAvg.total / reviews.length).toFixed(2)
+
+
+  // console.log('reviewsAvg', reviewsAvg);
+
+  return reviewsAvg
 }
 
 // This IIFE functions for Dev purposes 

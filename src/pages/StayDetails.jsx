@@ -1,20 +1,23 @@
 
 
 import React from 'react'
+import Avatar from '@mui/material/Avatar';
+
 // import { connect } from 'react-redux'
-import { Link, NavLink } from 'react-router-dom'
-import { Route } from 'react-router-dom'
+// import { Link, NavLink } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 
 
 import { stayService } from '../services/stay.service.js'
-// import { addReview } from '../store/review.actions.js'
+import { reviewService } from '../services/review.service.js'
+import { utilService } from '../services/util.service.js'
+import { AddReview } from '../cmps/AddReview.jsx'
 
 export class StayDetails extends React.Component {
     state = {
         stay: null,
         reviews: [],
-        // loggedInUser:'',
-        review:''
+       
     }
 
 
@@ -32,71 +35,14 @@ export class StayDetails extends React.Component {
         // , () => { console.log('the state after stay', this.state) }
     }
 
-    // handleChange = ({ target }) => {
-    //     const field = target.name
-    //     this.setState((prevState) => ({ ...prevState, review: { ...prevState.review, [field]: target.value } }))
-    // }
+    addGuestReview = (review) =>{
+        this.setState({ reviews: [ ...this.state.reviews, review ] }, () => console.log('reviews in detail', this.state.reviews));
 
-    // onGoBack = () => {
-    //     this.props.history.push('/toy')
-    // }
-
-
-    // addToyReview = (ev) => {
-    //     const { review, toy } = this.state
-    //     ev.preventDefault()
-    //     review.toyId = toy._id
-    //     this.props.addReview(review)
-    // }
-
-
-    //ADD REVIEW MODAL (NESTED ROUTE)
-    // addReviewModal = () => {
-
-    //     console.log('modalactive!');
-    //     const { toy } = this.state
-    //     // TO DO : ADD USER CONNECTED!!!!!
-    //     /// Dont let users that are not logged in to add review.
-
-    //     return (
-    //         <div className="add-review">
-    //             <Link className="close-btn" to={`/toy/${toy._id}`}>x</Link>
-    //             <h1>Add toy Review</h1>
-    //             <form onSubmit={this.addToyReview}>
-    //                 <label htmlFor="review-info">Your review</label>
-    //                 <textarea onChange={this.handleChange} name="txt" id="review-info" cols="20" rows="10"></textarea>
-    //                 <button>Submit</button>
-    //             </form>
-    //         </div>
-    //     )
-
-    // }
-
-    getReviewsAvg = (reviews) => {
-        const sum = reviews.reduce((acc, review) => {
-            return acc + review.rate;
-        }, 0);
-
-        const average = sum / reviews.length;
-
-        console.log(average);
-        return Number.parseFloat(average).toFixed(2)
     }
-    getDateFromTimeStemp = (timeStemp) => {
-        var a = new Date(timeStemp * 1000);
-        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        var year = a.getFullYear();
-        var month = months[a.getMonth()];
-        var date = a.getDate();
-        var time = date + ' ' + month + ' ' + year;
-        return time;
-    }
-
-
 
     render() {
         const { stay, reviews } = this.state
-        const reviewsAvg = this.getReviewsAvg(reviews)
+        const reviewsAvg = reviewService.getReviewsAvg(reviews)
 
         if (!stay) return <h1>Loading...</h1>
 
@@ -104,7 +50,7 @@ export class StayDetails extends React.Component {
             <div className="stay-details">
                 <section className="title">
                     <h1>{stay.name}</h1>
-                    <p>⭐ {reviewsAvg} ({reviews.length} reviews)</p>
+                    <p>⭐ {reviewsAvg.total} ({reviews.length} reviews)</p>
                     <p>∙</p>
                     <p>{stay.loc.address}</p>
                 </section>
@@ -114,10 +60,15 @@ export class StayDetails extends React.Component {
                 </section>
 
                 <section className="info">
-                    <div className="info-title">
+                    <div className="info-header">
+                        <div className="info-header-title">
                         <h2>Entire {stay.type} hosted by {stay.host.fullname}</h2>
                         <p>{stay.capacity} guests ∙ {stay.rooms} ∙ {stay.beds} ∙ {stay.baths}</p>
-                        {/* <img src={`../assets${stay.host.imgUrl}`} alt="" /> */}
+                        </div>
+
+                        <Avatar className="user-img" src={stay.host.imgUrl} />
+
+                        {/* <img className="user-img" src={stay.host.imgUrl} alt="" /> */}
                     </div>
                     <div className="info-feature">
                         <h3>Entire home</h3>
@@ -136,19 +87,29 @@ export class StayDetails extends React.Component {
                     <div className="info-amenities">
                         <h2>What this place offers</h2>
 
-                        {stay.amenities.map((amenitie,idx) => <p key={idx}>{amenitie}</p>)}
+                        {stay.amenities.map((amenitie, idx) => <p key={idx}>{amenitie}</p>)}
                     </div>
                 </section>
 
                 <section className="reviews">
-                    <h2>⭐ {reviewsAvg} ({reviews.length} reviews)</h2>
+                    <h2>⭐ {reviewsAvg.total} ({reviews.length} reviews)</h2>
+                    <div className="review-statistics">
+                        <p>Cleanliness {reviewsAvg.cleanliness}</p>
+                        <p>Accuracy {reviewsAvg.accuracy}</p>
+                        <p>Communication {reviewsAvg.communication}</p>
+                        <p>Location {reviewsAvg.location}</p>
+                        <p>Check-in {reviewsAvg["check-in"]}</p>
+                        <p>Value {reviewsAvg.value}</p>
+                    </div>
                     <div className="review-list">
                         {stay.reviews.map(review => {
                             return <div className="review-card" key={review.id}>
                                 <div className="review-card-header">
-                                    {/* <img src={review.by.imgUrl} alt="" /> */}
+                                    <Avatar className="user-img" src={review.by.imgUrl} />
+                                    <div>
                                     <h3>{review.by.fullname}</h3>
-                                    <small>{this.getDateFromTimeStemp(review.createdAt)}</small>
+                                    <small>{utilService.getDateFromTimeStemp(review.createdAt)}</small>
+                                    </div>
                                 </div>
                                 <p>{review.txt}</p>
                             </div>
@@ -156,18 +117,16 @@ export class StayDetails extends React.Component {
                     </div>
                 </section>
 
-                <section className="add-review">
-                    <h2>Add Review</h2>
-                </section>
+                <AddReview addGuestReview={this.addGuestReview}/>
+            
 
-                
+
             </div>
 
         )
     }
 
 }
-
 
 // const mapDispatchToProps = {
 //     addReview

@@ -984,6 +984,15 @@ function _createEntities(entityType) {
             break;
         case 'userDB':
             entities = [
+                // {
+                //     "_id": "00000001",
+                //     "fullname": "Guest",
+                //     "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1642694277/airbnb/users/z9fvzn5thptwielcxjcs.jpg",
+                //     "isHost": false,
+                //     "isGuest": true,
+                //     "username": "Guest",
+                //     "password": "123"
+                // },
                 {
                     "_id": "51399392",
                     "fullname": "Damien Li",

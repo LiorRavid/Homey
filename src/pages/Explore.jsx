@@ -25,7 +25,6 @@ class _Explore extends React.Component {
         this.props.loadStays(filterBy)
     }
 
-
     render() {
         const {stays} = this.props
         const trip = ''
@@ -33,7 +32,7 @@ class _Explore extends React.Component {
         const imgUrl = stays[0].imgUrls[0]
         return (
             <section className="explore-container">
-                <span>{stays.length} stays</span>
+                <span className="stays-number">{stays.length} stays</span>
                 <h1>Find place to stay</h1>
                 <Filter/>
                 <StayList stays={stays}/>

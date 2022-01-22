@@ -1,6 +1,9 @@
 import { Component } from 'react'
 import Avatar from '@mui/material/Avatar';
 
+import { userService } from '../../services/user.service.js'
+
+
 export class AddReview extends Component {
 
     state = {
@@ -18,13 +21,23 @@ export class AddReview extends Component {
         }
     }
 
+    componentDidMount(){
+        this.setState({ loggedInUser: userService.getLoggedinUser() }, () => console.log('state in preview', this.state));
+    }
+
     handleChange = ({ target }) => {
         const { value } = target;
         this.setState({ review: { ...this.state.review, txt: value } }, () => console.log('this.state.review.txt', this.state.review.txt));
     };
     sendReview = () => {
-        const { review } = this.state;
-        this.props.addGuestReview(review)
+        let { review,loggedInUser } = this.state;
+        review.by = {
+            _id: loggedInUser._id,
+            fullname: loggedInUser.fullname,
+            imgUrl: loggedInUser.imgUrl
+        }
+        if (loggedInUser.isGuest) this.props.addGuestReview(review)
+
     };
 
     render() {
@@ -35,9 +48,12 @@ export class AddReview extends Component {
         return (
             <section className="add-review">
                 <h2>Add Review</h2>
+                <div className="loggedin-user">
+
                 <Avatar src="/broken-image.jpg" />
 
                 <h3>{fullname}</h3>
+                </div>
 
 
                 <textarea

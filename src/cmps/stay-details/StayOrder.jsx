@@ -14,10 +14,10 @@ export class StayOrder extends Component {
     }
 
     render() {
-        const {stay} = this.state
-        
+        const { stay } = this.state
+
         if (!stay) return <h1>Loading...</h1>
-        const {reviewsAvg} = this.props
+        const { reviewsAvg } = this.props
 
         console.log(stay)
         return (
@@ -29,6 +29,28 @@ export class StayOrder extends Component {
                             <p>⭐ {reviewsAvg} ({stay.reviews.length} reviews)</p>
 
                         </div>
+                        <form>
+                            <div className="order-form-date">
+                                <label htmlFor="check-in">
+                                    <span>Check-in</span>
+                                    <input id="check-in" type="date" />
+                                </label>
+                                <label htmlFor="check-out">
+                                    <span>Check-out</span>
+                                    <input id="check-out" type="date" />
+                                </label>
+                            </div>
+                            <div className="order-form-guest">
+                                <label htmlFor="guest">
+                                    <span>guest</span>
+                                    <input id="guest" type="number" placeholder="1" />
+                                </label>
+
+                            </div>
+                            <div className="btn-container">
+                                <button>Reserve</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

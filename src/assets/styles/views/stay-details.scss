@@ -44,19 +44,19 @@ justify-content: space-between;
     }
 
     .user-img{
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
     }
 
     .info{
         width: 57%;
     }
     .info-header{
-        padding: 30px 0;
+        padding: 30px 0 20px;
         display: flex;
         justify-content: space-between;
         h2{
-            margin-top: 5px;
+            margin: 0;
         }
         p{
             margin: 0;
@@ -67,9 +67,14 @@ justify-content: space-between;
         // border-top: 1px solid rgba(0,0,0,.1607843137254902); 
         border-top: 1px solid #dadada;
 
-        padding: 30px 0;
+        padding: 20px 0;
+
     }
 
+    .info-feature h3{
+margin: 15px 0px 0px;
 
+    }
+    
     
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button'
+import { FilterSlider } from './FilterSlider.jsx'
 
 import { Link } from 'react-router-dom'
 
@@ -51,9 +52,29 @@ export class Filter extends React.Component {
                     <input type="number" name="minPrice" value={minPrice} onChange={this.onHandleChange} />
                     <input type="number" name="maxPrice" value={maxPrice} onChange={this.onHandleChange} />
                     <Link to={`/explore?location=${location}&minPrice=${minPrice}&maxPrice=${maxPrice}`}>Link</Link> */}
-                    <Button variant="outlined" onClick={() => this.onOpenModal('price')}>
-                        <span className="btn-txt">Price</span>
-                        {isPriceOpen && <div className='price-filter-modal'></div>}
+                    <Button variant="outlined">
+                        <div className="btn-expand" onClick={() => this.onOpenModal('price')}>Price</div>
+                        {isPriceOpen && 
+                            (<div className='price-filter-modal'>
+                                <FilterSlider/>
+                                <div className="price-select-container">
+                                    <div className="price-select" onClick="shouldShow = false">
+                                        <div className="label">min price</div>
+                                        <div className="price-change">
+                                            <div className="dollar">$</div>
+                                            <input value={50} placeholder="curr" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>–</h3>
+                                <div className="price-select"onClick="shouldShow = false">
+                                    <div className="label">max price</div>
+                                    <div className="price-change">
+                                        <div className="dollar">$</div>
+                                        <input value={50} placeholder="curr" />
+                                    </div>
+                                </div>
+                            </div>)}
                     </Button>
                     <Button variant="outlined">Type of place</Button>
                     <Button variant="outlined">Property type</Button>
@@ -64,8 +85,8 @@ export class Filter extends React.Component {
                     <Button variant="outlined">Smoking allowed</Button>
                     <Button variant="outlined">Pets allowed</Button>
                     <Button variant="outlined">Filters</Button>
-                </section>
-            </React.Fragment>
+                </section >
+            </React.Fragment >
         )
     }
 

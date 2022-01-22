@@ -13,16 +13,18 @@
     }
 }
 
+
 .price-filter-modal{
     position: absolute;
     top: 43px;
     left: -1px;
-    height: 353px;
+    // height: 353px;
     width: 440px;
     z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background: #fff;
     border: 0.5px solid hsla(0,0%,46.3%,.28);
     border-radius: 12px;

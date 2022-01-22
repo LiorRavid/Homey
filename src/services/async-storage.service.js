@@ -294,7 +294,7 @@ function _createEntities(entityType) {
                 {
                     "_id": "10006549",
                     "name": "NTH VIEW -  Beachfront Retreat!",
-                    "type": "house",
+                    "type": "House",
                     "rooms": "2 bedrooms",
                     "beds": "2 beds",
                     "baths": "1 bath",

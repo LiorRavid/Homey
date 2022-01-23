@@ -17,7 +17,7 @@ function query(entityType,filterBy, delay = 600) {
         if (filterBy.location) {
             const location = filterBy.location.toUpperCase()
             entities = entities.filter(stay => {
-                return stay.loc.country.toUpperCase().includes(location)
+                return stay.loc.country.toUpperCase().includes(location) || stay.loc.city.toUpperCase().includes(location)
             })
         }
         entities = entities.filter(stay => {

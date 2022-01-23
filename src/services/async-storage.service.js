@@ -132,7 +132,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Australia",
                         "countryCode": "AUS",
-                        "city":"New South Wales",
+                        "city":"Sydney",
                         "address": "Bondi Beach, New South Wales, Australia",
                         "lat": -151.275204,
                         "lng": 33.888219
@@ -230,7 +230,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Australia",
                         "countryCode": "AUS",
-                        "city":"New South Wales",
+                        "city":"Sydney",
                         "address": "Potts Point, New South Wales, Australia",
                         "lat": -151.223921,
                         "lng": 33.867867
@@ -326,7 +326,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Australia",
                         "countryCode": "AUS",
-                        "city":"New South Wales",
+                        "city":"Sydney",
                         "address": "Narrabeen, New South Wales, Australia",
                         "lat": -151.223921,
                         "lng": 33.867867

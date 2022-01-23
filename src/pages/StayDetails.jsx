@@ -39,6 +39,7 @@ export class StayDetails extends React.Component {
     addGuestReview = (review) => {
         let reviews = [...this.state.stay.reviews, review]
         // reviews.push(review)
+        review.createdAt = Date.now()/1000
         this.setState((prevState) => {
             return { stay: { ...prevState.stay, reviews } }
         })

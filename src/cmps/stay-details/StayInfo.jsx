@@ -1,4 +1,6 @@
 import Avatar from '@mui/material/Avatar';
+import { AiOutlineHome } from 'react-icons/ai';
+
 
 
 export function StayInfo({stay}) {
@@ -15,7 +17,7 @@ export function StayInfo({stay}) {
 
             </div>
             <div className="info-feature">
-                <h3>Entire home</h3>
+                <h3><AiOutlineHome/> Entire home</h3>
                 <small>You’ll have the apartment to yourself.</small>
                 <h3>Self check-in</h3>
                 <small>Check yourself in with the keypad.</small>

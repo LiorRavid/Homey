@@ -1,6 +1,7 @@
 
 
 import React from 'react'
+import { AiFillStar } from 'react-icons/ai';
 
 // import { connect } from 'react-redux'
 // import { Link, NavLink } from 'react-router-dom'
@@ -56,9 +57,13 @@ export class StayDetails extends React.Component {
 
                 <section className="title">
                     <h1>{stay.name}</h1>
-                    <p>⭐ {reviewsAvg.total} ({stay.reviews.length} reviews)</p>
+                    <div className="subtitle">
+
+                    <AiFillStar/>
+                    <p> {reviewsAvg.total} ({stay.reviews.length} reviews)</p>
                     <p>∙</p>
                     <p>{stay.loc.address}</p>
+                    </div>
                 </section>
 
                 <section className="gallery">

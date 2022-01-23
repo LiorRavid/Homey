@@ -37,10 +37,10 @@ export function AppHeader() {
 
                 <div className="header-filter">
                    
-                   <label><span>Location</span><input name="address" autocomplete="off" id="location" type="search" placeholder="Where are you going?" value="Tel Aviv" /></label>
-                    <label for="check-in"><span>Check in</span><input id="check-in" autocomplete="off" placeholder="Add dates" value="" /></label>
-                    <label for="check-out"><span>Check out</span><input id="check-out" autocomplete="off" placeholder="Add dates" value="" /></label>
-                    <label class="guests" for="guests"><span>Guests</span><input id="guests" name="guests" placeholder="Add guests" value="1  guests" /></label>
+                   <label><span>Location</span><input name="address" autoComplete="off" id="location" type="search" placeholder="Where are you going?" value="Tel Aviv" /></label>
+                    <label htmlFor="check-in"><span>Check in</span><input id="check-in" autoComplete="off" placeholder="Add dates" value="" /></label>
+                    <label htmlFor="check-out"><span>Check out</span><input id="check-out" autoComplete="off" placeholder="Add dates" value="" /></label>
+                    <label className='guests' htmlFor="guests"><span>Guests</span><input id="guests" name="guests" placeholder="Add guests" value="1  guests" /></label>
 
                     <div><BiSearch className='search-icon' /></div>
                 </div>

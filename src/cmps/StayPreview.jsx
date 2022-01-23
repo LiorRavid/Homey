@@ -23,8 +23,8 @@ class _StayPreview extends React.Component{
                     <div className="stay-preview-info">
                         <span className="stay-preview-rate">
                             <i className="fas fa-star"></i>
-                            <p>{rate.total}</p>
-                            <p>( {stay.reviews.length} reviews )</p>
+                            <p className="rate">{rate.total}</p>
+                            <p>( {stay.reviews.length})</p>
                         </span>
                         <p>
                             <span>{stay.type}</span>
@@ -32,7 +32,7 @@ class _StayPreview extends React.Component{
                             <span>{stay.loc.address.substring(0, stay.loc.address.indexOf(','))}</span>
                         </p>
                         <p>{stay.name}</p>
-                        <p className="stay-price"><span >${stay.price}</span> / night</p>
+                        <p className="stay-price"><span>${stay.price}</span> / night</p>
                     </div>
                 </div>
             </article>

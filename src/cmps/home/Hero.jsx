@@ -18,8 +18,10 @@ export function Hero({ loadStays, addTrip }) {
         <section className="main-hero-container ">
             <div className="main-hero">
 
+                <div className="hero-action">
                 <h1>Not sure where to go? Perfect.</h1>
-                <button className='hero-btn clean-link btn-outline-primary' ><Link onClick={explorAll}  to="/explore">I'm flexible</Link></button>
+                <button className='hero-btn clean-link btn-outline-primary' ><Link to={`/explore?location=&minPrice=-Infinity&maxPrice=Infinity`}>I'm flexible</Link></button>
+                </div>
             </div>
             
         </section>

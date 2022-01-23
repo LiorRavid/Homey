@@ -18,7 +18,7 @@ export function TopRated({ onSearch }) {
            
            <section className='top-cities'>
 
-            <Link to="/explore" onClick={() => { onSelectTopCity('Bangkok') }} className="top-cities-card">
+            <Link to={`/explore?location=Bangkok&minPrice=-Infinity&maxPrice=Infinity`}  className="top-cities-card clean-link">
                 <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642760367/airbnb/pop-des/uwlmwbvado6u2qhqtky8.jpg" alt="TopCities" />
                 <div className="city-details-container">
                     <h3>Bangkok</h3>
@@ -27,7 +27,7 @@ export function TopRated({ onSearch }) {
                     </div>
                 </div>
             </Link>
-            <Link to="/explore" onClick={() => { onSelectTopCity('Madrid') }} className="top-cities-card">
+            <Link to={`/explore?location=Madrid&minPrice=-Infinity&maxPrice=Infinity`}  className="top-cities-card clean-link">
                 <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642760507/airbnb/pop-des/bkq1qhmroiuqdogiy3x1.jpg" alt="TopCities"/>
                 <div className="city-details-container">
                     <h3>Madrid</h3>

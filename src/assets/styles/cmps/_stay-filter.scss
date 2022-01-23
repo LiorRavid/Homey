@@ -1,20 +1,19 @@
-.stay-filter{
-    > Button{
+.stay-filter {
+    > Button {
         border-radius: 30px;
         text-transform: inherit;
         margin-inline-end: 5px;
-        margin-bottom:16px;
-        color:#222; 
-        border-color:#ddd;
+        margin-bottom: 16px;
+        color: #222;
+        border-color: #ddd;
     }
 
-    > Button:hover{
-        border-color:#222;
+    > Button:hover {
+        border-color: #222;
     }
 }
 
-
-.price-filter-modal{
+.price-filter-modal {
     position: absolute;
     top: 43px;
     left: -1px;
@@ -26,8 +25,95 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    border: 0.5px solid hsla(0,0%,46.3%,.28);
+    border: 0.5px solid hsla(0, 0%, 46.3%, 0.28);
     border-radius: 12px;
     box-shadow: 0 10px 37px rgb(0 0 0 / 15%);
     padding: 20px;
+
+    .price-select-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+        .price-select {
+            height: 56px;
+            width: 168px;
+            background: #fff !important;
+            border: 0.5px solid hsla(0, 0%, 46.3%, 0.28) !important;
+            border-radius: 9px !important;
+
+            .price-label {
+                text-align: start;
+                margin-inline-start: 12px;
+                margin-top: 8px;
+                font-size: 11px;
+                line-height: 20px;
+                color: #717171;
+                font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+            }
+
+            .price-change {
+                display: flex;
+                align-items: flex-end;
+                align-items: center;
+                justify-content: center;
+                margin-inline-start: 12px;
+                font-size: 15px !important;
+            }
+
+            input {
+                border: none;
+                width: 50px;
+                font-size: 15px !important;
+            }
+        }
+
+        h3 {
+            margin: 8px;
+            color: #222;
+            font-size: 16px;
+            font-weight: lighter;
+            line-height: 20px;
+        }
+    }
+
+    .price-save {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 14px;
+        border-top: 1px solid #ebebeb;
+    
+            .clear {
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 600;
+                color: #222;
+                text-decoration: underline;
+            }
+    
+            .save {
+                cursor: pointer;
+                margin: 0;
+                text-align: center;
+                text-decoration: none;
+                width: auto;
+                font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 600;
+                border-radius: 8px;
+                outline: none;
+                padding: 8px 16px;
+                border: none;
+                background: #222;
+                color: #fff;
+            }
+        }    
 }
+
+

@@ -5,4 +5,10 @@
     background-color: #EBEBEB;
     border-top: 1px solid #ddd;
     padding: 40px;
+
+    div {
+        span, a, i{
+            margin: 5px;
+        }
+    }
 }

@@ -7,7 +7,33 @@
 
 .main-container.header-container{
     background-color: black;
+    color: white;
+    
 }
+
+.main-container.header-dark {
+    color: white;
+
+    .header-right{
+
+        .btn-explore:hover,.btn-host:hover{
+            background-color: #706d6d63;
+        }
+    }
+}
+
+.main-container.header-bright {
+
+    color: black;
+
+    
+
+    .homey{
+      color: #ff385c;
+    }
+}
+
+
 
 
 .header{
@@ -17,8 +43,8 @@
     // font-family: circular ;
     z-index: 100;
     position: sticky;
-    background-color: black;
-    color: white;
+    // background-color: black;
+    // color: white;
     
     .header-details {
         display: flex;
@@ -29,7 +55,7 @@
         align-self: center;
         background-color: white;
         border-radius: 40px;
-        // border: 1px solid black;
+        border: 1px solid rgba(211, 211, 211, 0.52);
         color: black;
         margin-bottom: 20px;
         cursor: pointer;
@@ -88,24 +114,31 @@
     
 }
 
-
-.header-left {
+.homey {
+    font-size: 1.8em;
+    margin-left: 5px;
     display: flex;
-    object-fit: contain;
-    height: 80px;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
     cursor: pointer;
-    color: white;
+    object-fit: contain;
+    height: 80px;
+    gap:10px;
+    // color: #ff385c;
+    // color: white;
+
+    .header-left {
+    font-size: 1rem;
+    // color: white;
     // color: #ff385c;
 
-    .homey {
-        font-size: 1.8em;
-        margin-left: 5px;
-    }
-}
+    // .homey {
+    //     font-size: 1.8em;
+    //     margin-left: 5px;
+    // }
+  }
 
+}
 .header-center {
     display: flex;
     align-items: center;
@@ -145,7 +178,6 @@
 
     
     
-
     button{
         background-color: #ff000000;
         padding: 7px;
@@ -154,7 +186,7 @@
         cursor: pointer;
         color: black;
     }
-    button:hover:not(:last-child){
+    button:hover(:last-child){
         background-color: #706d6d0e;
     }
     button:not(:last-child){
@@ -162,13 +194,15 @@
     }
     .btn-explore,.btn-host{
         background-color: #ff000000;
-        padding: 17px;
+        padding: 5px 20px;
         border-radius: 20px;
         border: none;
         cursor: pointer;
-        color: white;
     }
-    .btn-explore,.btn-host:hover:not(:last-child){
+    .btn-host{
+        margin-right: 10px;
+    }
+    .btn-explore:hover,.btn-host:hover{
         background-color: #706d6d0e;
     }
     .btn-explore:not(:last-child){

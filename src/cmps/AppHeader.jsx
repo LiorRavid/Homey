@@ -4,20 +4,32 @@ import { FaUserCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BiSearch } from "react-icons/bi"
 import { Link } from "react-router-dom"
+import { withRouter } from 'react-router-dom';
 
-export function AppHeader() {
+
+ function _AppHeader(props) {
+    
+    
+    const headerBackground = (props.location.pathname === "/")? "header-container" : ""
+    const headerColor = (props.location.pathname === "/")? "header-dark" : "header-bright"
+    const headerLogoColor = (props.location.pathname === "/")? "white" : "#ff385c"
+    console.log('props:', props);
+    
+    
+
     return (
-        <section className='main-container header-container full'>
+        <section className={`main-container  ${ headerColor } ${headerBackground} full`}>
 
-            <div className='header'>
+            <div className="header">
 
                 <div className="header-details">
 
+                        <Link className='homey clean-link' to="/">
                     <div className='header-left'>
-                        <SiAirbnb size="2em" color="white" />
-                        <Link className='homey clean-link' to="/"> homey</Link>
-                        {/* <span className='homey'>  homey</span> */}
+                        <SiAirbnb size="2em" color={headerLogoColor} />
+                    
                     </div>
+                             homey</Link>
 
                     {/* <div className='header-center'>
                 <input type="text" placeholder='Start your search' />
@@ -51,8 +63,5 @@ export function AppHeader() {
         </section>
     )
 }
-{/* <input name="address" autocomplete="off" id="location" type="search" placeholder="Where are you going?" value="Tel Aviv"></input> */}
-                    // <div>Location</div>
-                    // <div>Check in</div>
-                    // <div>Check out</div>
-                    // <div>Guests</div>
+
+export const AppHeader = withRouter(_AppHeader)

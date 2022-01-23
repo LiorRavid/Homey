@@ -55,7 +55,7 @@ export class FilterSlider extends React.Component {
 
     onHandleChange= (ev, newVal)=>{
         ev.stopPropagation()
-        this.setState({...this.state, values:newVal})
+        this.setState({...this.state, values:newVal},()=>{this.props.onSetPriceRange(this.state.values)})
     }
 
     render(){

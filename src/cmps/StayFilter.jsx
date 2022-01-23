@@ -13,6 +13,7 @@ export class Filter extends React.Component {
             location: '',
         },
         isPriceOpen: false,
+        currPriceVal:[0,500]
 
     }
 
@@ -41,10 +42,31 @@ export class Filter extends React.Component {
         }
     }
 
+    onSetPriceRange = (newVal)=>{
+        this.setState((prevState) => ({ ...prevState, currPriceVal: newVal }));
+    }
+
+    onHandleChange = (ev,newVal)=>{
+        ev.stopPropagation();
+        this.setState((prevState) => ({ ...prevState, currPriceVal: newVal }));
+    }
+
+    onClearPrice = (ev) =>{
+        ev.stopPropagation();
+        this.setState((prevState) => ({ ...prevState, currPriceVal: [0,500]}));
+    }
+
+    onSavePrice = (ev) =>{
+        ev.stopPropagation();
+        this.setState((prevState) => ({ ...prevState, filterBy:{...this.state.filterBy, minPrice:this.state.currPriceVal[0],maxPrice:this.state.currPriceVal[1]} ,isPriceOpen: !prevState.isPriceOpen }),()=>{
+            this.props.onSetPriceRange(this.state.filterBy)
+        })
+    }
+
 
     render() {
-        let { location, minPrice, maxPrice } = this.state.filterBy
-        const { isPriceOpen } = this.state
+        let { location, minPrice, maxPrice } = this.state.filterBy;
+        const { isPriceOpen,currPriceVal } = this.state;
         return (
             <React.Fragment>
                 <section className="stay-filter flex">
@@ -56,23 +78,27 @@ export class Filter extends React.Component {
                         <div className="btn-expand" onClick={() => this.onOpenModal('price')}>Price</div>
                         {isPriceOpen && 
                             (<div className='price-filter-modal'>
-                                <FilterSlider/>
+                                <FilterSlider onSetPriceRange={this.onSetPriceRange}/>
                                 <div className="price-select-container">
-                                    <div className="price-select" onClick="shouldShow = false">
+                                    <div className="price-select">
                                         <div className="label">min price</div>
                                         <div className="price-change">
                                             <div className="dollar">$</div>
-                                            <input value={50} placeholder="curr" />
+                                            <input value={currPriceVal[0]} onChange={(ev,newVal)=>this.onHandleChange(ev,newVal)} />
+                                        </div>
+                                    </div>
+                                    <h3>–</h3>
+                                    <div className="price-select">
+                                        <div className="label">max price</div>
+                                        <div className="price-change">
+                                            <div className="dollar">$</div>
+                                            <input value={currPriceVal[1]} onChange={(ev,newVal)=>this.onHandleChange(ev,newVal)}/>
                                         </div>
                                     </div>
                                 </div>
-                                <h3>–</h3>
-                                <div className="price-select"onClick="shouldShow = false">
-                                    <div className="label">max price</div>
-                                    <div className="price-change">
-                                        <div className="dollar">$</div>
-                                        <input value={50} placeholder="curr" />
-                                    </div>
+                                <div className="price-save">
+                                    <div className="clear" onClick={(ev)=>this.onClearPrice(ev)}>Clear</div>
+                                    <div className="save" onClick={(ev)=>this.onSavePrice(ev)}>Save</div>
                                 </div>
                             </div>)}
                     </Button>

@@ -1,33 +1,46 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
-import React from "react";
-import Slider from "react-slick";
+export class StayGallery extends Component {
+    render() {
+        return (
+            <div onClick={(ev)=> ev.stopPropagation()}>
+                <Carousel showThumbs={false} showIndicators={false} showStatus={false} infiniteLoop={true}>
+                    {this.props.stay.imgUrls.map((imgUrl,idx) => {
+                        return (
+                            <div key={idx}>
+                                <img src={imgUrl}/>
+                            </div>
+                        )
+                    })}
+                </Carousel>
+            </div>
+        );
+    }
+};
 
-export function StayGallery({ stay }) {
-    var settings = {
-        dots: false,
-        infinite: true,
-        arrows: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-    return (
-        <Slider {...settings} className="stay-preview-slider">
-            <div>
-                <img src={stay.imgUrls[0]} alt="" />
-            </div>
-            <div>
-                <img src={stay.imgUrls[1]} alt="" />
-            </div>
-            <div>
-                <img src={stay.imgUrls[2]} alt="" />
-            </div>
-            <div>
-                <img src={stay.imgUrls[3]} alt="" />
-            </div>
-            <div>
-                <img src={stay.imgUrls[4]} alt="" />
-            </div>
-        </Slider>
-    );
-}
+
+// import ImageGallery from 'react-image-gallery';
+
+
+// export class StayGallery extends React.Component {
+
+//     render() {
+//         const images = []
+//         let item
+//         this.props.stay.imgUrls.forEach((imgUrl,idx)=>{
+//             item = {origin:imgUrl}
+//             images[idx] = item
+//         })
+//         console.log(images)
+//         return <ImageGallery showThumbnails={false} showBullets={false} stopPropagation={true} items={images} />;
+//     }
+// }
+
+
+
+
+
+

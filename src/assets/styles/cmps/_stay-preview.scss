@@ -1,15 +1,17 @@
 .stay-preview-container {
     margin-bottom: 13px;
+    cursor: pointer;
 }
 
 .stay-preview-card {
     height: 100%;
+
     .stay-preview-info {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
-            height: 100px;
+            // height: 100px;
             margin-bottom: 3px;
 
             .stay-preview-rate{

@@ -1,5 +1,5 @@
 const initialState = {
-  stays: [],
+  stays: null,
   // sort: {
   //   type: 'byName',
   //   order: 1,

@@ -132,6 +132,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Australia",
                         "countryCode": "AUS",
+                        "city":"New South Wales",
                         "address": "Bondi Beach, New South Wales, Australia",
                         "lat": -151.275204,
                         "lng": 33.888219
@@ -229,6 +230,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Australia",
                         "countryCode": "AUS",
+                        "city":"New South Wales",
                         "address": "Potts Point, New South Wales, Australia",
                         "lat": -151.223921,
                         "lng": 33.867867
@@ -324,6 +326,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Australia",
                         "countryCode": "AUS",
+                        "city":"New South Wales",
                         "address": "Narrabeen, New South Wales, Australia",
                         "lat": -151.223921,
                         "lng": 33.867867
@@ -425,6 +428,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "United States",
                         "countryCode": "USA",
+                        "city":"New York",
                         "address": "Brooklyn, New York,United States",
                         "lat": 40.66801,
                         "lng": -73.98784
@@ -524,6 +528,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "United States",
                         "countryCode": "USA",
+                        "city":"New York",
                         "address": "New York, United States",
                         "lat": 40.71649,
                         "lng": -73.94865
@@ -623,6 +628,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "United States",
                         "countryCode": "USA",
+                        "city":"New York",
                         "address": "Queens, New York, United States",
                         "lat": 40.71567,
                         "lng": -73.87842
@@ -722,6 +728,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Spain",
                         "countryCode": "SP",
+                        "city":"Madrid",
                         "address": "Madrid, Spain",
                         "lat": 40.42116,
                         "lng": -3.70384
@@ -819,6 +826,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Spain",
                         "countryCode": "SP",
+                        "city":"Madrid",
                         "address": "Madrid, Spain",
                         "lat": 40.41126,
                         "lng": -3.70347
@@ -918,6 +926,7 @@ function _createEntities(entityType) {
                     "loc": {
                         "country": "Spain",
                         "countryCode": "SP",
+                        "city":"Madrid",
                         "address": "Madrid, Spain",
                         "lat": 40.40639,
                         "lng": -3.70048

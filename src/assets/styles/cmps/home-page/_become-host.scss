@@ -12,6 +12,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
     h1{
         margin-bottom: 550px;
@@ -24,5 +26,12 @@
     button{
         position: absolute;
         margin-bottom: 350px;
+        background-color: white;
+        color: black;
+        border-radius: 13px;
+        font-size: 1rem;
+        padding: 10px;
+        border:none
+        
     }
 }

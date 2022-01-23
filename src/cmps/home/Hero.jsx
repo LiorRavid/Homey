@@ -19,7 +19,7 @@ export function Hero({ loadStays, addTrip }) {
             <div className="main-hero">
 
                 <h1>Not sure where to go? Perfect.</h1>
-                <button onClick={explorAll}><Link to="/explore">Explore now</Link></button>
+                <button className='hero-btn clean-link btn-outline-primary' ><Link onClick={explorAll}  to="/explore">I'm flexible</Link></button>
             </div>
             
         </section>

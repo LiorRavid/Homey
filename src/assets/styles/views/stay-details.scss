@@ -1,15 +1,17 @@
 .stay-details{
     max-width: 1360px;
     margin: 0 auto;
+    line-height: 1.6;
     .title{
-padding-block-start: 30px;
+        padding-block-start: 30px;
         .subtitle{
             display: flex;
         }
         svg{
-        color: $clr1;
-        font-size: 1.2rem;
-        margin-top: 0.75rem;       
+            color: $clr1;
+            font-size: 1.2rem;
+            margin-top: 0.666rem;       
+            margin-inline-end: 5px;
      }
         h1{
            font-size: 1.5rem;
@@ -95,33 +97,37 @@ padding-block-start: 30px;
                 grid-row: 1/span 2;
                 border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-             }
-             &:nth-child(4){
-                border-bottom-left-radius: 10px;
-             }
-             &:nth-child(5){
-                border-bottom-right-radius: 10px;
-             }
-            }
-        }
     }
-    
-    @include for-wide-layout {
-        .gallery{
-            grid-template-columns: repeat(4,minmax(220px,1fr));
-            grid-template-rows: 250px 250px;
+    &:nth-child(4){
+        border-bottom-left-radius: 10px;
+    }
+    &:nth-child(5){
+        border-bottom-right-radius: 10px;
+    }
+}
+}
+}
+
+@include for-wide-layout {
+    .gallery{
+        grid-template-columns: repeat(4,minmax(220px,1fr));
+        grid-template-rows: 250px 250px;
+        
+        img{
             
-            img{
-               
-             &:first-child{
+            &:first-child{
                 grid-column: 1/span 2;
                 grid-row: 1/span 2;
                 border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-             }
-             &:nth-child(3){
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 0px;
+            }
+            &:nth-child(3){
                 border-top-right-radius: 10px;
-             }
+            }
+            &:nth-child(4){
+                border-bottom-left-radius: 0px;
+            }
              &:nth-child(5){
                 border-bottom-right-radius: 10px;
              }

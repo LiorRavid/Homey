@@ -8,8 +8,15 @@
 .main-container.header-container{
     background-color: black;
     color: white;
-    // position: fixed;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    width: 100%;
+    &.full-header{
+        height: 200px;
 
+    }
 }
 
 .main-container.header-dark {
@@ -44,6 +51,8 @@
     // font-family: circular ;
     z-index: 100;
     // position: fixed;
+    // right: calc(50% - 440px);
+    width: inherit;
     
     .header-details {
         display: flex;

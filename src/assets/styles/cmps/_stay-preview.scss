@@ -21,11 +21,21 @@
                 gap: 4px;
                 padding-bottom: 6px;
 
+                .rate{
+                    font-weight: 600;
+                }
+
                 .fa-star{
                     color: #ff385c;
                     font-size: .6875rem;
                 }
-            }  
+            } 
+            
+            .stay-price{
+                span{
+                    font-weight: 600;
+                }
+            }
         }
     }
 

@@ -32,6 +32,8 @@ export class SearchFilter extends React.Component {
         return (
             <form className="header-filter">
                 {/* <form > */}
+                <div className="filter-container">
+
 
                     <label htmlFor="location">
                         <span>Location</span>
@@ -50,7 +52,8 @@ export class SearchFilter extends React.Component {
                         <input name="guests" id="guests" name="guests" placeholder="Add guests" type="number" onChange={(ev)=>this.onHandleChange(ev)}/>
                     </label>
 
-                    <div onClick={()=>this.onSubmitSearch()}><BiSearch className='search-icon'  /></div>
+                    <div onClick={()=>this.onSubmitSearch()}><BiSearch className='search-icon' /></div>
+                </div>
                 {/* </form> */}
             </form>
         )

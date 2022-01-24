@@ -44,8 +44,9 @@ class _AppHeader extends React.Component {
         const headerColor = (location.pathname === "/") ? "header-dark" : "header-bright"
         const headerLogoColor = (location.pathname === "/") ? "white" : "#ff385c"
         const { isFullHeader } = this.state
+        
         return (
-            <section className={`main-container  ${headerColor} ${headerBackground} full`}>
+            <section className={`main-container ${isFullHeader?'full-header':''} ${headerColor} ${headerBackground} full`}>
 
                 <div className="header">
 
@@ -77,7 +78,7 @@ class _AppHeader extends React.Component {
 
                 </div>
 
-            </section>
+             </section>
         )
     }
 }

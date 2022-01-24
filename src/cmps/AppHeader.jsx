@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi"
 import { Link } from "react-router-dom"
 import { withRouter } from 'react-router-dom';
 import { SearchFilter } from './SearchFilter.jsx';
+import { BiSearch } from "react-icons/bi"
 
 
 class _AppHeader extends React.Component {
@@ -15,17 +16,18 @@ class _AppHeader extends React.Component {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('scroll', this.handleScroll, true);
 
     }
 
     handleScroll = (event) => {
-        let scrollTop = event.srcElement.body.scrollTop,
-            itemTranslate = Math.min(0, scrollTop/3 - 60);
-    
-        this.setState({
-          transform: itemTranslate
-        });
+        const { scrollY } = (window)
+        // console.log(scrollY)
+        if (scrollY < 100 && !this.state.isFullHeader) {
+            this.setState({ isFullHeader: true }, () => { console.log(this.state) })
+        } else if (scrollY > 100 && this.state.isFullHeader) {
+            this.setState({ isFullHeader: false }, () => { console.log(this.state) })
+        }
     }
 
 
@@ -41,7 +43,7 @@ class _AppHeader extends React.Component {
         const headerBackground = (location.pathname === "/") ? "header-container" : ""
         const headerColor = (location.pathname === "/") ? "header-dark" : "header-bright"
         const headerLogoColor = (location.pathname === "/") ? "white" : "#ff385c"
-
+        const { isFullHeader } = this.state
         return (
             <section className={`main-container  ${headerColor} ${headerBackground} full`}>
 
@@ -56,12 +58,10 @@ class _AppHeader extends React.Component {
                             </div>
                             homey</Link>
 
-                        {/* <div className='header-center'>
-                <input type="text" placeholder='Start your search' />
-                <BiSearch className='search-icon' />
-                
-                
-            </div> */}
+                        {!isFullHeader && <div className='header-center'>
+                            <input type="text" placeholder='Start your search' />
+                            <BiSearch className='search-icon' />
+                        </div>}
 
                         <div className='header-right'>
                             <Link className='btn-explore clean-link' to={`/explore?location=&minPrice=-Infinity&maxPrice=Infinity`}>Explore</Link>
@@ -72,7 +72,7 @@ class _AppHeader extends React.Component {
                         </div>
                     </div>
 
-                    <SearchFilter onSearch={this.onSearch} />
+                    {isFullHeader && <SearchFilter onSearch={this.onSearch} />}
 
 
                 </div>

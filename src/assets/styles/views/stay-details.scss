@@ -1,15 +1,17 @@
 .stay-details{
     max-width: 1360px;
     margin: 0 auto;
+    line-height: 1.6;
     .title{
-padding-block-start: 30px;
+        padding-block-start: 30px;
         .subtitle{
             display: flex;
         }
         svg{
-        color: $clr1;
-        font-size: 1.2rem;
-        margin-top: 0.75rem;       
+            color: $clr1;
+            font-size: 1.2rem;
+            margin-top: 0.666rem;       
+            margin-inline-end: 5px;
      }
         h1{
            font-size: 1.5rem;

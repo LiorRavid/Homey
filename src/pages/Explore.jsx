@@ -40,13 +40,15 @@ class _Explore extends React.Component {
     }
 
     render() {
-        const { stays } = this.props
+        const {stays} = this.props
+        const location = queryString.parse(this.props.location.search).location
+        console.log(location)
         const trip = ''
         if (!stays) return <React.Fragment />
         else if (stays.length === 0) {
             return (
                 <React.Fragment>
-                    <span className="stays-number">{0} stays</span>
+                    <span className="stays-number">{0} stays {`in ${location}`}</span>
                     <h3>No search results, find other place to stay</h3>
                 </React.Fragment>
             )
@@ -54,12 +56,12 @@ class _Explore extends React.Component {
             const imgUrl = stays[0].imgUrls[0]
             return (
                 <section className="explore-container">
-                    <span className="stays-number">{stays.length} stays</span>
-                    <h1>Find place to stay</h1>
-                    <Filter onSetPriceRange={this.onSetPriceRange} />
-                    <StayList stays={stays} />
-                </section>
-            )
+                <span className="stays-number">{stays.length} stays {`in ${location}`}</span>
+                <h1>Find place to stay</h1>
+                <Filter onSetPriceRange={this.onSetPriceRange}/>
+                <StayList stays={stays}/>
+            </section>
+        )
         }
     }
 }

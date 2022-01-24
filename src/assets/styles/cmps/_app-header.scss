@@ -8,7 +8,8 @@
 .main-container.header-container{
     background-color: black;
     color: white;
-    
+    // position: fixed;
+
 }
 
 .main-container.header-dark {
@@ -42,9 +43,7 @@
     // justify-content: space-between;
     // font-family: circular ;
     z-index: 100;
-    position: sticky;
-    // background-color: black;
-    // color: white;
+    // position: fixed;
     
     .header-details {
         display: flex;

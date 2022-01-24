@@ -50,6 +50,10 @@
         justify-content: space-between;
     }
     }
+
+    .filter-container{
+        display: flex;
+    }
     .header-filter {
         display: flex;
         align-self: center;
@@ -65,8 +69,8 @@
             color: white;
             font-size: 3rem;
             padding: 0.8rem;
-            margin-right: 7px;
-            margin-top: 10px;    
+            margin-right: 8px;
+            margin-top: 9px;    
         }
         label{
             position: relative;

@@ -1,23 +1,23 @@
 import { Link } from 'react-router-dom'
 
-export function PopDestination({ onSearch }) {
+export function PopDestination() {
 
-    function onSelectTopCity(city) {
-        const trip = {
-            guests: { adults: 1, kids: 0 },
-            loc: { address: city },
-            time: { checkIn: '', checkOut: '' }
-        }
-        onSearch(trip)
-    }
+    // function onSelectTopCity(city) {
+    //     const trip = {
+    //         guests: { adults: 1, kids: 0 },
+    //         loc: { address: city },
+    //         time: { checkIn: '', checkOut: '' }
+    //     }
+    //     onSearch(trip)
+    // }
 
     return (
-        <main className="top-cities-gallery">
+        <main className="pop-cities-gallery">
             
             <h1 className='head-line-popular-destinations'>Popular Destinations</h1>
 
-            <section className='top-cities'>
-            <Link to={`/explore?location=New York&minPrice=-Infinity&maxPrice=Infinity`} className="top-cities-card clean-link">
+            <section className='pop-cities'>
+            <Link to={`/explore?location=New York&minPrice=-Infinity&maxPrice=Infinity`} className="pop-cities-card clean-link">
                 <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642756388/airbnb/pop-des/x7oh3muult8plsfm5x2a.jpg" alt="TopCities" />
                 <div className="city-details-container">
                     <h3>New York</h3>
@@ -26,7 +26,7 @@ export function PopDestination({ onSearch }) {
                     </div>
                 </div>
             </Link>
-            <Link to={`/explore?location=Sydney&minPrice=-Infinity&maxPrice=Infinity`} className="top-cities-card clean-link">
+            <Link to={`/explore?location=Sydney&minPrice=-Infinity&maxPrice=Infinity`} className="pop-cities-card clean-link">
                 <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642756198/airbnb/pop-des/fvslkcejjnvtfvn0pmhv.jpg" alt="TopCities"/>
                 <div className="city-details-container">
                     <h3>Sydney</h3>
@@ -35,7 +35,7 @@ export function PopDestination({ onSearch }) {
                     </div>
                 </div>
             </Link>
-            <Link to={`/explore?location=London&minPrice=-Infinity&maxPrice=Infinity`} className="top-cities-card clean-link">
+            <Link to={`/explore?location=London&minPrice=-Infinity&maxPrice=Infinity`} className="pop-cities-card clean-link">
                 <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642756666/airbnb/pop-des/jksu6r9vs5i18o4eulbs.jpg" alt="TopCities"/>
                 <div className="city-details-container">
                     <h3>London</h3>
@@ -44,7 +44,7 @@ export function PopDestination({ onSearch }) {
                     </div>
                 </div>
             </Link>
-            <Link to={`/explore?location=Paris&minPrice=-Infinity&maxPrice=Infinity`}  className="top-cities-card clean-link">
+            <Link to={`/explore?location=Paris&minPrice=-Infinity&maxPrice=Infinity`}  className="pop-cities-card clean-link">
                 <img src="https://res.cloudinary.com/dxdtpxsax/image/upload/v1642756852/airbnb/pop-des/eyyvzabrv7d0ob3kfafk.jpg" alt="TopCities"/>
                 <div className="city-details-container">
                     <h3>Paris</h3>

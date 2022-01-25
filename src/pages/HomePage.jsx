@@ -5,7 +5,7 @@ import { Hero } from '../cmps/home/Hero.jsx'
 import { PopDestination } from '../cmps/home/PopDestination.jsx'
 import { TopRated } from '../cmps/home/TopRated.jsx'
 import { BecomeHost } from '../cmps/home/BecomeHost.jsx'
-import { setCurrPage,setHeaderSize,setAppState } from '../store/app.action.js'
+import { setCurrPage, setHeaderSize, setAppState } from '../store/app.action.js'
 
 
 class _HomePage extends React.Component {
@@ -13,8 +13,8 @@ class _HomePage extends React.Component {
     componentDidMount() {
         // this.props.setHeaderSize(true);
         // this.props.setCurrPage('home');   
-        this.props.setAppState({currPage:'home',isHomePageTop:true,isFullHeader:true});   
-     }
+        this.props.setAppState({ currPage: 'home', isHomePageTop: true, isFullHeader: true });
+    }
 
     render() {
 

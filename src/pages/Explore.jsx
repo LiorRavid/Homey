@@ -5,6 +5,8 @@ import queryString from 'query-string'
 import { StayList } from '../cmps/StayList.jsx'
 import { Filter } from '../cmps/StayFilter.jsx'
 import { loadStays } from '../store/stay.action.js'
+import { setCurrPage, setHeaderSize, setAppState } from '../store/app.action.js'
+
 
 
 
@@ -13,6 +15,7 @@ class _Explore extends React.Component {
     componentDidMount() {
         this.scrollUp();
         this.getStays();
+        this.props.setAppState({ isFullHeader: false, isHomePageTop: false, currPage: 'explore' })
     }
 
     componentDidUpdate(prevProps) {
@@ -40,7 +43,7 @@ class _Explore extends React.Component {
     }
 
     render() {
-        const {stays} = this.props
+        const { stays } = this.props
         const location = queryString.parse(this.props.location.search).location
         console.log(location)
         const trip = ''
@@ -56,24 +59,31 @@ class _Explore extends React.Component {
             const imgUrl = stays[0].imgUrls[0]
             return (
                 <section className="explore-container">
-                <span className="stays-number">{stays.length} stays {`in ${location}`}</span>
-                <h1>Find place to stay</h1>
-                <Filter onSetPriceRange={this.onSetPriceRange}/>
-                <StayList stays={stays}/>
-            </section>
-        )
+                    <span className="stays-number">{stays.length} stays {`in ${location}`}</span>
+                    <h1>Find place to stay</h1>
+                    <Filter onSetPriceRange={this.onSetPriceRange} />
+                    <StayList stays={stays} />
+                </section>
+            )
         }
     }
 }
 
-function mapStateToProps({ stayModule }) {
+function mapStateToProps({ stayModule, appModule }) {
     return {
         stays: stayModule.stays,
+        currPage: appModule.currPage,
+        isFullHeader: appModule.isFullHeader,
+
+
     }
 }
 
 const mapDispatchToProps = {
     loadStays,
+    setCurrPage,
+    setHeaderSize,
+    setAppState,
 }
 
 

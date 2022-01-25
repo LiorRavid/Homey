@@ -1,6 +1,9 @@
 
 
 import React from 'react'
+import { connect } from 'react-redux'
+import { setAppState } from '../store/app.action.js'
+
 import { AiFillStar } from 'react-icons/ai';
 
 // import { connect } from 'react-redux'
@@ -15,7 +18,7 @@ import { StayInfo } from '../cmps/stay-details/StayInfo.jsx'
 import { ReviewList } from '../cmps/stay-details/ReviewList.jsx'
 import { AddReview } from '../cmps/stay-details/AddReview.jsx'
 
-export class StayDetails extends React.Component {
+class _StayDetails extends React.Component {
     state = {
         stay: null,
         // reviews: [],
@@ -25,6 +28,10 @@ export class StayDetails extends React.Component {
 
     componentDidMount() {
         this.loadStay()
+        // this.props.setHeaderSize(false);
+        // this.props.setCurrPage('stay');
+        this.props.setAppState({ isFullHeader: false, isHomePageTop: false, currPage: 'stay' })
+
     }
 
     loadStay = () => {
@@ -102,9 +109,16 @@ export class StayDetails extends React.Component {
 
 }
 
-// const mapDispatchToProps = {
-//     addReview
-// }
+function mapStateToProps({appModule}) {
+    return {
+        isFullHeader: appModule.isFullHeader,
+        currPage: appModule.currPage,
+    }
+}
+
+const mapDispatchToProps = {
+    setAppState,
+}
 
 
-// export const ToyDetails = connect(null, mapDispatchToProps)(_ToyDetails)
+export const StayDetails = connect(mapStateToProps, mapDispatchToProps)(_StayDetails)

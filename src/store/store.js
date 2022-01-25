@@ -4,11 +4,13 @@ import thunk from 'redux-thunk'
 import { stayReducer } from './stay.reducer.js'
 import { userReducer } from './user.reducer.js'
 import { msgReducer } from './msg.reducer.js'
+import { appReducer } from './app.reducer.js'
 
 const rootReducer = combineReducers({
     stayModule : stayReducer,
     userModule : userReducer,
     msgModule: msgReducer,
+    appModule: appReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

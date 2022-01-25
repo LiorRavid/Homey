@@ -38,15 +38,15 @@ class _TopRated extends React.Component {
     
         return (
             
-            <main className="top-cities-gallery">
+            <main className="top-rated-gallery">
             
-            <h1>Top Rated homies</h1>
+            <h1>Top Rated <span>homies</span></h1>
            
-           <section className='top-cities'>
+           <section className='top-rated'>
 
                {
                    topRatedStays.map((stay,index) =>
-                    <Link key={index} to={`/explore?location=${stay.loc.country}&minPrice=-Infinity&maxPrice=Infinity`}  className="top-cities-card clean-link">
+                    <Link key={index} to={`/explore?location=${stay.loc.country}&minPrice=-Infinity&maxPrice=Infinity`}  className="top-rated-card clean-link">
                     <img src={stay.imgUrls[0]} alt="TopCities" />
                     <div className="city-details-container">
                         <h3>{stay.loc.city}</h3>

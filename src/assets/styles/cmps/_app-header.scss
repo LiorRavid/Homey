@@ -40,6 +40,11 @@
     // font-family: circular ;
     z-index: 100;
 }
+
+.filter-container{
+    display: flex;
+}
+
 .header-details {
     display: flex;
     justify-content: space-between;

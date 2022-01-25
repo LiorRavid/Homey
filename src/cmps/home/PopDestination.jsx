@@ -14,7 +14,7 @@ export function PopDestination({ onSearch }) {
     return (
         <main className="top-cities-gallery">
             
-            <h1 className='head-line-popular-destinations'>Top Popular Destinations</h1>
+            <h1 className='head-line-popular-destinations'>Popular Destinations</h1>
 
             <section className='top-cities'>
             <Link to={`/explore?location=New York&minPrice=-Infinity&maxPrice=Infinity`} className="top-cities-card clean-link">

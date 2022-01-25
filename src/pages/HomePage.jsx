@@ -12,7 +12,6 @@ export function HomePage() {
             <PopDestination />
             <TopRated />
             <BecomeHost />
-            <AppFooter />
         </section>
     )
 }

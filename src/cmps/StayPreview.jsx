@@ -24,14 +24,14 @@ class _StayPreview extends React.Component{
                         <span className="stay-preview-rate">
                             <i className="fas fa-star"></i>
                             <p className="rate">{rate.total}</p>
-                            <p>( {stay.reviews.length})</p>
+                            <p className="rate-length">( {stay.reviews.length})</p>
                         </span>
                         <p>
-                            <span>{stay.type}</span>
-                            •
-                            <span>{stay.loc.address.substring(0, stay.loc.address.indexOf(','))}</span>
+                            <span className="stay-type">{stay.type}</span>
+                            <span className="dot">•</span>
+                            <span className="stay-loc">{stay.loc.address.substring(0, stay.loc.address.indexOf(','))}</span>
                         </p>
-                        <p>{stay.name}</p>
+                        <p className="stay-name">{stay.name}</p>
                         <p className="stay-price"><span>${stay.price}</span> / night</p>
                     </div>
                 </div>

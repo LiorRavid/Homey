@@ -24,7 +24,7 @@ class _RootCmp extends React.Component {
                     currPage={currPage}
                     isHomePageTop={isHomePageTop}
                     onSetAppState={this.onSetAppState} />
-                <main className="main-container page">
+                <main className="main-container page grow">
                     <Switch>
                         {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
                     </Switch>

@@ -23,6 +23,7 @@
 
                 .rate{
                     font-weight: 600;
+                    color:$clr4;
                 }
 
                 .fa-star{
@@ -30,10 +31,31 @@
                     font-size: .6875rem;
                 }
             } 
+
+            .rate-length{
+                color:$clr5;
+            }
+
+            .stay-type{
+                color:$clr5;
+            }
+
+            .stay-loc{
+                color:$clr5;
+            }
+
+            .dot{
+                color:$clr5;
+            }
+
+            .stay-name{
+                color:$clr5;
+            }
             
             .stay-price{
                 span{
-                    font-weight: 600;
+                    // font-weight: 600;
+                    font-family: cereal-bold;
                 }
             }
         }

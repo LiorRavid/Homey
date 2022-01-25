@@ -20,7 +20,7 @@ class _TopRated extends React.Component {
             
             let {stays} = this.props
             stays.sort( (a,b) => {
-                return a.price.length - b.reviews.length
+                return a.reviews.length - b.reviews.length
             })
             stays = stays.slice(0,4)
             this.setState({topRatedStays:stays})

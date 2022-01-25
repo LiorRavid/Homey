@@ -18,17 +18,10 @@ class _TopRated extends React.Component {
     getTopRatedStays = () => {
         this.props.loadStays()
         setTimeout(() => {
-<<<<<<< HEAD
             
             let {stays} = this.props
             stays.sort( (a,b) => {
                 return a.reviews.length - b.reviews.length
-=======
-
-            let { stays } = this.props
-            stays.sort((a, b) => {
-                return a.price.length - b.reviews.length
->>>>>>> dfdd8b79bf6408ab0cc38cb2aaba768025dc556f
             })
             stays = stays.slice(0, 4)
             this.setState({ topRatedStays: stays })

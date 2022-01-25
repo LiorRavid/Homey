@@ -61,6 +61,7 @@
         object-fit: contain;
         height: 80px;
         gap: 10px;
+        font-family: cereal-book;
 
         .header-left {
             font-size: 1rem;
@@ -123,17 +124,17 @@
     label:last-of-type input {
         width: 140px;
     }
+    .search-icon {
+        background-color: #ff385c;
+        border-radius: 50%;
+        color: white;
+        font-size: 3rem;
+        padding: 0.8rem;
+        margin-right: 7px;
+        margin-top: 10px;
+    }
 }
 
-.search-icon {
-    background-color: #ff385c;
-    border-radius: 50%;
-    color: white;
-    font-size: 3rem;
-    padding: 0.8rem;
-    margin-right: 7px;
-    margin-top: 10px;
-}
 
 .header-center {
     display: flex;

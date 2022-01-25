@@ -49,7 +49,9 @@ export class StayOrder extends Component {
 
                             </div>
                             <div className="btn-container">
-                                <button>Reserve</button>
+                                <div className="content">
+                                    <button className="action-btn"><span>Reserve</span></button>
+                                </div>
                             </div>
                         </form>
                     </div>

@@ -32,7 +32,7 @@ export class SearchFilter extends React.Component {
         return (
             <form className="header-filter">
                 {/* <form > */}
-                {/* <div className="filter-container"> */}
+                <div className="filter-container">
 
 
                     <label htmlFor="location">
@@ -53,8 +53,8 @@ export class SearchFilter extends React.Component {
                     </label>
 
                     <div onClick={()=>this.onSubmitSearch()}><BiSearch className='search-icon' /></div>
+                </div>
                 {/* </form> */}
-                {/* </div> */}
             </form>
         )
     }

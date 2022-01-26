@@ -10,25 +10,34 @@
 }
 
 .pop-cities {
-    display: flex;
+    // display: flex;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
     .pop-cities-card {
-        width: 900px;
+        // width: 900px;
         // height: 900px;
         margin: 10px;
         color: rgb(0, 0, 0);
         border-bottom-left-radius: 13px;
         border-bottom-right-radius: 13px;
-        @include aspect-ratio(2.5,3);
+        @include aspect-ratio(9,16);
     }
     img {
         border-radius: 13px;
-        height: 390px;
+        // height: 200px;
         object-fit: cover;
     }
     .city-details-container {
-padding-inline-start: 3px;        
-// border: 1px lightgray solid;
-        h4 {
+        padding-inline-start: 3px;  
+        
+        .city-details{
+            position: relative;
+            top: 81%;
+        }
+
+        h4 span{
             color: rgba(131, 127, 127, 0.801);
         }
     }

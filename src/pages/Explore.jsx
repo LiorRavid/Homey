@@ -42,29 +42,27 @@ class _Explore extends React.Component {
         this.props.history.push(`/explore?location=${filterBy.location}&minPrice=${filterBy.minPrice}&maxPrice=${filterBy.maxPrice}`);
     }
 
+    onSetAmenitie = (filterBy)=>{
+        console.log('fikter explor',filterBy)
+        this.props.history.push(`/explore?location=${filterBy.location}&minPrice=${filterBy.minPrice}&maxPrice=${filterBy.maxPrice}&Wifi=${filterBy['Wifi']}&TV=${filterBy['TV']}&Kitchen=${filterBy['Kitchen']}&AC=${filterBy['AC']}&Smoking allowed=${filterBy['Smoking allowed']}&Pets allowed = ${filterBy['Pets allowed']}`);
+    }
+
     render() {
         const { stays } = this.props
         const location = queryString.parse(this.props.location.search).location
         console.log(location)
         const trip = ''
+        
         if (!stays) return <React.Fragment />
-        else if (stays.length === 0) {
-            return (
-                <React.Fragment>
-                    <span className="stays-number">{0} stays </span>
-                    <h3>No search results, find other place to stay</h3>
-                </React.Fragment>
-            )
-        } else {
-            const imgUrl = stays[0].imgUrls[0]
+        else{
             return (
                 <section className="explore-container">
-                <span className="stays-number">{stays.length} stays </span>
-                <h1>Find place to stay in {location}</h1>
-                <Filter onSetPriceRange={this.onSetPriceRange}/>
-                <StayList stays={stays}/>
-            </section>
-        )
+                    <span className="stays-number">{stays.length} stays </span>
+                    {(location)?<h1>Find place to stay in {location}</h1>:<h1>Find place to stay</h1>}
+                    <Filter onSetPriceRange={this.onSetPriceRange} onSetAmenitie={this.onSetAmenitie} location={location} />
+                    {(stays.length)?<StayList stays={stays}/>:<h2>No search results, find other place to stay</h2>}
+                </section>
+            )
         }
     }
 }

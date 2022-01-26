@@ -1,3 +1,4 @@
+import {utilService} from '../services/util.service.js'
 
 export const storageService = {
     query,
@@ -12,8 +13,12 @@ function query(entityType,filterBy, delay = 600) {
     var entities = JSON.parse(localStorage.getItem(entityType)) || _createEntities(entityType)
 
     if (entityType === 'stayDB') {
-        if (!filterBy) filterBy = { minPrice:-Infinity, maxPrice:Infinity,location:''}
+        if (!filterBy) filterBy = { minPrice:-Infinity, maxPrice:Infinity,location:'','Wifi':'','TV':'','Kitchen':'','AC':'','Smoking allowed':'','Pets allowed':''}
         
+        // if (filterBy['check-in']){
+        // const tsCheckIn = utilService.getTimeStampFromDate(filterBy['check-in'])
+        // const tsCheckOut = utilService.getTimeStampFromDate(filterBy['check-out'])
+
         if (filterBy.location) {
             const location = filterBy.location.toUpperCase()
             entities = entities.filter(stay => {
@@ -23,6 +28,41 @@ function query(entityType,filterBy, delay = 600) {
         entities = entities.filter(stay => {
             return (stay.price>=filterBy.minPrice && stay.price <=filterBy.maxPrice)
         } )
+
+        if(filterBy['Wifi']){
+            console.log('hi111',filterBy['Wifi'])
+            entities = entities.filter(stay => {
+                return (stay.amenities.includes('Wifi'))
+            })
+        }
+
+        if(filterBy['TV']){
+            entities = entities.filter(stay => {
+                return (stay.amenities.includes('TV'))
+            })
+        }
+        if(filterBy['Kitchen']){
+            entities = entities.filter(stay => {
+                return (stay.amenities.includes('Kitchen'))
+            })
+        }
+        if(filterBy['AC']){
+            entities = entities.filter(stay => {
+                return (stay.amenities.includes('AC'))
+            })
+        }
+
+        if(filterBy['Smoking allowed']){
+            entities = entities.filter(stay => {
+                return (stay.amenities.includes('Smoking allowed'))
+            })
+        }
+
+        if(filterBy['Pets allowed']){
+            entities = entities.filter(stay => {
+                return (stay.amenities.includes('Pets allowed'))
+            })
+        }
     }
         
     return new Promise((resolve, reject) => {
@@ -31,6 +71,7 @@ function query(entityType,filterBy, delay = 600) {
             resolve(entities)
         }, delay)
     })
+
 }
 
 function get(entityType, entityId) {

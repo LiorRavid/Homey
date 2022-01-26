@@ -3,7 +3,8 @@ export const utilService = {
     makeLorem,
     getRandomIntInclusive,
     delay,
-    getDateFromTimeStemp
+    getDateFromTimeStemp,
+    getTimeStampFromDate
 }
 
 function makeId(length = 6) {
@@ -39,7 +40,7 @@ function delay(ms = 1500) {
     })
 }
 
-function getDateFromTimeStemp(timeStemp){
+function getDateFromTimeStemp(timeStemp) {
     var a = new Date(timeStemp * 1000);
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var year = a.getFullYear();
@@ -47,5 +48,12 @@ function getDateFromTimeStemp(timeStemp){
     var date = a.getDate();
     var time = date + ' ' + month + ' ' + year;
     return time;
+}
+
+function getTimeStampFromDate(date) {
+    date = date.split("/");
+    var newDate = new Date(date[0], date[1] - 1, date[2]);
+    console.log('time',newDate.getTime())
+    return newDate.getTime();
 }
 

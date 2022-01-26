@@ -15,7 +15,7 @@
 .header-container.header-dark {
     color: white;
     background-color: black;
-    
+
     .header-right {
         .btn-explore:hover,
         .btn-host:hover {
@@ -33,7 +33,7 @@
     }
 }
 
-.filter-container{
+.filter-container {
     display: flex;
 }
 
@@ -44,7 +44,7 @@
     z-index: 100;
 }
 
-.filter-container{
+.filter-container {
     display: flex;
 }
 
@@ -77,6 +77,13 @@
     border: 1px solid rgba(211, 211, 211, 0.52);
     color: black;
     cursor: pointer;
+
+    .border {
+        height: 30px;
+        margin-top: 18px;
+        // border-right: 1px solid lightgrey;
+    }
+    
     label {
         position: relative;
         display: flex;
@@ -94,21 +101,60 @@
             font-weight: bold;
             line-height: 1.5;
         }
+
     }
     label:first-child {
         padding: 14px 50px 14px 35px;
     }
 
-    label:nth-child(2),
-    label:nth-child(3),
-    label:nth-child(4) {
+
+    // label:nth-child(3),
+    // label:nth-child(4) {
         // border-right: 1px solid lightgrey;
-        border-left: 1px solid lightgrey;
-    }
+        // border-left: 1px solid lightgrey;
+    // }
     label:hover {
         background-color: rgba(211, 211, 211, 0.37);
         border-radius: 40px;
     }
+
+    // label:hover + div.first{
+    //     border-right: 1px solid white;
+    // }
+
+    // label:hover ~ div.first{
+    //     border-right: 1px solid white;
+    // }
+
+    // label.check-in:hover ~ div.second{
+    //     border-right: 1px solid white;
+    // }
+
+    // div.first{
+    //     border-right: 1px solid white;
+    // }
+
+    // label:hover,
+    // .label:hover ~ div {
+    //     border-right: 1px solid white;
+    // }
+
+    // label:hover ~ div.third{
+    //     border-right: 1px solid white;
+    // }
+
+    .first, .second, .third{
+        border-right: 1px solid lightgrey;
+    }
+
+
+
+
+    // div + label:hover{
+    //     border-right: 1px solid white;
+    // }
+
+
     // label:not(:last-child, label:nth-of-type(4)){
     //     border-right: 1px solid lightgrey;
     // }
@@ -134,7 +180,6 @@
         margin-top: 10px;
     }
 }
-
 
 .header-center {
     display: flex;

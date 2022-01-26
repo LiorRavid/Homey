@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button'
+import {MdKeyboardArrowDown} from 'react-icons/md'
 import { FilterSlider } from './FilterSlider.jsx'
 
 import { Link } from 'react-router-dom'
@@ -11,10 +12,20 @@ export class Filter extends React.Component {
             minPrice: -Infinity,
             maxPrice: Infinity,
             location: '',
+            'Wifi':'',
+            'TV':'',
+            'Kitchen':'',
+            'AC':'',
+            'Smoking allowed':'',
+            'Pets allowed':'',
         },
         isPriceOpen: false,
         currPriceVal:[0,500]
 
+    }
+
+    componentDidMount(){
+        this.setState({...this.state, filterBy:{...this.state.filterBy,location:this.props.location}})
     }
 
 
@@ -63,6 +74,17 @@ export class Filter extends React.Component {
         })
     }
 
+    onClickAmenitie = (amenitie) => {
+        console.log('hi',this.state.filterBy[amenitie])
+        if(this.state.filterBy[amenitie]!==''){
+            this.setState((prevState) => ({ ...prevState, filterBy:{...this.state.filterBy,[amenitie]: '' }}),()=>{
+                this.props.onSetAmenitie(this.state.filterBy)});
+        }else{
+            this.setState((prevState) => ({ ...prevState, filterBy:{...this.state.filterBy,[amenitie]: amenitie}}),()=>{
+                this.props.onSetAmenitie(this.state.filterBy)});
+        }
+    }
+
 
     render() {
         let { location, minPrice, maxPrice } = this.state.filterBy;
@@ -75,7 +97,7 @@ export class Filter extends React.Component {
                     <input type="number" name="maxPrice" value={maxPrice} onChange={this.onHandleChange} />
                     <Link to={`/explore?location=${location}&minPrice=${minPrice}&maxPrice=${maxPrice}`}>Link</Link> */}
                     <Button variant="outlined">
-                        <div className="btn-expand" onClick={() => this.onOpenModal('price')}>Price</div>
+                        <div className="btn-expand flex" onClick={() => this.onOpenModal('price')}>Price {(!isPriceOpen)?<i class="fas fa-angle-down arrow-down"></i>: <i class="fas fa-angle-up arrow-up"></i>}</div>
                         {isPriceOpen && 
                             (<div className='price-filter-modal'>
                                 <FilterSlider onSetPriceRange={this.onSetPriceRange}/>
@@ -104,13 +126,12 @@ export class Filter extends React.Component {
                     </Button>
                     <Button variant="outlined">Type of place</Button>
                     <Button variant="outlined">Property type</Button>
-                    <Button variant="outlined">Wifi</Button>
-                    <Button variant="outlined">TV</Button>
-                    <Button variant="outlined">Kitchen</Button>
-                    <Button variant="outlined">AC</Button>
-                    <Button variant="outlined">Smoking allowed</Button>
-                    <Button variant="outlined">Pets allowed</Button>
-                    <Button variant="outlined">Filters</Button>
+                    <Button variant="outlined" className={(this.state.filterBy['Wifi']==='')?'':'btn-clicked'} onClick={()=>this.onClickAmenitie('Wifi')}>Wifi</Button>
+                    <Button variant="outlined" className={(this.state.filterBy['TV']==='')?'':'btn-clicked'} onClick={()=>this.onClickAmenitie('TV')}>TV</Button>
+                    <Button variant="outlined" className={(this.state.filterBy['Kitchen']==='')?'':'btn-clicked'} onClick={()=>this.onClickAmenitie('Kitchen')}>Kitchen</Button>
+                    <Button variant="outlined" className={(this.state.filterBy['AC']==='')?'':'btn-clicked'} onClick={()=>this.onClickAmenitie('AC')}>AC</Button>
+                    <Button variant="outlined" className={(this.state.filterBy['Smoking allowed']==='')?'':'btn-clicked'} onClick={()=>this.onClickAmenitie('Smoking allowed')}>Smoking allowed</Button>
+                    <Button variant="outlined" className={(this.state.filterBy['Pets allowed']==='')?'':'btn-clicked'} onClick={()=>this.onClickAmenitie('Pets allowed')}>Pets allowed</Button>
                 </section >
             </React.Fragment >
         )

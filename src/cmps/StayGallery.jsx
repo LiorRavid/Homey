@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
+// || ev.target.className.baseVal === 'MuiSvgIcon-root'
 export class StayGallery extends Component {
+    
+    
     render() {
         return (
-            <div onClick={(ev)=> ev.stopPropagation()}>
+            <div>
                 <Carousel showThumbs={false} showIndicators={false} showStatus={false} infiniteLoop={true}>
                     {this.props.stay.imgUrls.map((imgUrl,idx) => {
                         return (
@@ -38,6 +41,16 @@ export class StayGallery extends Component {
 //         return <ImageGallery showThumbnails={false} showBullets={false} stopPropagation={true} items={images} />;
 //     }
 // }
+
+
+
+
+// classNames="date-picker-2"
+//                 rangeColors={"black"}
+//                 color={"black"}
+//                 className="date-pick"
+//                 ranges={[selectionRange]}
+//                 onChange={this.handleSelect}
 
 
 

@@ -4,22 +4,19 @@ import { withRouter } from 'react-router-dom';
 import { reviewService } from '../services/review.service.js'
 import { StayGallery } from './StayGallery.jsx'
 
-// export function StayPreview({ stay }) {
+
 class _StayPreview extends React.Component{
 
-    moveToDetails = ()=>{
-        this.props.history.push(`/stay/${this.props.stay._id}`)
-    }
-
+    
     render(){
         const{stay}= this.props
         const rate = reviewService.getReviewsAvg(stay.reviews)
         return (
-            // <Link to={`/stay/${stay._id}`} className=" stay-preview-container clean-link">
-            <article className=" stay-preview-container" onClick={()=>this.moveToDetails()}>
+            <article className=" stay-preview-container" onClick={(ev) => {
+                if (ev.target.className === 'control-arrow control-next' || ev.target.className === 'control-arrow control-prev') return
+                this.props.history.push(`/stay/${this.props.stay._id}`)}}>
                 <div className="stay-preview-card">
                     <StayGallery stay={stay}/>
-                    {/* <img src={imgUrl} /> */}
                     <div className="stay-preview-info">
                         <span className="stay-preview-rate">
                             <i className="fas fa-star"></i>
@@ -36,7 +33,6 @@ class _StayPreview extends React.Component{
                     </div>
                 </div>
             </article>
-            // </Link>
         )
     }
 }

@@ -3,6 +3,8 @@
 @import "setup/functions.scss";
 @import "setup/mixins.scss";
 @import "setup/typography.scss";
+@import 'react-date-range/dist/styles.css';
+@import 'react-date-range/dist/theme/default.css'; 
 
 // // Basics
 @import "basics/helpers.scss";

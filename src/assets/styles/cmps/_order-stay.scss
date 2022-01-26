@@ -63,10 +63,12 @@
             border-right: 1px solid #999;
         }
 
-        input {
+        .check-in-input {
             border: none;
             font-size: 1rem;
             width: 100%;
+            height: 10px;
+            // background-color: rgba(0, 0, 0, 0.493);
             cursor: pointer;
             margin-top: 5px;
         }

@@ -23,7 +23,7 @@ export class SearchFilter extends React.Component {
         if (target) {
             const field = target.name
             const value = target.value
-            this.setState((prevState) => ({...prevState,[field]:value }), () => { console.log('state in search', this.state) })
+            this.setState((prevState) => ({...prevState,[field]:value }))
         } 
     }
 
@@ -49,7 +49,7 @@ export class SearchFilter extends React.Component {
                     </label>
                     <label className="guests" htmlFor="guests">
                         <span>Guests</span>
-                        <input name="guests" id="guests" name="guests" placeholder="Add guests" type="number" onChange={(ev)=>this.onHandleChange(ev)}/>
+                        <input name="guests" id="guests" placeholder="Add guests" type="number" onChange={(ev)=>this.onHandleChange(ev)}/>
                     </label>
 
                     <div onClick={()=>this.onSubmitSearch()}><BiSearch className='search-icon' /></div>

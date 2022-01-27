@@ -29,11 +29,14 @@ class _StayOrder extends Component {
     componentDidMount() {
         const { stay } = this.props
         
-        const {checkIn, checkOut, guests } = queryString.parse(this.props.location.search)
-        console.log('guests',guests)
-        // this.setState({ stay: { ...stay }})
-        this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection, guests} })
-        // this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection,["check-in"]: checkIn,["check-out"]: checkOut, guests: guests} })
+        let {checkIn, checkOut, guests } = queryString.parse(this.props.location.search)
+        guests = (!guests)?0:guests
+        checkIn = new Date(checkIn)
+        checkOut = new Date(checkOut)     
+        const numOfNights = ((checkOut - checkIn) / 1000 / 60 / 60 / 24)
+  
+        // this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection, guests} })
+        this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection,["check-in"]: checkIn,["check-out"]: checkOut, guests: guests,numOfNights} })
 
 
     }
@@ -64,9 +67,9 @@ class _StayOrder extends Component {
     }
 
     toggleDatePicker = ({ target }) => {
-        console.dir('target', target)
 
         const domRect = target.getBoundingClientRect();
+        console.log('domRect',domRect)
         const pos = {
             left: domRect.x,
             top: domRect.y - domRect.height - 5
@@ -95,12 +98,12 @@ class _StayOrder extends Component {
 
                         </div>
                         <form>
-                            <div className="order-form-date">
-                                <label htmlFor="check-in" onClick={this.toggleDatePicker}>
+                            <div className="order-form-date" onClick={this.toggleDatePicker}>
+                                <label htmlFor="check-in" >
                                     <span>Check-in</span>
                                     <div className="check-in-input" >{checkIn}</div>
                                 </label>
-                                <label htmlFor="check-out" onClick={this.toggleDatePicker}>
+                                <label htmlFor="check-out">
                                     <span>Check-out</span>
                                     <div className="check-in-input" >{checkOut}</div>
                                 </label>
@@ -113,13 +116,6 @@ class _StayOrder extends Component {
 
                             </div>
                             {datePicker.isDatePickerOpen && <DatePicker toggleDatePicker={this.toggleDatePicker} pos={datePicker.pos} onSelectDate={this.onSelectDate} />}
-                            {userSelection.numOfNights &&
-                                <div className='price-container'>
-                                    <p>You won't be charged yet</p>
-                                    <div className='nights-price'>${stay.price} x</div>
-                                    <h3>{userSelection.numOfNights}</h3>
-                                </div>
-                            }
                             <div className="btn-container">
                                 <div className="cell"></div>
                                 <div className="cell"></div>
@@ -225,6 +221,15 @@ class _StayOrder extends Component {
                                     <button className="action-btn"><span>Reserve</span></button>
                                 </div>
                             </div>
+                            {userSelection.numOfNights &&
+                                <div className='price-container'>
+                                    <p className='info'>You won't be charged yet</p>
+                                    <div className='price'><p>${stay.price} ⨉ {userSelection.numOfNights} nights</p><p>${stay.price*userSelection.numOfNights}</p></div>
+                                    <div className='price'><p>Service fee</p><p>$0</p></div>
+                                    <div className='price'><p>Occupancy taxes and fees</p><p>$9</p></div>
+                                    <div className='total-price'><p>Total</p><p>${stay.price*userSelection.numOfNights+9}</p></div>
+                                </div>
+                            }
                         </form>
                     </div>
                 </div>

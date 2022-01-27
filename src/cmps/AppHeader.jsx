@@ -10,6 +10,10 @@ import { BiSearch } from "react-icons/bi"
 
 class _AppHeader extends React.Component {
 
+    state = {
+        
+    }
+
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll, true);
     }
@@ -29,7 +33,11 @@ class _AppHeader extends React.Component {
         }
     }
 
+    
+
     onSearch = (searchValue) => {
+        console.log('searchValue',searchValue)
+
         this.props.history.push(`/explore?location=${searchValue.location}&minPrice=-Infinity&maxPrice=Infinity&checkIn=${searchValue["check-in"]}&checkOut=${searchValue["check-out"]}&guests=${searchValue.guests}`)
     }
 

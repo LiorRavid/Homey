@@ -10,7 +10,7 @@ export function AppFooter({ onSearch, topRatedStays, nearbayStays }) {
 
                 <section className="footer-nav-container">
                     <div >
-                        <span>© 2021 Home & Go, <span>Inc.</span></span>
+                        <span>© 2022 homey, <span>Inc.</span></span>
                         <span>·</span>
                         <Link to="/login">Login</Link>
                         <span>·</span>

@@ -12,12 +12,15 @@ export class StayOrder extends Component {
 
     state = {
         stay: null,
-        isDatePickerOpen: false,
+        datePicker: {
+            isDatePickerOpen: false,
+            pos: null
+        },
         userSelection: {
             "check-in": new Date(),
             "check-out": new Date(),
             guests: 0,
-            numOfNights:null
+            numOfNights: null
         },
     }
 
@@ -34,36 +37,46 @@ export class StayOrder extends Component {
             if (field === 'guests') {
                 if (value < 0) value = 0
                 else if (value > this.state.stay.capacity) value = this.state.stay.capacity
-                // console.log('value', value)
             }
             this.setState((prevState) => {
-                // const numOfNights = ((prevState.userSelection["check-out"]-prevState.userSelection["check-in"])/1000/60/60/24)
                 return ({ ...prevState, userSelection: { ...prevState.userSelection, [field]: value } })
             })
         }
     }
-    
+
     onSelectDate = (rangeSelection) => {
         // console.log('rangeSelection', rangeSelection)
-        const numOfNights = ((rangeSelection.endDate-rangeSelection.startDate)/1000/60/60/24)
-        console.log('numOfNights',numOfNights)
-        
+        const numOfNights = ((rangeSelection.endDate - rangeSelection.startDate) / 1000 / 60 / 60 / 24)
+        console.log('numOfNights', numOfNights)
+
         this.setState((prevState) => {
-            
-            return ({ ...prevState, userSelection: { ...prevState.userSelection, "check-in": rangeSelection.startDate,"check-out": rangeSelection.endDate,numOfNights } })
-    })
+
+            return ({ ...prevState, userSelection: { ...prevState.userSelection, "check-in": rangeSelection.startDate, "check-out": rangeSelection.endDate, numOfNights } })
+        })
     }
 
     toggleDatePicker = ({ target }) => {
-        const domRect = target.getBoundingClientRect();
-        this.setState((prevState) => ({ ...prevState, isDatePickerOpen: !prevState.isDatePickerOpen }))
+        if (target){
+
+            const domRect = target.getBoundingClientRect();
+            console.log('domRect', domRect)
+            const pos = {
+                left:domRect.x,
+                top:domRect.y-domRect.height-5
+            }
+            
+            this.setState((prevState) => ({ ...prevState, datePicker: { ...prevState.datePicker, isDatePickerOpen: !prevState.datePicker.isDatePickerOpen,pos } }))
+        }else {
+            this.setState((prevState) => ({ ...prevState, datePicker: { ...prevState.datePicker, isDatePickerOpen: !prevState.datePicker.isDatePickerOpen } }))
+            
+        }
     }
 
     render() {
-        const { stay, isDatePickerOpen, userSelection } = this.state
+        const { stay, datePicker, userSelection } = this.state
         const checkIn = userSelection['check-in'].toLocaleDateString('en-GB')
         const checkOut = userSelection['check-out'].toLocaleDateString('en-GB')
-      
+
         if (!stay) return <h1>Loading...</h1>
         const { reviewsAvg } = this.props
 
@@ -95,8 +108,8 @@ export class StayOrder extends Component {
                                 </label>
 
                             </div>
-                            {isDatePickerOpen && <DatePicker onSelectDate={this.onSelectDate}/>}
-                            {userSelection.numOfNights && <h3>{userSelection.numOfNights}</h3> }
+                            {datePicker.isDatePickerOpen && <DatePicker pos={datePicker.pos} onSelectDate={this.onSelectDate} />}
+                            {userSelection.numOfNights && <h3>{userSelection.numOfNights}</h3>}
                             <div className="btn-container">
                                 <div class="cell"></div>
                                 <div class="cell"></div>

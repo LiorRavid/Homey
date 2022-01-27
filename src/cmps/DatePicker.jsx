@@ -1,5 +1,7 @@
 import React from 'react';
 import { DateRange } from 'react-date-range';
+import { AiOutlineCloseSquare } from 'react-icons/ai';
+
 
 export class DatePicker extends React.Component {
 
@@ -23,8 +25,10 @@ export class DatePicker extends React.Component {
     }
     render() {
         const { selectionRange } = this.state
+        const { pos } = this.props
+        console.log('pos',pos)
         return (
-            <div className="date-picker-container">
+            <div className="date-picker-container" style={{left:pos.left, top:pos.top}}>
 
                 <DateRange
                     classNames="date-picker-2"
@@ -36,6 +40,7 @@ export class DatePicker extends React.Component {
                     months={2}
                     direction='horizontal'
                 />
+                <div className="close-btn"><AiOutlineCloseSquare/></div>
             </div>
         )
     }

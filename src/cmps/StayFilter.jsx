@@ -97,7 +97,7 @@ export class Filter extends React.Component {
                     <input type="number" name="maxPrice" value={maxPrice} onChange={this.onHandleChange} />
                     <Link to={`/explore?location=${location}&minPrice=${minPrice}&maxPrice=${maxPrice}`}>Link</Link> */}
                     <Button variant="outlined">
-                        <div className="btn-expand flex" onClick={() => this.onOpenModal('price')}>Price {(!isPriceOpen)?<i class="fas fa-angle-down arrow-down"></i>: <i class="fas fa-angle-up arrow-up"></i>}</div>
+                        <div className="btn-expand flex" onClick={() => this.onOpenModal('price')}>Price {(!isPriceOpen)?<i className="fas fa-angle-down arrow-down"></i>: <i className="fas fa-angle-up arrow-up"></i>}</div>
                         {isPriceOpen && 
                             (<div className='price-filter-modal'>
                                 <FilterSlider onSetPriceRange={this.onSetPriceRange}/>

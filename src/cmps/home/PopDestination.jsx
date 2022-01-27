@@ -40,7 +40,7 @@ export function PopDestination() {
                 <div className="city-details-container">
                     <div className="city-details">
                         <h3>London</h3>
-                        <h4><span>England</span></h4>
+                        <h4><span>UK</span></h4>
                     </div>
                 </div>
             </Link>

@@ -30,6 +30,7 @@ class _AppHeader extends React.Component {
     }
 
     onSearch = (searchValue) => {
+        console.log('search',searchValue)
         this.props.history.push(`/explore?location=${searchValue.location}&minPrice=-Infinity&maxPrice=Infinity&checkIn=${searchValue["check-in"]}&checkOut=${searchValue["check-out"]}&guests=${searchValue.guests}`)
     }
 

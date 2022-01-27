@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import {FiHeart} from 'react-icons/fi'
 
 // || ev.target.className.baseVal === 'MuiSvgIcon-root'
 export class StayGallery extends Component {
@@ -15,6 +16,7 @@ export class StayGallery extends Component {
                         return (
                             <div key={idx}>
                                 <img src={imgUrl}/>
+                                {/* <FiHeart/>   */}
                             </div>
                         )
                     })}

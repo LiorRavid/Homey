@@ -23,7 +23,7 @@ class _StayPreview extends React.Component{
                         <span className="stay-preview-rate">
                             <i className="fas fa-star"></i>
                             <p className="rate">{rate.total}</p>
-                            <p className="rate-length">( {stay.reviews.length})</p>
+                            <p className="rate-length">({stay.reviews.length})</p>
                         </span>
                         <p>
                             <span className="stay-type">{stay.type}</span>

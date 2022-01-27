@@ -1,5 +1,7 @@
 import { Component } from 'react'
 import { utilService } from '../../services/util.service.js'
+import { withRouter } from 'react-router-dom';
+import queryString from 'query-string'
 
 import { DatePicker } from '../DatePicker.jsx';
 import { AiFillStar } from 'react-icons/ai';
@@ -8,7 +10,7 @@ import { AiFillStar } from 'react-icons/ai';
 
 
 
-export class StayOrder extends Component {
+class _StayOrder extends Component {
 
     state = {
         stay: null,
@@ -26,7 +28,13 @@ export class StayOrder extends Component {
 
     componentDidMount() {
         const { stay } = this.props
-        this.setState({ stay: { ...stay } })
+        
+        const {checkIn, checkOut, guests } = queryString.parse(this.props.location.search)
+        console.log('guests',guests)
+        // this.setState({ stay: { ...stay }})
+        this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection, guests} })
+        // this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection,["check-in"]: checkIn,["check-out"]: checkOut, guests: guests} })
+
 
     }
 
@@ -56,20 +64,16 @@ export class StayOrder extends Component {
     }
 
     toggleDatePicker = ({ target }) => {
-        if (target){
+        console.dir('target', target)
 
-            const domRect = target.getBoundingClientRect();
-            console.log('domRect', domRect)
-            const pos = {
-                left:domRect.x,
-                top:domRect.y-domRect.height-5
-            }
-            
-            this.setState((prevState) => ({ ...prevState, datePicker: { ...prevState.datePicker, isDatePickerOpen: !prevState.datePicker.isDatePickerOpen,pos } }))
-        }else {
-            this.setState((prevState) => ({ ...prevState, datePicker: { ...prevState.datePicker, isDatePickerOpen: !prevState.datePicker.isDatePickerOpen } }))
-            
+        const domRect = target.getBoundingClientRect();
+        const pos = {
+            left: domRect.x,
+            top: domRect.y - domRect.height - 5
         }
+
+        this.setState((prevState) => ({ ...prevState, datePicker: { ...prevState.datePicker, isDatePickerOpen: !prevState.datePicker.isDatePickerOpen, pos } }))
+
     }
 
     render() {
@@ -108,8 +112,14 @@ export class StayOrder extends Component {
                                 </label>
 
                             </div>
-                            {datePicker.isDatePickerOpen && <DatePicker pos={datePicker.pos} onSelectDate={this.onSelectDate} />}
-                            {userSelection.numOfNights && <h3>{userSelection.numOfNights}</h3>}
+                            {datePicker.isDatePickerOpen && <DatePicker toggleDatePicker={this.toggleDatePicker} pos={datePicker.pos} onSelectDate={this.onSelectDate} />}
+                            {userSelection.numOfNights &&
+                                <div className='price-container'>
+                                    <p>You won't be charged yet</p>
+                                    <div className='nights-price'>${stay.price} x</div>
+                                    <h3>{userSelection.numOfNights}</h3>
+                                </div>
+                            }
                             <div className="btn-container">
                                 <div class="cell"></div>
                                 <div class="cell"></div>
@@ -222,3 +232,6 @@ export class StayOrder extends Component {
         )
     }
 }
+
+
+export const StayOrder = withRouter(_StayOrder)

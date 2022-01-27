@@ -4,6 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setAppState } from '../store/app.action.js'
 
+import LinearProgress from '@mui/material/LinearProgress';
 import { AiFillStar } from 'react-icons/ai';
 
 // import { connect } from 'react-redux'
@@ -37,7 +38,7 @@ class _StayDetails extends React.Component {
     loadStay = () => {
         const { stayId } = this.props.match.params
         stayService.getById(stayId).then((stay) => {
-        
+
             this.setState({ stay })
         })
         // , () => { console.log('the state after stay', this.state) }
@@ -46,7 +47,7 @@ class _StayDetails extends React.Component {
     addGuestReview = (review) => {
         let reviews = [...this.state.stay.reviews, review]
         // reviews.push(review)
-        review.createdAt = Date.now()/1000
+        review.createdAt = Date.now() / 1000
         this.setState((prevState) => {
             return { stay: { ...prevState.stay, reviews } }
         })
@@ -67,10 +68,10 @@ class _StayDetails extends React.Component {
                     <h1>{stay.name}</h1>
                     <div className="subtitle">
 
-                    <AiFillStar/>
-                    <p> {reviewsAvg.total} ({stay.reviews.length} reviews)</p>
-                    <p>∙</p>
-                    <p>{stay.loc.address}</p>
+                        <AiFillStar />
+                        <p> {reviewsAvg.total} ({stay.reviews.length} reviews)</p>
+                        <p>∙</p>
+                        <p>{stay.loc.address}</p>
                     </div>
                 </section>
 
@@ -80,18 +81,46 @@ class _StayDetails extends React.Component {
 
                 <div className="info-order-container">
                     <StayInfo stay={stay} />
-                    <StayOrder stay={stay} reviewsAvg={reviewsAvg.total}/>
+                    <StayOrder stay={stay} reviewsAvg={reviewsAvg.total} />
                 </div>
 
                 <section className="reviews">
-                    <h2>⭐ {reviewsAvg.total} ({stay.reviews.length} reviews)</h2>
+                    <h2><AiFillStar /> {reviewsAvg.total} ({stay.reviews.length} reviews)</h2>
                     <div className="review-statistics">
-                        <p>Cleanliness {reviewsAvg.cleanliness}</p>
-                        <p>Accuracy {reviewsAvg.accuracy}</p>
-                        <p>Communication {reviewsAvg.communication}</p>
-                        <p>Location {reviewsAvg.location}</p>
-                        <p>Check-in {reviewsAvg["check-in"]}</p>
-                        <p>Value {reviewsAvg.value}</p>
+                        <div className="statistic-container">
+                            <p>Cleanliness</p>
+                            {/* <div className="statistic-rate">{reviewsAvg.cleanliness}</div> */}
+                            <div className="statistic-rate"><LinearProgress color="inherit" variant="determinate" value={reviewsAvg.cleanliness*20} /><p>{reviewsAvg.cleanliness}</p></div>
+                        </div>
+                        <div className="statistic-container">
+                            <p>Accuracy</p>
+                            {/* <div className="statistic-rate">{reviewsAvg.accuracy}</div> */}
+                            <div className="statistic-rate"><LinearProgress color="inherit" variant="determinate" value={reviewsAvg.accuracy*20} /><p>{reviewsAvg.accuracy}</p></div>
+                        </div>
+                        <div className="statistic-container">
+                            <p>Communication</p>
+
+                            {/* <div className="statistic-rate">{reviewsAvg.communication}</div> */}
+                            <div className="statistic-rate"><LinearProgress color="inherit" variant="determinate" value={reviewsAvg.communication*20} /><p>{reviewsAvg.communication}</p></div>
+                        </div>
+                        <div className="statistic-container">
+                            <p>Location</p>
+
+                            {/* <div className="statistic-rate">{reviewsAvg.location}</div> */}
+                            <div className="statistic-rate"><LinearProgress color="inherit" variant="determinate" value={reviewsAvg.location*20} /><p>{reviewsAvg.location}</p></div>
+                        </div>
+                        <div className="statistic-container">
+                            <p>Check-in</p>
+                            
+                            {/* <p className="statistic-bar"></p> */}
+                            <div className="statistic-rate"><LinearProgress color="inherit" variant="determinate" value={reviewsAvg["check-in"]*20} /><p>{reviewsAvg["check-in"]}</p></div>
+                        </div>
+                        <div className="statistic-container">
+                            <p>Value</p>
+
+                            {/* <div className="statistic-rate">{reviewsAvg.value}</div> */}
+                            <div className="statistic-rate"><LinearProgress variant="determinate" color="inherit" value={reviewsAvg.value*20} /><p>{reviewsAvg.value}</p></div>
+                        </div>
                     </div>
 
                     <ReviewList stay={stay} />
@@ -109,7 +138,7 @@ class _StayDetails extends React.Component {
 
 }
 
-function mapStateToProps({appModule}) {
+function mapStateToProps({ appModule }) {
     return {
         isFullHeader: appModule.isFullHeader,
         currPage: appModule.currPage,

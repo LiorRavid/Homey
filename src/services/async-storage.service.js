@@ -777,7 +777,7 @@ function _createEntities(entityType) {
                     "reviews": [
                         {
                             "id": "r101",
-                            "createdAt": 1465767064000,
+                            "createdAt": 1465767064,
                             "txt": "We loved staying at Nurias place. The location is so centralized and we were able to enjoy walking to different attractions in the city.",
                             "rate": {
                                 "Cleanliness":4,
@@ -795,7 +795,7 @@ function _createEntities(entityType) {
                         },
                         {
                             "id": "r102",
-                            "createdAt": 1534109464000,
+                            "createdAt": 1534109464,
                             "txt": "Nuria's apartment is in the perfect location to everything in the historic center. The place is close to everything that we were able to stop by and drop of stuff as needed or take a nap when we were touring the city. All the amenities are as described and Nuria is a great host able to help us with any questions we had during the check in.",
                             "rate": {
                                 "Cleanliness":4,
@@ -813,7 +813,7 @@ function _createEntities(entityType) {
                         },
                         {
                             "id": "r103",
-                            "createdAt": 1612992664000,
+                            "createdAt": 1612992664,
                             "txt": "Nuria hands down was absolutely fantastic and accommodating. She's very flexible as far as check-in/check out times and she even provided complimentary champagne as a welcoming gift. The location of her apartment was amazing! Most of the typical tourist spots are close by and walkable. If you don't want to walk, the apartment is right across the street from the Callao metro stop. Would stay here again if I visit Madrid.",
                             "rate": {
                                 "Cleanliness":4,
@@ -875,7 +875,7 @@ function _createEntities(entityType) {
                     "reviews": [
                         {
                             "id": "r101",
-                            "createdAt": 1541280664000,
+                            "createdAt": 1541280664,
                             "txt": "Very cute space in a great location! Close to a lot of stores bars and metro! Although Jose was on vacation during my visit and we didn’t get to meet, he was very easy to get a hold of and very quick to respond! My stay was cut short due to things out of his and my control but he was very helpful anytime I needed! The room is a comfortable stay, it does get very hot so be sure to buy a fan for the room! The room is up a lot of stairs so be prepared. But overall great space while visit Madrid & he was a great host!",
                             "rate": {
                                 "Cleanliness":4,
@@ -893,7 +893,7 @@ function _createEntities(entityType) {
                         },
                         {
                             "id": "r102",
-                            "createdAt": 1513373464000,
+                            "createdAt": 1513373464,
                             "txt": "I lived with José for 4 months while studying abroad in Madrid and he could not have been a better host. Every positive review is absolutely accurate, he really is fantastic. The neighborhood is centrally located and a short walk from major metro stops and a 10 minute walk to most major tourist destinations. Close enough for convenience and far enough to have a quiet place to stay that was a great representation of the diversity of Madrid. The apartment is fantastic and José is happy to give you recommendations, binge watch Game of Thrones with you or give you privacy when you need it. At one point I got very sick and he even went to the pharmacy for me. If you're a solo female traveler, this neighborhood like most of Madrid, is VERY safe! I took many late night walks alone. The apartment is on the top floor with no elevator so if you have mobility issues, you should consider that. Otherwise, stay here! Thank you so much, José!",
                             "rate": {
                                 "Cleanliness":5,
@@ -911,7 +911,7 @@ function _createEntities(entityType) {
                         },
                         {
                             "id": "r103",
-                            "createdAt": 1466026264000,
+                            "createdAt": 1466026264,
                             "txt": "The apartment is exactly as the listing describes it, and the neighborhood is lively , Full of interesting cafés and things to do. You can walk to the best museums, and yet not be in an area dominated by tourism.José was extremely kind and eager to be helpful in every moment, but one can also have quiet, and once complete privacy.",
                             "rate": {
                                 "Cleanliness":4,
@@ -975,7 +975,7 @@ function _createEntities(entityType) {
                     "reviews": [
                         {
                             "id": "r101",
-                            "createdAt": 1563226264000,
+                            "createdAt": 1563226264,
                             "txt": "nice place for couples...",
                             "rate": {
                                 "Cleanliness":4,
@@ -993,7 +993,7 @@ function _createEntities(entityType) {
                         },
                         {
                             "id": "r102",
-                            "createdAt": 1537047064000,
+                            "createdAt": 1537047064,
                             "txt": "Very clean and nice place, in a very good neighborhood. Eloisa always very kind and in constant communication. We had a great stay, thank you once again!",
                             "rate": {
                                 "Cleanliness":4,
@@ -1011,7 +1011,7 @@ function _createEntities(entityType) {
                         },
                         {
                             "id": "r103",
-                            "createdAt": 1539639064000,
+                            "createdAt": 1539639064,
                             "txt": "Nice place, 5 min from atocha and 15 min by walk to the city center . Worth enough !",
                             "rate": {
                                 "Cleanliness":4,

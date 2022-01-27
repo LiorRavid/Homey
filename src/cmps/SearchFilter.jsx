@@ -34,8 +34,8 @@ export class SearchFilter extends React.Component {
         if (target) {
             const field = target.name
             const value = target.value
-            this.setState((prevState) => ({ ...prevState, [field]: value }), () => { console.log('state in search', this.state) })
-        }
+            this.setState((prevState) => ({...prevState,[field]:value }))
+        } 
     }
 
     onHover = (prev, next) => {
@@ -69,7 +69,7 @@ export class SearchFilter extends React.Component {
                     <div className={`border ${this.state.third ? 'third' : undefined}`}></div>
                     <label className="guests" htmlFor="guests" onMouseEnter={() => this.onHover('third', null)} onMouseLeave={() => this.onLeaveHover('third', null)}>
                         <span>Guests</span>
-                        <input name="guests" id="guests" name="guests" placeholder="Add guests" type="number" onChange={(ev) => this.onHandleChange(ev)} />
+                        <input name="guests" id="guests" placeholder="Add guests" type="number" onChange={(ev)=>this.onHandleChange(ev)}/>
                     </label>
 
                     <div onClick={() => this.onSubmitSearch()}><BiSearch className='search-icon' /></div>

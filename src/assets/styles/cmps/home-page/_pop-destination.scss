@@ -20,9 +20,10 @@
         // height: 900px;
         margin: 10px;
         color: rgb(0, 0, 0);
-        border-bottom-left-radius: 13px;
-        border-bottom-right-radius: 13px;
-        @include aspect-ratio(9,16);
+        border-radius:13px ;
+        // border-bottom-left-radius: 13px;
+        // border-bottom-right-radius: 13px;
+        @include aspect-ratio(1,1.6);
     }
     img {
         border-radius: 13px;
@@ -34,7 +35,7 @@
         
         .city-details{
             position: relative;
-            top: 81%;
+            top: 91%;
         }
 
         h4 span{

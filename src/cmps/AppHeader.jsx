@@ -46,7 +46,7 @@ class _AppHeader extends React.Component {
         console.log('rendered')
 
         return (
-            <section className={`main-container ${isFullHeader ? 'full-header' : ''} ${headerColor} header-container full`}>
+            <section className={`main-container ${isFullHeader && 'full-header'} ${headerColor} header-container full`}>
                 <div className="header">
                     <div className="header-details">
                         <Link className='homey clean-link' to="/" color={headerLogoColor}>

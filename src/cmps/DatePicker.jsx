@@ -25,14 +25,14 @@ export class DatePicker extends React.Component {
     }
     render() {
         const { selectionRange } = this.state
-        const { pos } = this.props
+        const { pos,toggleDatePicker } = this.props
         console.log('pos',pos)
         return (
             <div className="date-picker-container" style={{left:pos.left, top:pos.top}}>
 
                 <DateRange
                     classNames="date-picker-2"
-                    rangeColors={"black"}
+                    // rangeColors={"#ff385c"}
                     color={"black"}
                     className="date-pick"
                     ranges={[selectionRange]}
@@ -40,7 +40,7 @@ export class DatePicker extends React.Component {
                     months={2}
                     direction='horizontal'
                 />
-                <div className="close-btn"><AiOutlineCloseSquare/></div>
+                <div className="close-btn" onClick={(ev)=>toggleDatePicker(ev)}><AiOutlineCloseSquare/></div>
             </div>
         )
     }

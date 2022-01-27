@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
+
 import React from 'react'
+import queryString from 'query-string'
 import { withRouter } from 'react-router-dom';
 import { reviewService } from '../services/review.service.js'
 import { StayGallery } from './StayGallery.jsx'
@@ -10,11 +11,12 @@ class _StayPreview extends React.Component{
     
     render(){
         const{stay}= this.props
+        const {location,checkIn,checkOut,guests} = queryString.parse(this.props.location.search)
         const rate = reviewService.getReviewsAvg(stay.reviews)
         return (
             <article className=" stay-preview-container" onClick={(ev) => {
                 if (ev.target.className === 'control-arrow control-next' || ev.target.className === 'control-arrow control-prev') return
-                this.props.history.push(`/stay/${this.props.stay._id}`)}}>
+                this.props.history.push(`/stay/${this.props.stay._id}?location=${location}&checkIn=${checkIn}&checkOut=${checkOut}&guests=${guests}`)}}>
                 <div className="stay-preview-card">
                     <StayGallery stay={stay}/>
                     <div className="stay-preview-info">

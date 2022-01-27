@@ -15,7 +15,7 @@ class _AppHeader extends React.Component {
     }
 
     handleScroll = (event) => {
-        const { scrollY } = (window)
+        const { scrollY } = window
         let action = null
         if ((scrollY < 100) && (this.props.currPage === "home")) {
             action = { isHomePageTop: true, isFullHeader: true }      
@@ -40,7 +40,6 @@ class _AppHeader extends React.Component {
     }
 
     render() {
-        const { location } = this.props
         const { isFullHeader, isHomePageTop, currPage } = this.props
         const headerColor = (isHomePageTop) ? "header-dark" : "header-bright"
         const headerLogoColor = (isHomePageTop) ? "white" : "#ff385c"
@@ -54,19 +53,19 @@ class _AppHeader extends React.Component {
                             <div className='header-left'>
                                 <SiAirbnb size="2em" color={headerLogoColor} />
                             </div>
-                            homey</Link>
+                            homey
+                        </Link>
                         {!isFullHeader && <div className='header-center' onClick={() => this.onOpenFullHeader()}>
                             <input type="text" placeholder='Start your search' />
                             <BiSearch className='search-icon' />
                         </div>}
                         <div className='header-right'>
                             <Link className='btn-explore clean-link' to={`/explore?location=&minPrice=-Infinity&maxPrice=Infinity`} >Explore</Link>
-                            {/* <button>Explore</button> */}
                             <Link className='btn-host clean-link' to="/host">Become a host</Link>
-                            <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black" /><FaUserCircle color="#717171" /></button>
+                            <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black" /><FaUserCircle color="#717171"/></button>
                         </div>
                     </div>
-                    {isFullHeader && <SearchFilter onSearch={this.onSearch} />}
+                    {isFullHeader && <SearchFilter onSearch={this.onSearch} currPage={currPage}/>}
                 </div>
             </section>
         )

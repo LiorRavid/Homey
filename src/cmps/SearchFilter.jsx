@@ -16,6 +16,14 @@ export class SearchFilter extends React.Component {
         third: true
     }
 
+    componentDidMount(){
+        const{currPage} = this.props
+        if(currPage === 'explore'){
+            const {location} = queryString.parse(this.props.location.search)
+            this.setState((prevState) => ({ ...prevState, [field]: value }), () => { console.log('state in search', this.state) })
+        }
+    }
+
     onSubmitSearch = () => {
         const searchValue = { ...this.state }
         this.props.onSearch(searchValue)

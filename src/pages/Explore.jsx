@@ -48,10 +48,10 @@ class _Explore extends React.Component {
     }
 
     render() {
-        const { stays } = this.props
-        const location = queryString.parse(this.props.location.search).location
+        const { stays} = this.props
+        const {location} = queryString.parse(this.props.location.search)
         console.log(location)
-        const trip = ''
+        // const trip = ''
         
         if (!stays) return <React.Fragment />
         else{
@@ -59,7 +59,7 @@ class _Explore extends React.Component {
                 <section className="explore-container">
                     <span className="stays-number">{stays.length} stays </span>
                     {(location)?<h1>Find place to stay in {location}</h1>:<h1>Find place to stay</h1>}
-                    <Filter onSetPriceRange={this.onSetPriceRange} onSetAmenitie={this.onSetAmenitie} location={location} />
+                    <Filter onSetPriceRange={this.onSetPriceRange} onSetAmenitie={this.onSetAmenitie} location={location}/>
                     {(stays.length)?<StayList stays={stays}/>:<h2>No search results, find other place to stay</h2>}
                 </section>
             )

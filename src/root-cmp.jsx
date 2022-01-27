@@ -17,7 +17,7 @@ class _RootCmp extends React.Component {
 
     render() {
         const { isFullHeader, currPage, isHomePageTop } = this.props
-        console.log('state from store in root',this.props)
+        // console.log('state from store in root',this.props)
         return (
             <section>
                 <AppHeader isFullHeader={isFullHeader}

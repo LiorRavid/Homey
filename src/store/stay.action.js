@@ -3,10 +3,11 @@ import { stayService } from '../services/stay.service.js'
 export function loadStays(filterBy) {
   return async (dispatch) => {
     try {
+      console.log('filter before backend',filterBy)
       const stays = await stayService.query(filterBy)
       dispatch({ type: 'SET_STAYS', stays })
     } catch (err) {
-      console.error(err)
+      console.dir(err)
     }
   }
 }

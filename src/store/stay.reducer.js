@@ -11,6 +11,7 @@ export function stayReducer(state = initialState, action) {
 
   switch (action.type) {
     case 'SET_STAYS':
+      console.log('action',action.stays)
       newState = { ...state, stays: [...action.stays] }
       break
     // case 'SET_SORT':

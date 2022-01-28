@@ -139,7 +139,6 @@ function _createEntities(entityType) {
         case 'stayDB':
             entities = [
                 {
-                    "_id": "10006547",
                     "name": "Sunny Beach Apartment",
                     "type": "Apartment",
                     "rooms": "3 bedrooms",
@@ -237,7 +236,6 @@ function _createEntities(entityType) {
                     "likedByUsers": ['mini-user'] // for user-wishlist : use $in
                 },
                 {
-                    "_id": "10006548",
                     "name": "Potts Point Apartment",
                     "type": "Studio Apartment",
                     "rooms": "1 bedroom",
@@ -335,7 +333,6 @@ function _createEntities(entityType) {
                     "likedByUsers": ['mini-user'] // for user-wishlist : use $in
                 },
                 {
-                    "_id": "10006549",
                     "name": "NTH VIEW -  Beachfront Retreat!",
                     "type": "House",
                     "rooms": "2 bedrooms",
@@ -431,7 +428,6 @@ function _createEntities(entityType) {
                     "likedByUsers": ['mini-user'] // for user-wishlist : use $in
                 },
                 {
-                    "_id": "10006550",
                     "name": "Nice South Slope 2 BR w/ Patio, Washer / Dryer",
                     "type": "House",
                     "rooms": "2 bedrooms",
@@ -533,7 +529,6 @@ function _createEntities(entityType) {
                     "likedByUsers": ['mini-user'] // for user-wishlist : use $in
                 },
                 {
-                    "_id": "10006551",
                     "name": "138 Bowery-Modern Queen Studio",
                     "type": "House",
                     "rooms": "Studio",
@@ -633,7 +628,6 @@ function _createEntities(entityType) {
                     "likedByUsers": ['mini-user'] // for user-wishlist : use $in
                 },
                 {
-                    "_id": "10006552",
                     "name": "Luxury private apartment/Suite/with balcony",
                     "type": "House",
                     "rooms": "1 bedroom",
@@ -733,7 +727,6 @@ function _createEntities(entityType) {
                     "likedByUsers": ['mini-user'] // for user-wishlist : use $in
                 },
                 {
-                    "_id": "10006553",
                     "name": "Tafari Gran Via",
                     "type": "House",
                     "rooms": "1 bedroom",
@@ -833,7 +826,6 @@ function _createEntities(entityType) {
                     "likedByUsers": ['mini-user'] // for user-wishlist : use $in
                 },
                 {
-                    "_id": "10006554",
                     "name": "Attic in the Heart of Madrid-WIFI",
                     "type": "House",
                     "rooms": "1 bedroom",
@@ -931,7 +923,6 @@ function _createEntities(entityType) {
                     "likedByUsers": ['mini-user'] // for user-wishlist : use $in
                 },
                 {
-                    "_id": "10006555",
                     "name": "Loft Eloisa",
                     "type": "House",
                     "rooms": "1 bedroom",

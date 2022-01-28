@@ -1,5 +1,6 @@
 import Axios from 'axios'
 import {storageService} from './async-storage.service.js'
+import {httpService} from './http.service.js'
 var axios = Axios.create({
     withCredentials: true
 })
@@ -15,11 +16,11 @@ export const stayService = {
 
 async function query(filterBy) {
   try {
-    // const res = await axios.get(`http://localhost:3020/api/toy?name=${name}&inStock=${inStock}&labels=${JSON.stringify(labels)}&type=${type}&order=${order}`)
-    // return res.data
-    const res = await storageService.query(STORAGE_KEY,filterBy)
-    console.log(res)
+    const res = await httpService.get('stay',filterBy)
     return res
+    // const res = await storageService.query(STORAGE_KEY,filterBy)
+    // console.log(res)
+    // return res
   } catch (err) {
     console.log('Cannot get stays:',  err)
     throw err
@@ -32,8 +33,8 @@ async function getById(stayId) {
   //   .get(`http://localhost:3020/api/toy/${toyId}`)
   //   .then((res) => res.data)
   try {
-    // const res = await axios.get(`http://localhost:3020/api/toy/${toyId}`)
-    const res = await storageService.get(STORAGE_KEY,stayId)
+    const res = await httpService.get(`stay/${stayId}`)
+    // const res = await storageService.get(STORAGE_KEY,stayId)
     // console.log(res)
     // return res.data
     return res

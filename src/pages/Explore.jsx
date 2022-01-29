@@ -34,7 +34,15 @@ class _Explore extends React.Component {
 
     getStays = () => {
         const filterBy = queryString.parse(this.props.location.search)
-        console.log(filterBy)
+        console.log('filter',filterBy)
+        if(+filterBy.minPrice === -Infinity){
+            filterBy.minPrice = -100000
+        }
+        if(+filterBy.maxPrice === Infinity){
+            filterBy.maxPrice = 100000
+        }
+        // filterBy.minPrice = +filterBy.minPrice
+        // filterBy.maxPrice = +filterBy.maxPrice
         this.props.loadStays(filterBy)
     }
 

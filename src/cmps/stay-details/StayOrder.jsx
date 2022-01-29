@@ -28,15 +28,19 @@ class _StayOrder extends Component {
 
     componentDidMount() {
         const { stay } = this.props
-        
-        let {checkIn, checkOut, guests } = queryString.parse(this.props.location.search)
-        guests = (!guests)?0:guests
-        checkIn = new Date(checkIn)
-        checkOut = new Date(checkOut)     
-        const numOfNights = ((checkOut - checkIn) / 1000 / 60 / 60 / 24)
-  
+
+        let { checkIn, checkOut, guests } = queryString.parse(this.props.location.search)
+        guests = (guests === 'undefined') ? 0 : guests
+        checkIn = (checkIn === 'undefined') ? this.state.userSelection['check-in'] : new Date(checkIn)
+        checkOut = (checkOut === 'undefined') ? this.state.userSelection['check-out'] : new Date(checkOut)
+        // checkIn =(!checkOut)? new Date() :new Date(checkOut)
+        // checkIn = new Date(checkIn)
+        // checkOut = new Date(checkOut)
+        console.log('checkOut - checkIn', checkOut - checkIn)
+        const numOfNights = ((checkOut - checkIn)<(1000*60*60*23))?null: ((checkOut - checkIn) / 1000 / 60 / 60 / 24)
+
         // this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection, guests} })
-        this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection,["check-in"]: checkIn,["check-out"]: checkOut, guests: guests,numOfNights} })
+        this.setState({ stay: { ...stay }, userSelection: { ...this.state.userSelection, ["check-in"]: checkIn, ["check-out"]: checkOut, guests: guests, numOfNights } })
 
 
     }
@@ -69,7 +73,7 @@ class _StayOrder extends Component {
     toggleDatePicker = ({ target }) => {
 
         const domRect = target.getBoundingClientRect();
-        console.log('domRect',domRect)
+        console.log('domRect', domRect)
         const pos = {
             left: domRect.x,
             top: domRect.y - domRect.height - 5
@@ -224,10 +228,10 @@ class _StayOrder extends Component {
                             {userSelection.numOfNights &&
                                 <div className='price-container'>
                                     <p className='info'>You won't be charged yet</p>
-                                    <div className='price'><p>${stay.price} ⨉ {userSelection.numOfNights} nights</p><p>${stay.price*userSelection.numOfNights}</p></div>
+                                    <div className='price'><p>${stay.price} ⨉ {userSelection.numOfNights} nights</p><p>${stay.price * userSelection.numOfNights}</p></div>
                                     <div className='price'><p>Service fee</p><p>$0</p></div>
                                     <div className='price'><p>Occupancy taxes and fees</p><p>$9</p></div>
-                                    <div className='total-price'><p>Total</p><p>${stay.price*userSelection.numOfNights+9}</p></div>
+                                    <div className='total-price'><p>Total</p><p>${stay.price * userSelection.numOfNights + 9}</p></div>
                                 </div>
                             }
                         </form>

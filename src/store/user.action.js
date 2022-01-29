@@ -1,5 +1,20 @@
 import { userService } from '../services/user.service.js'
 
+export function loadUsers() {
+  return async dispatch => {
+    try {
+      const users = await userService.getUsers()
+      dispatch({ type: 'SET_USERS', users })
+      // socketService.on(SOCKET_EVENT_REVIEW_ADDED, (review) =>{
+      //   dispatch({ type: 'ADD_REVIEW', review })
+      // })
+
+    } catch (err) {
+      console.log('ReviewActions: err in loadReviews', err)
+    }
+  }
+}
+
 export function signup(credentials) {
   return async (dispatch) => {
     try {

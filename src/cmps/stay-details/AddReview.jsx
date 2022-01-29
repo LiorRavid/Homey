@@ -7,7 +7,7 @@ import { userService } from '../../services/user.service.js'
 export class AddReview extends Component {
 
     state = {
-        loggedInUser: null,
+        // loggedInUser: null,
         review: {
             txt: '',
             rate: {
@@ -21,36 +21,39 @@ export class AddReview extends Component {
         }
     }
 
-    componentDidMount(){
-        this.setState({ loggedInUser: userService.getLoggedinUser() }, () => console.log('state in preview', this.state));
-    }
+    // componentDidMount(){
+    //     const {loggedinUser} = this.props
+    //     this.setState({ loggedInUser});
+    // }
 
     handleChange = ({ target }) => {
         const { value } = target;
         this.setState({ review: { ...this.state.review, txt: value } }, () => console.log('this.state.review.txt', this.state.review.txt));
     };
     sendReview = () => {
-        let { review,loggedInUser } = this.state;
+        let { review } = this.state;
+        let { loggedinUser } = this.props;
         review.by = {
-            _id: loggedInUser._id,
-            fullname: loggedInUser.fullname,
-            imgUrl: loggedInUser.imgUrl
+            _id: loggedinUser._id,
+            fullname: loggedinUser.fullname,
+            imgUrl: loggedinUser.imgUrl
         }
-        if (loggedInUser.isGuest) this.props.addGuestReview(review)
+        this.props.addGuestReview(review)
 
     };
 
     render() {
-        const { review, loggedInUser } = this.state
+        const { review } = this.state
+        const { loggedinUser } = this.props
         // const imgUrl = (loggedInUser) ? loggedInUser.imgUrl : Avatar
-        const fullname = (loggedInUser) ? loggedInUser.fullname : 'Guest'
+        const fullname = (loggedinUser) ? loggedinUser.fullname : 'Guest'
 
         return (
             <section className="add-review">
                 <h2>Add Review</h2>
                 <div className="loggedin-user">
 
-                <Avatar src="/broken-image.jpg" />
+                <Avatar src={loggedinUser.imgUrl} />
 
                 <h3>{fullname}</h3>
                 </div>

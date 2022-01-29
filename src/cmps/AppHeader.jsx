@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"
 import { withRouter } from 'react-router-dom';
 import { SearchFilter } from './SearchFilter.jsx';
 import { BiSearch } from "react-icons/bi"
+import Avatar from '@mui/material/Avatar';
+
 
 
 class _AppHeader extends React.Component {
@@ -48,7 +50,7 @@ class _AppHeader extends React.Component {
     }
 
     render() {
-        const { isFullHeader, isHomePageTop, currPage } = this.props
+        const { isFullHeader, isHomePageTop, currPage,loggedinUser } = this.props
         const headerColor = (isHomePageTop) ? "header-dark" : "header-bright"
         const headerLogoColor = (isHomePageTop) ? "white" : "#ff385c"
         console.log('rendered')
@@ -70,7 +72,7 @@ class _AppHeader extends React.Component {
                         <div className='header-right'>
                             <Link className='btn-explore clean-link' to={`/explore?location=&minPrice=-Infinity&maxPrice=Infinity`} >Explore</Link>
                             <Link className='btn-host clean-link' to="/host">Become a host</Link>
-                            <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black" /><FaUserCircle color="#717171"/></button>
+                            <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black" /><Avatar src={(loggedinUser)? loggedinUser.imgUrl:'/broken-image.jpg'} /></button>
                         </div>
                     </div>
                     {isFullHeader && <SearchFilter onSearch={this.onSearch} currPage={currPage}/>}

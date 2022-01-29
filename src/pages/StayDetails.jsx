@@ -4,12 +4,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setAppState } from '../store/app.action.js'
 
+import BeatLoader from "react-spinners/BeatLoader";
 import LinearProgress from '@mui/material/LinearProgress';
 import { AiFillStar } from 'react-icons/ai';
-
-// import { connect } from 'react-redux'
-// import { Link, NavLink } from 'react-router-dom'
-// import { Route } from 'react-router-dom'
 
 
 import { stayService } from '../services/stay.service.js'
@@ -57,8 +54,10 @@ class _StayDetails extends React.Component {
 
     render() {
         const { stay } = this.state
+        const { loggedinUser } = this.props
 
-        if (!stay) return <h1>Loading...</h1>
+        // return <div className='loader'> <BeatLoader size={30} color={'#ff385c'}/></div>
+        if (!stay) return <div className='loader'> <BeatLoader size={30} color={'#ff385c'}/></div>
         const reviewsAvg = reviewService.getReviewsAvg(stay.reviews)
 
         return (
@@ -127,7 +126,7 @@ class _StayDetails extends React.Component {
 
                 </section>
 
-                <AddReview addGuestReview={this.addGuestReview} />
+                <AddReview addGuestReview={this.addGuestReview} loggedinUser={loggedinUser}/>
 
 
 
@@ -138,10 +137,12 @@ class _StayDetails extends React.Component {
 
 }
 
-function mapStateToProps({ appModule }) {
+function mapStateToProps({ appModule,userModule }) {
     return {
         isFullHeader: appModule.isFullHeader,
         currPage: appModule.currPage,
+        loggedinUser: userModule.loggedinUser,
+
     }
 }
 

@@ -44,7 +44,7 @@ h1 {
 }
 
 p {
-  margin: 0 ;
+  margin: 0;
   max-width: 50ch;
 }
 
@@ -58,10 +58,17 @@ button {
   font-weight: none;
 }
 
-a{
+a {
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+.loader {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
 }
 
 // main.grow{

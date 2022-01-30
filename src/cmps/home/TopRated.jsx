@@ -15,14 +15,15 @@ class _TopRated extends React.Component {
         this.getTopRatedStays()
     }
 
-    getTopRatedStays = async () => {
-        let stays =  await this.props.loadStays()   
-        // let { stays } = this.props
-        stays.sort((a, b) => {
-            return a.reviews.length - b.reviews.length
-        })
-        stays = stays.slice(0, 4)
-        this.setState({ topRatedStays: stays })
+    getTopRatedStays = async() => {
+        await this.props.loadStays()
+            let {stays} = this.props
+            console.log('stays top',stays)
+            stays.sort( (a,b) => {
+                return a.reviews.length - b.reviews.length
+            })
+            stays = stays.slice(0, 4)
+            this.setState({ topRatedStays: stays })
     }
 
 
@@ -30,9 +31,8 @@ class _TopRated extends React.Component {
         const { topRatedStays } = this.state
         console.log('topRatedStays:', topRatedStays);
 
-
+        // if (!topRatedStays) return <React.Fragment />
         return (
-
             <main className="top-rated-gallery">
 
                 <h1>Top Rated <span>homies</span></h1>

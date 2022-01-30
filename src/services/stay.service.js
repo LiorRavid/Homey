@@ -16,6 +16,7 @@ export const stayService = {
 
 async function query(filterBy) {
   try {
+    console.log('filter in STAYSERVICE',filterBy)
     const res = await httpService.get('stay',filterBy)
     return res
     // const res = await storageService.query(STORAGE_KEY,filterBy)

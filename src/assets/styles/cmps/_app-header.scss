@@ -22,14 +22,6 @@
         .btn-host:hover {
             background-color: #706d6d63;
         }
-        .user-icon {
-            display: flex;
-            
-            > div {
-                width: 38px;
-                height: 38px;
-            }
-        }
     }
 }
 
@@ -51,6 +43,45 @@
     flex-direction: column;
     // font-family: circular ;
     z-index: 100;
+    .user-action {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 13px;
+        padding: 10px 0;
+        position: absolute;
+        // transform: translateX(-50%);
+        width: 260px;
+        font-size: 1rem;
+        text-transform: capitalize;
+        box-shadow: 0 3px 8px 0 rgb(0 0 0 / 18%);
+        z-index: 5;
+        top: 70px;
+        right: 160px;
+        .btn-header-container {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin:0;
+            padding: 10px 0 20px;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            margin:0;
+            padding: 10px 0;
+            gap: 10px;
+            height: fit-content;
+        }
+        a {
+            height: 100%;
+            width: 260px;
+            padding: 12px 20px;
+            color: #1f1f1f;
+        }
+        a:hover {
+            background-color: rgba(211, 211, 211, 0.37);
+        }
+    }
 }
 
 .filter-container {
@@ -271,6 +302,10 @@
         padding: 5px;
         font-size: 2rem;
 
+        > div {
+            width: 38px;
+            height: 38px;
+        }
         .ham-icon {
             margin: 7px 9px 0px;
             font-size: 2rem;

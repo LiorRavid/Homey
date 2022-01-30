@@ -453,7 +453,7 @@
         "fullname": "Eylon Frisch",
         "imgUrl": "https://res.cloudinary.com/dxdtpxsax/image/upload/v1643396205/airbnb/users/vvwmuh66cubhmscvvgt3.jpg",
         "isHost": true,
-        "username": "Eylon Frisch",
+        "username": "Eylon",
         "password": "123"
     },
 ]

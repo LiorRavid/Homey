@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setAppState } from '../store/app.action.js'
 import Avatar from '@mui/material/Avatar';
 
-import BeatLoader from "react-spinners/BeatLoader";
+// import BeatLoader from "react-spinners/BeatLoader";
 
 // import { socketService } from '../services/socketService.js'
 

@@ -36,19 +36,27 @@ function remove(userId) {
     return httpService.delete(`user/${userId}`)
 }
 
-async function update(user) {
-    // await storageService.put('user', user)
-    user = await httpService.put(`user/${user._id}`, user)
-    // Handle case in which admin updates other user's details
+async function update(userCred) {
+    // userCred.score = 10000;
+    const user = await storageService.put('userDB', userCred)
+    // const user = await httpService.post('auth/signup', userCred)
+    // socketService.emit(SOCKET_EMIT_LOGIN, user._id);
     if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
     return user;
 }
+// async function update(user) {
+//     await storageService.put('user', user)
+//     // user = await httpService.put(`user/${user._id}`, user)
+//     // Handle case in which admin updates other user's details
+//     if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
+//     return user;
+// }
 
 async function login(userCred) {
     const users = await storageService.query('userDB')
     const user = users.find(user => user.username === userCred.username && user.password === userCred.password)
     return _saveLocalUser(user)
-
+    
     // const user = await httpService.post('auth/login', userCred)
     // socketService.emit(SOCKET_EMIT_LOGIN, user._id);
     // if (user) return _saveLocalUser(user)

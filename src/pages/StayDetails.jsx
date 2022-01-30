@@ -3,6 +3,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setAppState } from '../store/app.action.js'
+import { userUpdate } from '../store/user.action.js'
 
 import BeatLoader from "react-spinners/BeatLoader";
 import LinearProgress from '@mui/material/LinearProgress';
@@ -54,7 +55,7 @@ class _StayDetails extends React.Component {
 
     render() {
         const { stay } = this.state
-        const { loggedinUser } = this.props
+        const { loggedinUser,userUpdate } = this.props
 
         // return <div className='loader'> <BeatLoader size={30} color={'#ff385c'}/></div>
         if (!stay) return <div className='loader'> <BeatLoader size={30} color={'#ff385c'}/></div>
@@ -80,7 +81,7 @@ class _StayDetails extends React.Component {
 
                 <div className="info-order-container">
                     <StayInfo stay={stay} />
-                    <StayOrder stay={stay} reviewsAvg={reviewsAvg.total} />
+                    <StayOrder stay={stay} reviewsAvg={reviewsAvg.total} userUpdate={userUpdate}/>
                 </div>
 
                 <section className="reviews">
@@ -148,6 +149,7 @@ function mapStateToProps({ appModule,userModule }) {
 
 const mapDispatchToProps = {
     setAppState,
+    userUpdate
 }
 
 

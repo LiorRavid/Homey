@@ -21,7 +21,7 @@ export function signup(credentials) {
       const user = await userService.signup(credentials)
       dispatch({ type: 'SET_USER', user })
     } catch (err) {
-      console.error(err)
+      console.error('ERR',err)
     }
   }
 }
@@ -30,6 +30,16 @@ export function login(credentials) {
   return async (dispatch) => {
     try {
       const user = await userService.login(credentials)
+      dispatch({ type: 'SET_USER', user })
+    } catch (err) {
+      console.error(err)
+    }
+  }
+}
+export function userUpdate(credentials) {
+  return async (dispatch) => {
+    try {
+      const user = await userService.update(credentials)
       dispatch({ type: 'SET_USER', user })
     } catch (err) {
       console.error(err)

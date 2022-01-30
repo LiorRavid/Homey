@@ -79,7 +79,7 @@ class _LoginSignup extends Component {
 	};
 
 	doSignup = async (ev) => {
-		// ev.preventDefault();
+		ev.preventDefault();
 		const { username, password, fullname, email } = this.state.signupCred;
 		if (!username || !password || !fullname || !email) {
 			return this.setState({ msg: 'All inputs are required' });

@@ -36,7 +36,7 @@ class _StayOrder extends Component {
         // checkIn =(!checkOut)? new Date() :new Date(checkOut)
         // checkIn = new Date(checkIn)
         // checkOut = new Date(checkOut)
-        console.log('checkOut - checkIn', checkOut - checkIn)
+        console.log('this.props order', this.props)
         const numOfNights = ((checkOut - checkIn)<(1000*60*60*23))?null: ((checkOut - checkIn) / 1000 / 60 / 60 / 24)
 
         // this.setState({ stay: { ...stay },userSelection:{...this.state.userSelection, guests} })

@@ -84,7 +84,7 @@ function post(entityType, newEntity) {
         .then(entities => {
             entities.push(newEntity)
             _save(entityType, entities)
-            return newEntity
+            return Promise.resolve(newEntity) 
         })
 }
 
@@ -94,7 +94,8 @@ function put(entityType, updatedEntity) {
             const idx = entities.findIndex(entity => entity._id === updatedEntity._id)
             entities.splice(idx, 1, updatedEntity)
             _save(entityType, entities)
-            return updatedEntity
+            return Promise.resolve(updatedEntity) 
+
         })
 }
 

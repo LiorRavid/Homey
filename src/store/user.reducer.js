@@ -1,7 +1,7 @@
 import { userService } from '../services/user.service'
 
 const initialState = {
-  loggedinUser: userService.getLoggedinUser()
+  loggedinUser: null
 }
 
 export function userReducer(state = initialState, action) {
@@ -9,7 +9,7 @@ export function userReducer(state = initialState, action) {
 
   switch (action.type) {
     case 'SET_USER':
-      newState = { ...state, user: action.user }
+      newState = { ...state, loggedinUser: action.user }
       break
     default:
       break

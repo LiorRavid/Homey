@@ -83,6 +83,11 @@ class _StayOrder extends Component {
 
     }
 
+    onReserve = () => {
+        console.log('reserving')
+        console.log('state',this.state)
+    }
+
     render() {
         const { stay, datePicker, userSelection } = this.state
         const checkIn = userSelection['check-in'].toLocaleDateString('en-GB')
@@ -120,7 +125,7 @@ class _StayOrder extends Component {
 
                             </div>
                             {datePicker.isDatePickerOpen && <DatePicker toggleDatePicker={this.toggleDatePicker} pos={datePicker.pos} onSelectDate={this.onSelectDate} />}
-                            <div className="btn-container">
+                            <div className="btn-container" onClick={this.onReserve}>
                                 <div className="cell"></div>
                                 <div className="cell"></div>
                                 <div className="cell"></div>

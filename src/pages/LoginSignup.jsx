@@ -32,7 +32,7 @@ class _LoginSignup extends Component {
 	};
 
 	componentDidMount() {
-        this.props.setAppState({ isFullHeader: false, isHomePageTop: false, currPage: 'login' })
+		this.props.setAppState({ isFullHeader: false, isHomePageTop: false, currPage: 'login' })
 	}
 
 	// componentWillUnmount() {
@@ -79,7 +79,7 @@ class _LoginSignup extends Component {
 	};
 
 	doSignup = async (ev) => {
-		ev.preventDefault();
+		// ev.preventDefault();
 		const { username, password, fullname, email } = this.state.signupCred;
 		if (!username || !password || !fullname || !email) {
 			return this.setState({ msg: 'All inputs are required' });
@@ -95,9 +95,10 @@ class _LoginSignup extends Component {
 		);
 	};
 
-	removeUser = (userId) => {
-		this.props.history.push('/');
-		this.props.removeUser(userId);
+	removeUser = async (userId) => {
+		// this.props.removeUser(userId);
+		this.props.history.push(-1);
+		await this.props.logout();
 
 
 	};
@@ -115,7 +116,7 @@ class _LoginSignup extends Component {
 					<h2>Sign Up</h2>
 				</div>
 				<div className="login-form-body">
-					<h1>Welcome to <span>Homey</span></h1>
+					<h1>Welcome to <span>homey</span></h1>
 
 					<input
 						type="text"
@@ -226,15 +227,15 @@ class _LoginSignup extends Component {
 					<div className="login-forms-container">
 						<div className='logout-container'>
 
-						<h2>Not {loggedinUser.username}?</h2>
-						<Avatar src={loggedinUser.imgUrl} />
+							<h2>Not {loggedinUser.username}?</h2>
+							<Avatar src={loggedinUser.imgUrl} />
 
-						<button onClick={this.props.logout} className='logout-btn'>Log out</button>
+							<button onClick={this.removeUser} className='logout-btn'>Log out</button>
 						</div>
 					</div>
 				}
 
-				
+
 				<section className="login-forms-container">
 					{!loggedinUser && formType === 'login' && loginSection}
 					{!loggedinUser && formType === 'signup' && signupSection}

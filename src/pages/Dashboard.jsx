@@ -84,8 +84,8 @@ export class _Dashboard extends Component {
                     </div>
                     {/* <DashSideNav onSelectAction={this.onSelectAction} /> */}
                 </section>
-                {stays && <div className='loader'> <BeatLoader size={30} color={'#ff385c'} /></div>}
-                {!stays && 
+                {/* {!stays && <div className='loader'> <BeatLoader size={30} color={'#ff385c'} /></div>} */}
+                
                 <section className="dash-main-container">
                         <DashHeader stays={stays} orders={orders} orderChangeStatus={orderChangeStatus} />
                         <section className="dash-info-container">
@@ -96,7 +96,7 @@ export class _Dashboard extends Component {
                             {action === 'add stay' && <StayEdit onSelectAction={this.onSelectAction} loggedInUser={loggedInUser} toggleMsgModal={toggleMsgModal} />}
                             {action === 'orders' && <HostOrders loggedInUser={loggedInUser} orders={orders} updateOrder={updateOrder} onSelectAction={this.onSelectAction} />} */}
                         </section>
-                    </section>}
+                    </section>
             </section>
         )
     }

@@ -45,7 +45,7 @@ export class AddReview extends Component {
     render() {
         const { review } = this.state
         const { loggedinUser } = this.props
-        // const imgUrl = (loggedInUser) ? loggedInUser.imgUrl : Avatar
+        const imgUrl = (loggedinUser)? loggedinUser.imgUrl:'/broken-image.jpg'
         const fullname = (loggedinUser) ? loggedinUser.fullname : 'Guest'
 
         return (
@@ -53,7 +53,7 @@ export class AddReview extends Component {
                 <h2>Add Review</h2>
                 <div className="loggedin-user">
 
-                <Avatar src={loggedinUser.imgUrl} />
+                <Avatar src={imgUrl} />
 
                 <h3>{fullname}</h3>
                 </div>

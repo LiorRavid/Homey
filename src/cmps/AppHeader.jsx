@@ -13,7 +13,7 @@ import Avatar from '@mui/material/Avatar';
 class _AppHeader extends React.Component {
 
     state = {
-        
+        isUserActionOpen: false
     }
 
     componentDidMount() {
@@ -24,7 +24,7 @@ class _AppHeader extends React.Component {
         const { scrollY } = window
         let action = null
         if ((scrollY < 100) && (this.props.currPage === "home")) {
-            action = { isHomePageTop: true, isFullHeader: true }      
+            action = { isHomePageTop: true, isFullHeader: true }
         } else {
             action = { isHomePageTop: false, isFullHeader: false }
         }
@@ -35,10 +35,10 @@ class _AppHeader extends React.Component {
         }
     }
 
-    
+
 
     onSearch = (searchValue) => {
-        console.log('searchValue',searchValue)
+        console.log('searchValue', searchValue)
 
         this.props.history.push(`/explore?location=${searchValue.location}&minPrice=-Infinity&maxPrice=Infinity&checkIn=${searchValue["check-in"]}&checkOut=${searchValue["check-out"]}&guests=${searchValue.guests}`)
     }
@@ -48,9 +48,15 @@ class _AppHeader extends React.Component {
         this.props.onSetAppState(action)
 
     }
+    toggleUserAction = () => {
+        this.setState((prevState)=>({isUserActionOpen:!prevState.isUserActionOpen}))
+
+    }
+
 
     render() {
-        const { isFullHeader, isHomePageTop, currPage,loggedinUser } = this.props
+        const { isUserActionOpen } = this.state
+        const { isFullHeader, isHomePageTop, currPage, loggedinUser } = this.props
         const headerColor = (isHomePageTop) ? "header-dark" : "header-bright"
         const headerLogoColor = (isHomePageTop) ? "white" : "#ff385c"
         console.log('rendered')
@@ -72,10 +78,21 @@ class _AppHeader extends React.Component {
                         <div className='header-right'>
                             <Link className='btn-explore clean-link' to={`/explore?location=&minPrice=-Infinity&maxPrice=Infinity`} >Explore</Link>
                             <Link className='btn-host clean-link' to="/host">Become a host</Link>
-                            <button className='user-icon'><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black" /><Avatar src={(loggedinUser)? loggedinUser.imgUrl:'/broken-image.jpg'} /></button>
+                            <button className='user-icon' onClick={this.toggleUserAction}><GiHamburgerMenu className='ham-icon' size="1.05rem" color="black" /><Avatar src={(loggedinUser) ? loggedinUser.imgUrl : '/broken-image.jpg'} /></button>
                         </div>
                     </div>
-                    {isFullHeader && <SearchFilter onSearch={this.onSearch} currPage={currPage}/>}
+                    {isUserActionOpen && <section className='user-action'>
+                            <div className='btn-header-container'>
+                                {!loggedinUser && <Link className='btn-login clean-link' to="/login">Log In</Link>}
+                                {loggedinUser && <Link className='btn-login clean-link' to="/dashboard">Dashboard</Link>}
+                            </div>
+                            <div className='btn-container'>
+                                {loggedinUser && <Link className='btn-login clean-link' to="/login">Log Out</Link>}
+                                <Link className='btn-about clean-link' to="/">About</Link>
+                                <Link className='btn-help clean-link' to="/">Help</Link>
+                            </div>
+                    </section>}
+                    {isFullHeader && <SearchFilter onSearch={this.onSearch} currPage={currPage} />}
                 </div>
             </section>
         )
